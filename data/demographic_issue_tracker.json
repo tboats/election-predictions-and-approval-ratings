@@ -1,0 +1,199 @@
+{
+  "survey": "Economist / YouGov Presidential Job Approval Tracker & Issue Sentiment",
+  "timeframe": "Latest Wave: October 2\u20135, 2026 (Comparison with Inauguration Jan 2025)",
+  "demographics": [
+    {
+      "group": "All US Adults",
+      "category": "National",
+      "approve": 37,
+      "disapprove": 61,
+      "net": -24,
+      "net_jan_2025": -10,
+      "shift": -14
+    },
+    {
+      "group": "18\u201329 Years Old",
+      "category": "Age",
+      "approve": 30,
+      "disapprove": 64,
+      "net": -34,
+      "net_jan_2025": -18,
+      "shift": -16
+    },
+    {
+      "group": "30\u201344 Years Old (Millennials)",
+      "category": "Age",
+      "approve": 28,
+      "disapprove": 70,
+      "net": -42,
+      "net_jan_2025": -1,
+      "shift": -41
+    },
+    {
+      "group": "45\u201364 Years Old (Gen X)",
+      "category": "Age",
+      "approve": 34,
+      "disapprove": 62,
+      "net": -28,
+      "net_jan_2025": 15,
+      "shift": -43
+    },
+    {
+      "group": "65+ Years Old (Seniors)",
+      "category": "Age",
+      "approve": 44,
+      "disapprove": 52,
+      "net": -8,
+      "net_jan_2025": 8,
+      "shift": -16
+    },
+    {
+      "group": "Men",
+      "category": "Gender",
+      "approve": 43,
+      "disapprove": 54,
+      "net": -11,
+      "net_jan_2025": 4,
+      "shift": -15
+    },
+    {
+      "group": "Women",
+      "category": "Gender",
+      "approve": 32,
+      "disapprove": 67,
+      "net": -35,
+      "net_jan_2025": -22,
+      "shift": -13
+    },
+    {
+      "group": "High School or Less",
+      "category": "Education",
+      "approve": 43,
+      "disapprove": 53,
+      "net": -10,
+      "net_jan_2025": 7,
+      "shift": -17
+    },
+    {
+      "group": "Some College",
+      "category": "Education",
+      "approve": 39,
+      "disapprove": 58,
+      "net": -19,
+      "net_jan_2025": 2,
+      "shift": -21
+    },
+    {
+      "group": "College Graduate / Postgrad",
+      "category": "Education",
+      "approve": 29,
+      "disapprove": 69,
+      "net": -40,
+      "net_jan_2025": -25,
+      "shift": -15
+    },
+    {
+      "group": "Urban",
+      "category": "Community",
+      "approve": 25,
+      "disapprove": 72,
+      "net": -47,
+      "net_jan_2025": -32,
+      "shift": -15
+    },
+    {
+      "group": "Suburban",
+      "category": "Community",
+      "approve": 36,
+      "disapprove": 62,
+      "net": -26,
+      "net_jan_2025": -8,
+      "shift": -18
+    },
+    {
+      "group": "Rural",
+      "category": "Community",
+      "approve": 51,
+      "disapprove": 46,
+      "net": 5,
+      "net_jan_2025": 28,
+      "shift": -23
+    },
+    {
+      "group": "Democrats",
+      "category": "Party ID",
+      "approve": 4,
+      "disapprove": 95,
+      "net": -91,
+      "net_jan_2025": -85,
+      "shift": -6
+    },
+    {
+      "group": "Independents",
+      "category": "Party ID",
+      "approve": 27,
+      "disapprove": 67,
+      "net": -40,
+      "net_jan_2025": -14,
+      "shift": -26
+    },
+    {
+      "group": "Republicans",
+      "category": "Party ID",
+      "approve": 84,
+      "disapprove": 14,
+      "net": 70,
+      "net_jan_2025": 82,
+      "shift": -12
+    }
+  ],
+  "issues": [
+    {
+      "issue": "Inflation & Cost of Living (92% gas, 90% food price hikes)",
+      "approve": 28,
+      "disapprove": 68,
+      "net": -40,
+      "importance_rank": 1
+    },
+    {
+      "issue": "Jobs & The Economy",
+      "approve": 36,
+      "disapprove": 59,
+      "net": -23,
+      "importance_rank": 2
+    },
+    {
+      "issue": "Foreign Policy & Global Conflicts",
+      "approve": 33,
+      "disapprove": 62,
+      "net": -29,
+      "importance_rank": 3
+    },
+    {
+      "issue": "Tariffs & Government Spending",
+      "approve": 32,
+      "disapprove": 63,
+      "net": -31,
+      "importance_rank": 4
+    },
+    {
+      "issue": "Healthcare Costs",
+      "approve": 31,
+      "disapprove": 64,
+      "net": -33,
+      "importance_rank": 5
+    },
+    {
+      "issue": "Immigration & Border Security",
+      "approve": 43,
+      "disapprove": 53,
+      "net": -10,
+      "importance_rank": 6
+    }
+  ],
+  "congressional_generic_ballot": {
+    "democrats": 47,
+    "republicans": 39,
+    "margin": "+8 D"
+  }
+}
