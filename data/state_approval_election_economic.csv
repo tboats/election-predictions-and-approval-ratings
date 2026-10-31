@@ -1,52 +1,52 @@
 state,code,fips,region,economic_segment,coalition_category,is_swing_state,civiqs_approve_2026,civiqs_disapprove_2026,civiqs_net_approval_2026,economist_net_approval_2026,primary_net_approval_2026,trump_votes_2024,trump_pct_2024,harris_votes_2024,harris_pct_2024,trump_win_margin_2024,margin_swing_2020_to_2024,total_votes_2024,approval_vs_win_margin_gap,gdp_growth_rate,unemployment_rate_2026,median_household_income,pct_bachelor_or_higher,pop_2026,pop_growth_rate
-Alabama,AL,1,South,Manufacturing & Industrial,Solid Trump (R+15+),False,50.0,43.0,7.0,1.8,7.0,1462616,64.57,772412,34.1,30.47,5.01,2265090,-23.47,1.3,3.4,28650,27.43,5223121,0.00578
-Alaska,AK,2,West,Energy & Resource Extraction,Lean/Likely Trump (R+0 to +15),False,42.0,52.0,-10.0,-9.8,-10.0,184458,54.54,140026,41.41,13.13,3.07,338177,-23.130000000000003,1.4,4.3,36978,32.79,738003,0.00099
-Arizona,AZ,4,West,Sunbelt & Consumer Growth,Key 2024 Battleground,True,42.0,53.0,-11.0,-14.9,-11.0,1770242,52.22,1582860,46.69,5.53,5.84,3390161,-16.53,4.9,4.9,32173,32.43,7691212,0.00884
-Arkansas,AR,5,South,Manufacturing & Industrial,Solid Trump (R+15+),False,53.0,41.0,12.0,0.6,12.0,759241,64.2,396905,33.56,30.64,3.02,1182676,-18.64,0.7,3.9,27274,25.27,3133502,0.00601
+Alabama,AL,1,South,Manufacturing & Industrial,Solid Trump (R+15+),False,50.0,44.0,6.0,1.8,6.0,1462616,64.57,772412,34.1,30.47,5.01,2265090,-24.47,1.3,3.4,28650,27.43,5223121,0.00578
+Alaska,AK,2,West,Energy & Resource Extraction,Lean/Likely Trump (R+0 to +15),False,41.0,53.0,-12.0,-9.8,-12.0,184458,54.54,140026,41.41,13.13,3.07,338177,-25.130000000000003,1.4,4.3,36978,32.79,738003,0.00099
+Arizona,AZ,4,West,Sunbelt & Consumer Growth,Key 2024 Battleground,True,41.0,54.0,-13.0,-14.9,-13.0,1770242,52.22,1582860,46.69,5.53,5.84,3390161,-18.53,4.9,4.9,32173,32.43,7691212,0.00884
+Arkansas,AR,5,South,Manufacturing & Industrial,Solid Trump (R+15+),False,52.0,42.0,10.0,0.6,10.0,759241,64.2,396905,33.56,30.64,3.02,1182676,-20.64,0.7,3.9,27274,25.27,3133502,0.00601
 California,CA,6,West,"Tech, Finance & Knowledge",Solid Harris (D+15+),False,27.0,69.0,-42.0,-26.9,-42.0,6081697,38.33,9276179,58.47,-20.14,9.02,15865475,-21.86,1.3,5.1,39393,36.19,39345844,-0.00024
 Colorado,CO,8,West,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,34.0,62.0,-28.0,-26.9,-28.0,1377441,43.14,1728159,54.13,-10.99,2.51,3192745,-17.009999999999998,0.7,4.0,41053,44.42,6036620,0.004
 Connecticut,CT,9,Northeast,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,30.0,65.0,-35.0,-34.4,-35.0,736918,41.89,992053,56.4,-14.51,5.56,1759010,-20.490000000000002,5.7,5.1,45359,42.13,3702543,0.00381
 Delaware,DE,10,South,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,32.0,64.0,-32.0,-25.7,-32.0,214351,41.79,289758,56.49,-14.7,4.27,512912,-17.3,2.7,4.7,36858,35.62,1069781,0.00927
 District of Columbia,DC,11,South,Public Sector & Diversified,Solid Harris (D+15+),False,,,,-79.5,-79.5,21076,6.47,294185,90.28,-83.81,2.94,325869,4.310000000000002,2.4,5.7,59808,63.05,695980,0.00337
-Florida,FL,12,South,Sunbelt & Consumer Growth,Lean/Likely Trump (R+0 to +15),False,38.0,54.0,-16.0,-7.0,-16.0,6110125,56.09,4683038,42.99,13.1,9.74,10893752,-29.1,1.0,4.5,32887,33.16,23659198,0.00838
-Georgia,GA,13,South,Sunbelt & Consumer Growth,Key 2024 Battleground,True,35.0,60.0,-25.0,-20.8,-25.0,2663117,50.72,2548017,48.53,2.19,2.42,5250905,-27.19,3.0,3.2,32657,,11401288,0.00872
+Florida,FL,12,South,Sunbelt & Consumer Growth,Lean/Likely Trump (R+0 to +15),False,37.0,55.0,-18.0,-7.0,-18.0,6110125,56.09,4683038,42.99,13.1,9.74,10893752,-31.1,1.0,4.5,32887,33.16,23659198,0.00838
+Georgia,GA,13,South,Sunbelt & Consumer Growth,Key 2024 Battleground,True,35.0,61.0,-26.0,-20.8,-26.0,2663117,50.72,2548017,48.53,2.2,2.43,5250905,-28.2,3.0,3.2,32657,,11401288,0.00872
 Hawaii,HI,15,West,Sunbelt & Consumer Growth,Solid Harris (D+15+),False,19.0,78.0,-59.0,-38.4,-59.0,193661,37.48,313044,60.59,-23.11,6.35,516701,-35.89,10.5,2.7,36989,35.3,1430688,-0.00149
-Idaho,ID,16,West,Agriculture & Farm Belt,Solid Trump (R+15+),False,53.0,41.0,12.0,25.6,12.0,605246,66.87,274972,30.38,36.49,5.72,905057,-24.490000000000002,7.0,3.6,29606,30.72,2058594,0.01422
+Idaho,ID,16,West,Agriculture & Farm Belt,Solid Trump (R+15+),False,52.0,42.0,10.0,25.6,10.0,605246,66.87,274972,30.38,36.49,5.72,905057,-26.490000000000002,7.0,3.6,29606,30.72,2058594,0.01422
 Illinois,IL,17,Midwest,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,33.0,63.0,-30.0,-36.3,-30.0,2449079,43.47,3062863,54.37,-10.9,6.09,5633310,-19.1,5.6,4.7,37728,37.14,12735249,0.00127
 Indiana,IN,18,Midwest,Manufacturing & Industrial,Solid Trump (R+15+),False,49.0,46.0,3.0,-13.2,3.0,1720347,58.58,1163603,39.62,18.96,2.89,2936677,-15.96,3.2,3.3,30988,28.88,7011912,0.00553
-Iowa,IA,19,Midwest,Agriculture & Farm Belt,Lean/Likely Trump (R+0 to +15),False,41.0,53.0,-12.0,-12.7,-12.0,927019,55.73,707278,42.52,13.21,5.01,1663506,-25.21,0.3,3.2,33107,30.54,3246320,0.00245
-Kansas,KS,20,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,48.0,46.0,2.0,-9.5,2.0,758802,57.16,544853,41.04,16.12,1.48,1327591,-14.120000000000001,1.1,3.8,32885,35.4,2989188,0.00402
-Kentucky,KY,21,South,Manufacturing & Industrial,Solid Trump (R+15+),False,47.0,49.0,-2.0,-3.1,-2.0,1337494,64.47,704043,33.94,30.53,4.59,2074530,-32.53,2.6,4.7,29029,26.98,4629682,0.00495
-Louisiana,LA,22,South,Energy & Resource Extraction,Solid Trump (R+15+),False,47.0,49.0,-2.0,-4.9,-2.0,1208505,60.22,766870,38.21,22.01,3.4,2006975,-24.01,1.2,4.2,28662,26.45,4621500,0.00072
-Maine,ME,23,Northeast,Public Sector & Diversified,Lean/Likely Harris (D+0 to +15),False,37.0,58.0,-21.0,-23.2,-21.0,377977,45.46,435652,52.4,-6.94,2.13,831375,-14.059999999999999,4.9,3.2,34078,35.99,1421310,0.00455
+Iowa,IA,19,Midwest,Agriculture & Farm Belt,Lean/Likely Trump (R+0 to +15),False,40.0,54.0,-14.0,-12.7,-14.0,927019,55.73,707278,42.52,13.21,5.01,1663506,-27.21,0.3,3.2,33107,30.54,3246320,0.00245
+Kansas,KS,20,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,47.0,48.0,-1.0,-9.5,-1.0,758802,57.16,544853,41.04,16.12,1.48,1327591,-17.12,1.1,3.8,32885,35.4,2989188,0.00402
+Kentucky,KY,21,South,Manufacturing & Industrial,Solid Trump (R+15+),False,46.0,50.0,-4.0,-3.1,-4.0,1337494,64.47,704043,33.94,30.53,4.59,2074530,-34.53,2.6,4.7,29029,26.98,4629682,0.00495
+Louisiana,LA,22,South,Energy & Resource Extraction,Solid Trump (R+15+),False,46.0,50.0,-4.0,-4.9,-4.0,1208505,60.22,766870,38.21,22.01,3.4,2006975,-26.01,1.2,4.2,28662,26.45,4621500,0.00072
+Maine,ME,23,Northeast,Public Sector & Diversified,Lean/Likely Harris (D+0 to +15),False,36.0,58.0,-22.0,-23.2,-22.0,377977,45.46,435652,52.4,-6.94,2.13,831375,-15.059999999999999,4.9,3.2,34078,35.99,1421310,0.00455
 Maryland,MD,24,South,"Tech, Finance & Knowledge",Solid Harris (D+15+),False,26.0,70.0,-44.0,-39.3,-44.0,1035550,34.08,1902577,62.62,-28.54,4.67,3038334,-15.46,3.4,4.1,43325,48.55,6285380,0.0032
 Massachusetts,MA,25,Northeast,"Tech, Finance & Knowledge",Solid Harris (D+15+),False,24.0,72.0,-48.0,-31.0,-48.0,1251303,36.02,2126518,61.22,-25.2,8.26,3473668,-22.8,1.9,4.3,46241,50.62,7169608,0.00217
-Michigan,MI,26,Midwest,Manufacturing & Industrial,Key 2024 Battleground,True,36.0,60.0,-24.0,-17.5,-24.0,2816636,49.73,2736533,48.31,1.42,4.2,5664186,-25.42,3.0,5.0,32892,31.67,10155806,0.00276
+Michigan,MI,26,Midwest,Manufacturing & Industrial,Key 2024 Battleground,True,35.0,61.0,-26.0,-17.5,-26.0,2816636,49.73,2736533,48.31,1.42,4.2,5664186,-27.42,3.0,5.0,32892,31.67,10155806,0.00276
 Minnesota,MN,27,Midwest,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,34.0,60.0,-26.0,-22.9,-26.0,1519032,46.68,1656979,50.92,-4.24,2.87,3253920,-21.759999999999998,2.9,4.4,39025,38.9,5863405,0.00566
-Mississippi,MS,28,South,Agriculture & Farm Belt,Solid Trump (R+15+),False,47.0,49.0,-2.0,-4.8,-2.0,747744,60.89,466668,38.0,22.89,6.34,1228008,-24.89,0.6,3.4,25301,24.78,2958148,0.00135
-Missouri,MO,29,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,46.0,49.0,-3.0,-6.8,-3.0,1751986,58.49,1200599,40.08,18.41,3.02,2995327,-21.41,1.7,3.5,31756,31.72,6297538,0.00431
-Montana,MT,30,West,Agriculture & Farm Belt,Solid Trump (R+15+),False,50.0,45.0,5.0,2.5,5.0,352079,58.39,231906,38.46,19.93,3.56,602990,-14.93,0.3,3.2,32625,34.8,1151831,0.00623
-Nebraska,NE,31,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,47.0,49.0,-2.0,-5.8,-2.0,564816,59.32,369995,38.86,20.46,1.4,952182,-22.46,0.5,2.9,33272,34.45,2030421,0.00615
-Nevada,NV,32,West,Sunbelt & Consumer Growth,Key 2024 Battleground,True,37.0,57.0,-20.0,-16.9,-20.0,751205,50.59,705197,47.49,3.1,5.49,1484840,-23.1,5.7,4.8,33575,27.57,3310833,0.00873
-New Hampshire,NH,33,Northeast,Public Sector & Diversified,Lean/Likely Harris (D+0 to +15),False,32.0,62.0,-30.0,-18.8,-30.0,395523,47.87,418488,50.65,-2.78,4.57,826189,-27.22,1.0,2.8,41241,40.98,1422166,0.00482
+Mississippi,MS,28,South,Agriculture & Farm Belt,Solid Trump (R+15+),False,46.0,50.0,-4.0,-4.8,-4.0,747744,60.89,466668,38.0,22.89,6.34,1228008,-26.89,0.6,3.4,25301,24.78,2958148,0.00135
+Missouri,MO,29,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,45.0,50.0,-5.0,-6.8,-5.0,1751986,58.49,1200599,40.08,18.41,3.02,2995327,-23.41,1.7,3.5,31756,31.72,6297538,0.00431
+Montana,MT,30,West,Agriculture & Farm Belt,Solid Trump (R+15+),False,49.0,47.0,2.0,2.5,2.0,352079,58.39,231906,38.46,19.93,3.56,602990,-17.93,0.3,3.2,32625,34.8,1151831,0.00623
+Nebraska,NE,31,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,46.0,50.0,-4.0,-5.8,-4.0,564816,59.32,369995,38.86,20.46,1.4,952182,-24.46,0.5,2.9,33272,34.45,2030421,0.00615
+Nevada,NV,32,West,Sunbelt & Consumer Growth,Key 2024 Battleground,True,36.0,58.0,-22.0,-16.9,-22.0,751205,50.59,705197,47.49,3.1,5.49,1484840,-25.1,5.7,4.8,33575,27.57,3310833,0.00873
+New Hampshire,NH,33,Northeast,Public Sector & Diversified,Lean/Likely Harris (D+0 to +15),False,38.0,57.0,-19.0,-18.8,-19.0,395523,47.87,418488,50.65,-2.78,4.57,826189,-16.22,1.0,2.8,41241,40.98,1422166,0.00482
 New Jersey,NJ,34,Northeast,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,33.0,64.0,-31.0,-22.1,-31.0,1968215,46.06,2220713,51.97,-5.91,10.03,4272725,-25.09,3.4,4.3,44888,43.1,9590076,0.00438
 New Mexico,NM,35,West,Energy & Resource Extraction,Lean/Likely Harris (D+0 to +15),False,34.0,62.0,-28.0,-30.1,-28.0,423391,45.85,478802,51.85,-6.0,4.79,923403,-22.0,2.9,4.7,28423,30.05,2124222,-0.0006
 New York,NY,36,Northeast,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,30.0,66.0,-36.0,-25.3,-36.0,3578899,43.31,4619195,55.91,-12.6,10.53,8262495,-23.4,3.5,4.3,41857,40.9,20003435,5e-05
-North Carolina,NC,37,South,Manufacturing & Industrial,Key 2024 Battleground,True,40.0,55.0,-15.0,-12.6,-15.0,2898423,50.86,2715375,47.65,3.21,1.86,5699141,-18.21,0.6,3.5,32021,34.91,11343875,0.01303
-North Dakota,ND,38,Midwest,Energy & Resource Extraction,Solid Trump (R+15+),False,56.0,40.0,16.0,7.7,16.0,246505,66.96,112327,30.51,36.45,3.11,368155,-20.450000000000003,1.1,2.2,36611,31.74,805329,0.00747
-Ohio,OH,39,Midwest,Manufacturing & Industrial,Lean/Likely Trump (R+0 to +15),False,43.0,51.0,-8.0,-15.2,-8.0,3180116,55.14,2533699,43.93,11.21,3.18,5767788,-19.21,2.9,3.3,32780,30.72,11940399,0.00335
-Oklahoma,OK,40,South,Energy & Resource Extraction,Solid Trump (R+15+),False,56.0,40.0,16.0,3.1,16.0,1036213,66.16,499599,31.9,34.26,1.17,1566173,-18.259999999999998,1.0,4.3,29666,27.92,4148818,0.00619
+North Carolina,NC,37,South,Manufacturing & Industrial,Key 2024 Battleground,True,39.0,56.0,-17.0,-12.6,-17.0,2898423,50.86,2715375,47.65,3.21,1.86,5699141,-20.21,0.6,3.5,32021,34.91,11343875,0.01303
+North Dakota,ND,38,Midwest,Energy & Resource Extraction,Solid Trump (R+15+),False,55.0,41.0,14.0,7.7,14.0,246505,66.96,112327,30.51,36.45,3.11,368155,-22.450000000000003,1.1,2.2,36611,31.74,805329,0.00747
+Ohio,OH,39,Midwest,Manufacturing & Industrial,Lean/Likely Trump (R+0 to +15),False,42.0,52.0,-10.0,-15.2,-10.0,3180116,55.14,2533699,43.93,11.21,3.18,5767788,-21.21,2.9,3.3,32780,30.72,11940399,0.00335
+Oklahoma,OK,40,South,Energy & Resource Extraction,Solid Trump (R+15+),False,55.0,41.0,14.0,3.1,14.0,1036213,66.16,499599,31.9,34.26,1.17,1566173,-20.259999999999998,1.0,4.3,29666,27.92,4148818,0.00619
 Oregon,OR,41,West,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,30.0,67.0,-37.0,-30.9,-37.0,919480,40.97,1240600,55.27,-14.3,1.79,2244493,-22.7,0.9,5.1,35531,36.33,4281848,0.00193
-Pennsylvania,PA,42,Northeast,Manufacturing & Industrial,Key 2024 Battleground,True,37.0,59.0,-22.0,-20.1,-22.0,3543308,50.37,3423042,48.66,1.71,2.87,7058732,-23.71,4.7,3.7,35804,34.54,13073016,0.00104
+Pennsylvania,PA,42,Northeast,Manufacturing & Industrial,Key 2024 Battleground,True,36.0,60.0,-24.0,-20.1,-24.0,3543308,50.37,3423042,48.66,1.71,2.87,7058732,-25.71,4.7,3.7,35804,34.54,13073016,0.00104
 Rhode Island,RI,44,Northeast,Public Sector & Diversified,Lean/Likely Harris (D+0 to +15),False,30.0,64.0,-34.0,-34.8,-34.0,214406,41.76,285156,55.54,-13.78,7.0,513386,-20.22,2.9,3.7,37525,36.5,1118627,0.00368
 South Carolina,SC,45,South,Manufacturing & Industrial,Solid Trump (R+15+),False,46.0,49.0,-3.0,-11.4,-3.0,1483747,58.23,1028452,40.36,17.87,6.19,2548140,-20.87,1.6,4.1,31295,31.53,5650232,0.01435
-South Dakota,SD,46,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,51.0,42.0,9.0,-2.9,9.0,272081,63.43,146859,34.24,29.19,3.03,428922,-20.19,0.3,2.0,31550,31.67,943078,0.00854
+South Dakota,SD,46,Midwest,Agriculture & Farm Belt,Solid Trump (R+15+),False,50.0,43.0,7.0,-2.9,7.0,272081,63.43,146859,34.24,29.19,3.03,428922,-22.19,0.3,2.0,31550,31.67,943078,0.00854
 Tennessee,TN,47,South,Manufacturing & Industrial,Solid Trump (R+15+),False,53.0,41.0,12.0,3.4,12.0,1966865,64.19,1056265,34.47,29.72,6.51,3063942,-17.72,1.0,3.4,31224,30.48,7378861,0.00872
-Texas,TX,48,South,Energy & Resource Extraction,Lean/Likely Trump (R+0 to +15),False,37.0,57.0,-20.0,-16.5,-20.0,6393597,56.14,4835250,42.46,13.68,8.1,11388674,-33.68,1.7,4.4,32267,33.12,32101064,0.01234
-Utah,UT,49,West,Sunbelt & Consumer Growth,Solid Trump (R+15+),False,48.0,45.0,3.0,2.1,3.0,883818,59.38,562566,37.79,21.59,1.11,1488494,-18.59,6.1,3.5,31771,36.81,3574825,0.01015
+Texas,TX,48,South,Energy & Resource Extraction,Lean/Likely Trump (R+0 to +15),False,36.0,58.0,-22.0,-16.5,-22.0,6393597,56.14,4835250,42.46,13.68,8.1,11388674,-35.68,1.7,4.4,32267,33.12,32101064,0.01234
+Utah,UT,49,West,Sunbelt & Consumer Growth,Solid Trump (R+15+),False,47.0,48.0,-1.0,2.1,-1.0,883818,59.38,562566,37.79,21.59,1.11,1488494,-22.59,6.1,3.5,31771,36.81,3574825,0.01015
 Vermont,VT,50,Northeast,Public Sector & Diversified,Solid Harris (D+15+),False,21.0,76.0,-55.0,-42.8,-55.0,119395,32.32,235791,63.83,-31.51,3.9,369422,-23.49,2.7,2.6,35702,44.44,642805,-0.00288
 Virginia,VA,51,South,"Tech, Finance & Knowledge",Lean/Likely Harris (D+0 to +15),False,35.0,60.0,-25.0,-17.0,-25.0,2075085,46.05,2335395,51.83,-5.78,4.35,4505941,-19.22,1.3,3.6,40635,41.81,8940572,0.00681
 Washington,WA,53,West,"Tech, Finance & Knowledge",Solid Harris (D+15+),False,28.0,67.0,-39.0,54.0,-39.0,1530923,39.01,2245849,57.23,-18.22,0.98,3924243,-20.78,5.1,4.9,41521,40.97,8074082,0.00913
-West Virginia,WV,54,South,Energy & Resource Extraction,Solid Trump (R+15+),False,56.0,37.0,19.0,-35.4,19.0,533556,69.97,214309,28.1,41.87,2.94,762582,-22.869999999999997,3.7,4.0,27446,24.12,1764892,-0.00071
-Wisconsin,WI,55,Midwest,Manufacturing & Industrial,Key 2024 Battleground,True,40.0,56.0,-16.0,-21.1,-16.0,1697626,49.6,1668229,48.74,0.86,1.49,3422918,-16.86,3.2,3.2,34568,32.54,5988406,0.00262
-Wyoming,WY,56,West,Energy & Resource Extraction,Solid Trump (R+15+),False,59.0,34.0,25.0,22.3,25.0,192633,71.6,69527,25.84,45.76,2.38,269048,-20.759999999999998,6.2,3.0,34104,29.24,590784,0.00345
+West Virginia,WV,54,South,Energy & Resource Extraction,Solid Trump (R+15+),False,55.0,38.0,17.0,-35.4,17.0,533556,69.97,214309,28.1,41.87,2.94,762582,-24.869999999999997,3.7,4.0,27446,24.12,1764892,-0.00071
+Wisconsin,WI,55,Midwest,Manufacturing & Industrial,Key 2024 Battleground,True,39.0,57.0,-18.0,-21.1,-18.0,1697626,49.6,1668229,48.74,0.86,1.49,3422918,-18.86,3.2,3.2,34568,32.54,5988406,0.00262
+Wyoming,WY,56,West,Energy & Resource Extraction,Solid Trump (R+15+),False,58.0,35.0,23.0,22.3,23.0,192633,71.6,69527,25.84,45.76,2.38,269048,-22.759999999999998,6.2,3.0,34104,29.24,590784,0.00345

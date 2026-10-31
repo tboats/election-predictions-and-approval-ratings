@@ -60,43 +60,43 @@ df_hist = pd.DataFrame(historical_midterms)
 # -----------------------------------------------------------------------------
 races_data = [
     # Democratic Defending Seats (13 seats)
-    {'state': 'Colorado', 'code': 'CO', 'seat_type': 'Class 2', 'incumbent': 'John Hickenlooper', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 12.0},
-    {'state': 'Delaware', 'code': 'DE', 'seat_type': 'Class 2', 'incumbent': 'Chris Coons', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 16.0},
-    {'state': 'Georgia', 'code': 'GA', 'seat_type': 'Class 2', 'incumbent': 'Jon Ossoff', 'party': 'D', 'region': 'South', 'raw_poll_dem_margin': 2.5},
-    {'state': 'Illinois', 'code': 'IL', 'seat_type': 'Class 2', 'incumbent': 'Dick Durbin', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 15.0},
-    {'state': 'Massachusetts', 'code': 'MA', 'seat_type': 'Class 2', 'incumbent': 'Ed Markey', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 25.0},
-    {'state': 'Michigan', 'code': 'MI', 'seat_type': 'Class 2', 'incumbent': 'Gary Peters', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 3.5},
-    {'state': 'Minnesota', 'code': 'MN', 'seat_type': 'Class 2', 'incumbent': 'Tina Smith', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 6.5},
-    {'state': 'New Hampshire', 'code': 'NH', 'seat_type': 'Class 2', 'incumbent': 'Jeanne Shaheen', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 7.0},
-    {'state': 'New Jersey', 'code': 'NJ', 'seat_type': 'Class 2', 'incumbent': 'Cory Booker', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 11.5},
-    {'state': 'New Mexico', 'code': 'NM', 'seat_type': 'Class 2', 'incumbent': 'Ben Ray Luján', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 8.5},
-    {'state': 'Oregon', 'code': 'OR', 'seat_type': 'Class 2', 'incumbent': 'Jeff Merkley', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 15.5},
-    {'state': 'Rhode Island', 'code': 'RI', 'seat_type': 'Class 2', 'incumbent': 'Jack Reed', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 19.5},
-    {'state': 'Virginia', 'code': 'VA', 'seat_type': 'Class 2', 'incumbent': 'Mark Warner', 'party': 'D', 'region': 'South', 'raw_poll_dem_margin': 8.5},
+    {'state': 'Colorado', 'code': 'CO', 'seat_type': 'Class 2', 'incumbent': 'John Hickenlooper', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 13.0},
+    {'state': 'Delaware', 'code': 'DE', 'seat_type': 'Class 2', 'incumbent': 'Chris Coons', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 17.0},
+    {'state': 'Georgia', 'code': 'GA', 'seat_type': 'Class 2', 'incumbent': 'Jon Ossoff', 'party': 'D', 'region': 'South', 'raw_poll_dem_margin': 3.8},
+    {'state': 'Illinois', 'code': 'IL', 'seat_type': 'Class 2', 'incumbent': 'Dick Durbin', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 16.0},
+    {'state': 'Massachusetts', 'code': 'MA', 'seat_type': 'Class 2', 'incumbent': 'Ed Markey', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 26.0},
+    {'state': 'Michigan', 'code': 'MI', 'seat_type': 'Class 2', 'incumbent': 'Gary Peters', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 4.5},
+    {'state': 'Minnesota', 'code': 'MN', 'seat_type': 'Class 2', 'incumbent': 'Tina Smith', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 7.5},
+    {'state': 'New Hampshire', 'code': 'NH', 'seat_type': 'Class 2', 'incumbent': 'Jeanne Shaheen', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 8.0},
+    {'state': 'New Jersey', 'code': 'NJ', 'seat_type': 'Class 2', 'incumbent': 'Cory Booker', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 12.5},
+    {'state': 'New Mexico', 'code': 'NM', 'seat_type': 'Class 2', 'incumbent': 'Ben Ray Luján', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 9.5},
+    {'state': 'Oregon', 'code': 'OR', 'seat_type': 'Class 2', 'incumbent': 'Jeff Merkley', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 16.0},
+    {'state': 'Rhode Island', 'code': 'RI', 'seat_type': 'Class 2', 'incumbent': 'Jack Reed', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 20.5},
+    {'state': 'Virginia', 'code': 'VA', 'seat_type': 'Class 2', 'incumbent': 'Mark Warner', 'party': 'D', 'region': 'South', 'raw_poll_dem_margin': 9.5},
 
     # Republican Defending Seats (22 seats: 20 regular Class 2 + 2 specials)
-    {'state': 'Alabama', 'code': 'AL', 'seat_type': 'Class 2', 'incumbent': 'Tommy Tuberville', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -27.0},
-    {'state': 'Alaska', 'code': 'AK', 'seat_type': 'Class 2', 'incumbent': 'Dan Sullivan', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -7.0},
-    {'state': 'Arkansas', 'code': 'AR', 'seat_type': 'Class 2', 'incumbent': 'Tom Cotton', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -28.0},
+    {'state': 'Alabama', 'code': 'AL', 'seat_type': 'Class 2', 'incumbent': 'Tommy Tuberville', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -26.5},
+    {'state': 'Alaska', 'code': 'AK', 'seat_type': 'Class 2', 'incumbent': 'Dan Sullivan', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -6.0},
+    {'state': 'Arkansas', 'code': 'AR', 'seat_type': 'Class 2', 'incumbent': 'Tom Cotton', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -27.5},
     {'state': 'Idaho', 'code': 'ID', 'seat_type': 'Class 2', 'incumbent': 'Jim Risch', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -31.0},
-    {'state': 'Iowa', 'code': 'IA', 'seat_type': 'Class 2', 'incumbent': 'Joni Ernst', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -4.0},
-    {'state': 'Kansas', 'code': 'KS', 'seat_type': 'Class 2', 'incumbent': 'Roger Marshall', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -12.0},
-    {'state': 'Kentucky', 'code': 'KY', 'seat_type': 'Class 2', 'incumbent': 'Mitch McConnell (or Open)', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -17.0},
-    {'state': 'Louisiana', 'code': 'LA', 'seat_type': 'Class 2', 'incumbent': 'Bill Cassidy', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -19.0},
-    {'state': 'Maine', 'code': 'ME', 'seat_type': 'Class 2', 'incumbent': 'Susan Collins', 'party': 'R', 'region': 'Northeast', 'raw_poll_dem_margin': -0.5},
-    {'state': 'Mississippi', 'code': 'MS', 'seat_type': 'Class 2', 'incumbent': 'Cindy Hyde-Smith', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -18.0},
-    {'state': 'Montana', 'code': 'MT', 'seat_type': 'Class 2', 'incumbent': 'Steve Daines', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -13.0},
-    {'state': 'Nebraska', 'code': 'NE', 'seat_type': 'Class 2', 'incumbent': 'Pete Ricketts', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -16.0},
-    {'state': 'North Carolina', 'code': 'NC', 'seat_type': 'Class 2', 'incumbent': 'Thom Tillis', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -0.8},
-    {'state': 'Oklahoma', 'code': 'OK', 'seat_type': 'Class 2', 'incumbent': 'Markwayne Mullin', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -29.0},
-    {'state': 'South Carolina', 'code': 'SC', 'seat_type': 'Class 2', 'incumbent': 'Lindsey Graham', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -11.5},
-    {'state': 'South Dakota', 'code': 'SD', 'seat_type': 'Class 2', 'incumbent': 'Mike Rounds', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -26.0},
-    {'state': 'Tennessee', 'code': 'TN', 'seat_type': 'Class 2', 'incumbent': 'Bill Hagerty', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -24.5},
-    {'state': 'Texas', 'code': 'TX', 'seat_type': 'Class 2', 'incumbent': 'John Cornyn', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -3.5},
-    {'state': 'West Virginia', 'code': 'WV', 'seat_type': 'Class 2', 'incumbent': 'Shelley Moore Capito', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -33.0},
-    {'state': 'Wyoming', 'code': 'WY', 'seat_type': 'Class 2', 'incumbent': 'Cynthia Lummis', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -40.0},
-    {'state': 'Ohio (Special)', 'code': 'OH', 'seat_type': 'Special', 'incumbent': 'Appointed (Vance Seat)', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -4.5},
-    {'state': 'Florida (Special)', 'code': 'FL', 'seat_type': 'Special', 'incumbent': 'Appointed (Rubio Seat)', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -5.5},
+    {'state': 'Iowa', 'code': 'IA', 'seat_type': 'Class 2', 'incumbent': 'Joni Ernst', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -3.2},
+    {'state': 'Kansas', 'code': 'KS', 'seat_type': 'Class 2', 'incumbent': 'Roger Marshall', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -11.5},
+    {'state': 'Kentucky', 'code': 'KY', 'seat_type': 'Class 2', 'incumbent': 'Mitch McConnell (or Open)', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -16.5},
+    {'state': 'Louisiana', 'code': 'LA', 'seat_type': 'Class 2', 'incumbent': 'Bill Cassidy', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -18.5},
+    {'state': 'Maine', 'code': 'ME', 'seat_type': 'Class 2', 'incumbent': 'Susan Collins', 'party': 'R', 'region': 'Northeast', 'raw_poll_dem_margin': 1.2},
+    {'state': 'Mississippi', 'code': 'MS', 'seat_type': 'Class 2', 'incumbent': 'Cindy Hyde-Smith', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -17.5},
+    {'state': 'Montana', 'code': 'MT', 'seat_type': 'Class 2', 'incumbent': 'Steve Daines', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -12.5},
+    {'state': 'Nebraska', 'code': 'NE', 'seat_type': 'Class 2', 'incumbent': 'Pete Ricketts', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -15.5},
+    {'state': 'North Carolina', 'code': 'NC', 'seat_type': 'Class 2', 'incumbent': 'Thom Tillis', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': 0.6},
+    {'state': 'Oklahoma', 'code': 'OK', 'seat_type': 'Class 2', 'incumbent': 'Markwayne Mullin', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -28.5},
+    {'state': 'South Carolina', 'code': 'SC', 'seat_type': 'Class 2', 'incumbent': 'Lindsey Graham', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -11.0},
+    {'state': 'South Dakota', 'code': 'SD', 'seat_type': 'Class 2', 'incumbent': 'Mike Rounds', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -25.5},
+    {'state': 'Tennessee', 'code': 'TN', 'seat_type': 'Class 2', 'incumbent': 'Bill Hagerty', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -24.0},
+    {'state': 'Texas', 'code': 'TX', 'seat_type': 'Class 2', 'incumbent': 'John Cornyn', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -2.2},
+    {'state': 'West Virginia', 'code': 'WV', 'seat_type': 'Class 2', 'incumbent': 'Shelley Moore Capito', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -32.5},
+    {'state': 'Wyoming', 'code': 'WY', 'seat_type': 'Class 2', 'incumbent': 'Cynthia Lummis', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -39.5},
+    {'state': 'Ohio (Special)', 'code': 'OH', 'seat_type': 'Special', 'incumbent': 'Appointed (Vance Seat)', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -3.8},
+    {'state': 'Florida (Special)', 'code': 'FL', 'seat_type': 'Special', 'incumbent': 'Appointed (Rubio Seat)', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -4.5},
 ]
 
 # Merge with state approval metrics and calculate Approval Tilt
@@ -252,7 +252,7 @@ for bar in bars1:
     if h > 2.5:
         ax1.text(bar.get_x() + bar.get_width()/2, h + 0.4, f"{h:.1f}%", ha='center', va='bottom', fontsize=9, fontweight='bold')
 
-ax1.set_title("Projected Democratic Senate Seats (Full Tilted Model)\nMean: 48.6 Seats | Median: 48 Seats", fontsize=13, fontweight='bold', pad=12)
+ax1.set_title(f"Projected Democratic Senate Seats (Full Tilted Model)\nMean: {stats_tilted['mean_dem_seats']} Seats | Median: {stats_tilted['median_dem_seats']} Seats", fontsize=13, fontweight='bold', pad=12)
 ax1.set_xlabel("Total Democratic Seats (out of 100)", fontsize=11, fontweight='bold')
 ax1.set_ylabel("Probability (%) across 50,000 Simulations", fontsize=11, fontweight='bold')
 ax1.set_xlim(42.5, 56.5)
@@ -261,9 +261,9 @@ ax1.legend(loc='upper right', frameon=True, fontsize=9)
 
 # Right: Control Breakdown Doughnut / Bar
 categories = [
-    f"Republican Majority\n(51+ Seats)\n{stats_tilted['prob_rep_majority_51plus']}%\n[80% CI: 49–53]",
+    f"Republican Majority\n(51+ Seats)\n{stats_tilted['prob_rep_majority_51plus']}%\n[80% CI: {stats_tilted['ci_80_rep'][0]}–{stats_tilted['ci_80_rep'][1]}]",
     f"50-50 Split\n(GOP Control via VP)\n{stats_tilted['prob_tie_50_50']}%",
-    f"Democratic Majority\n(51+ Seats)\n{stats_tilted['prob_dem_majority_51plus']}%\n[80% CI: 47–51]"
+    f"Democratic Majority\n(51+ Seats)\n{stats_tilted['prob_dem_majority_51plus']}%\n[80% CI: {stats_tilted['ci_80_dem'][0]}–{stats_tilted['ci_80_dem'][1]}]"
 ]
 pcts = [stats_tilted['prob_rep_majority_51plus'], stats_tilted['prob_tie_50_50'], stats_tilted['prob_dem_majority_51plus']]
 colors_ctrl = ['#dc2626', '#f59e0b', '#2563eb']
@@ -279,7 +279,7 @@ for at in autotexts:
     at.set_color('white')
     at.set_fontweight('bold')
 
-ax2.set_title("Overall Probability of Senate Control (2026 Midterms)\nTotal GOP Control: 85.5% | Dem Majority: 14.5%", fontsize=13, fontweight='bold', pad=12)
+ax2.set_title(f"Overall Probability of Senate Control (2026 Midterms)\nTotal GOP Control: {stats_tilted['prob_rep_control_50plus']}% | Dem Majority: {stats_tilted['prob_dem_majority_51plus']}%", fontsize=13, fontweight='bold', pad=12)
 
 plt.tight_layout()
 plt.savefig('figures/fig7_senate_seat_distribution.png')
@@ -385,7 +385,7 @@ fig_plotly_dist.add_vline(x=49.5, line_width=2, line_dash='dot', line_color='#d9
                           annotation_text='<b>50-50 Split (GOP Control via VP Vance)</b>', annotation_position='top left')
 
 fig_plotly_dist.update_layout(
-    title='<b>2026 Senate Midterm Projection: Distribution of Democratic Seats (50,000 Simulations)</b><br><sup>Mean: 48.6 Dem / 51.4 GOP | 80% CI: [47, 51] Dem | 95% CI: [46, 52] Dem | GOP Control: 85.5%</sup>',
+    title=f"<b>2026 Senate Midterm Projection: Distribution of Democratic Seats (50,000 Simulations)</b><br><sup>Mean: {stats_tilted['mean_dem_seats']} Dem / {stats_tilted['mean_rep_seats']} GOP | 80% CI: {stats_tilted['ci_80_dem']} Dem | 95% CI: {stats_tilted['ci_95_dem']} Dem | GOP Control: {stats_tilted['prob_rep_control_50plus']}%</sup>",
     xaxis=dict(title='Total Democratic Seats (out of 100)', tickmode='linear', tick0=42, dtick=1, range=[42.5, 56.5]),
     yaxis=dict(title='Probability (%) across Simulations'),
     template='plotly_white',

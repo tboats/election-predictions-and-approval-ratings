@@ -23,7 +23,8 @@ anchors = {
         (1.00, 39.5, 57.5), # Jan 2026 / 1 Year
         (1.25, 38.5, 59.0), # Spring 2026
         (1.50, 37.5, 60.5), # Mid 2026
-        (1.72, 36.5, 61.5), # Oct 2026 (Current Stage)
+        (1.72, 36.5, 61.5), # Early Oct 2026
+        (1.78, 36.0, 62.0), # Late Oct 2026 (Final Pre-Election Stage)
     ],
     'Donald Trump (Term 1)': [
         (0.00, 45.0, 45.0), # Jan 2017
@@ -163,8 +164,8 @@ anchors = {
 }
 
 # Generate dense time series points
-# For 4 years: 0.0 to 4.0 in steps of 0.05 years (~18 days, 81 points)
-time_grid_full = np.round(np.arange(0.0, 4.01, 0.05), 3)
+# For 4 years: 0.0 to 4.0 in steps of 0.05 years (~18 days, 81 points), plus current stage 1.78
+time_grid_full = np.sort(np.unique(np.append(np.round(np.arange(0.0, 4.01, 0.05), 3), [1.78])))
 
 rows = []
 for pres, pts in anchors.items():
@@ -201,9 +202,9 @@ df_ts = pd.DataFrame(rows)
 df_ts.to_csv('data/presidential_approval_historical_timeseries.csv', index=False)
 print(f"Generated {len(df_ts)} time series rows across {len(anchors)} presidents.")
 
-# Generate summary table at Current Stage (x = 1.72 years / Month 20.7 / Day 628)
-current_stage_x = 1.70 # Nearest in grid
+# Generate summary table at Current Stage (x = 1.78 years / Month 21.4 / Day 650 / Late Oct 2026)
+current_stage_x = 1.78
 df_stage = df_ts[df_ts['years_into_presidency'] == current_stage_x].copy()
 df_stage = df_stage.sort_values(by='net_approval', ascending=False)
-print("\n--- STANDINGS AT CURRENT STAGE (YEAR 1.70 / MONTH 20.4) ---")
+print("\n--- STANDINGS AT CURRENT STAGE (YEAR 1.78 / MONTH 21.4) ---")
 print(df_stage[['president', 'approval', 'disapproval', 'net_approval']].to_string(index=False))

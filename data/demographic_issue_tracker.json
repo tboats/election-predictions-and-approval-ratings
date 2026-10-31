@@ -1,15 +1,15 @@
 {
   "survey": "Economist / YouGov Presidential Job Approval Tracker & Issue Sentiment",
-  "timeframe": "Latest Wave: October 2\u20135, 2026 (Comparison with Inauguration Jan 2025)",
+  "timeframe": "Latest Pre-Election Wave: October 24–28, 2026 (Comparison with Inauguration Jan 2025)",
   "demographics": [
     {
       "group": "All US Adults",
       "category": "National",
-      "approve": 37,
-      "disapprove": 61,
-      "net": -24,
+      "approve": 36,
+      "disapprove": 62,
+      "net": -26,
       "net_jan_2025": -10,
-      "shift": -14
+      "shift": -16
     },
     {
       "group": "18\u201329 Years Old",

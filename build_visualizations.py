@@ -237,7 +237,7 @@ pres_styles = {
     'Richard Nixon (Term 1)': {'color': '#64748b', 'lw': 1.6, 'ls': ':', 'zorder': 2}
 }
 
-current_x = 1.72 # October 2026 / Year 1.72
+current_x = 1.78 # Late October 2026 / Year 1.78 (Final Pre-Election Stage)
 
 for pres, st in pres_styles.items():
     sub = df_ts[df_ts['president'] == pres]
@@ -247,7 +247,7 @@ for pres, st in pres_styles.items():
              color=st['color'], linewidth=st['lw'], linestyle=st['ls'], zorder=st['zorder'])
 
 # Reference lines on ax1 (Approval)
-ax1.axvline(current_x, color='#b91c1c', linestyle='--', linewidth=1.8, alpha=0.85, label='Current Stage (Year 1.72 / Oct 2026)')
+ax1.axvline(current_x, color='#b91c1c', linestyle='--', linewidth=1.8, alpha=0.85, label='Current Stage (Year 1.78 / Late Oct 2026)')
 ax1.axhline(50, color='#718096', linestyle=':', linewidth=1.2, label='50% Approval Threshold')
 ax1.set_title("Presidential Job Approval Trajectory (Years 0–4)", fontsize=13, fontweight='bold', pad=12)
 ax1.set_xlabel("Years into Presidency (0–4 Years)", fontsize=11, fontweight='bold')
@@ -261,7 +261,7 @@ t2_sub = df_ts[(df_ts['president'] == 'Donald Trump (Term 2)') & (df_ts['years_i
 if not t2_sub.empty:
     last_pt = t2_sub.iloc[-1]
     ax1.scatter([last_pt['years_into_presidency']], [last_pt['approval']], color='#dc2626', s=90, edgecolors='black', zorder=15)
-    ax1.annotate(f"Trump T2: {last_pt['approval']:.1f}%\n(Historic Low at Yr 1.72)",
+    ax1.annotate(f"Trump T2: {last_pt['approval']:.1f}%\n(Historic Low at Yr 1.78)",
                  xy=(last_pt['years_into_presidency'], last_pt['approval']),
                  xytext=(last_pt['years_into_presidency'] + 0.15, last_pt['approval'] - 6),
                  arrowprops=dict(arrowstyle='->', color='#dc2626', lw=1.5),
@@ -269,7 +269,7 @@ if not t2_sub.empty:
                  bbox=dict(boxstyle='round,pad=0.3', facecolor='#fee2e2', edgecolor='#dc2626', alpha=0.9))
 
 # Reference lines on ax2 (Net Approval)
-ax2.axvline(current_x, color='#b91c1c', linestyle='--', linewidth=1.8, alpha=0.85, label='Current Stage (Year 1.72)')
+ax2.axvline(current_x, color='#b91c1c', linestyle='--', linewidth=1.8, alpha=0.85, label='Current Stage (Year 1.78)')
 ax2.axhline(0, color='#4a5568', linestyle='-', linewidth=1.2, label='Net Neutral (0% Net)')
 ax2.set_title("Presidential Net Job Approval Trajectory (Years 0–4)", fontsize=13, fontweight='bold', pad=12)
 ax2.set_xlabel("Years into Presidency (0–4 Years)", fontsize=11, fontweight='bold')
@@ -281,7 +281,7 @@ ax2.legend(loc='upper right', frameon=True, fontsize=8.5, ncol=2)
 # Point callout for Trump Term 2 on ax2
 if not t2_sub.empty:
     ax2.scatter([last_pt['years_into_presidency']], [last_pt['net_approval']], color='#dc2626', s=90, edgecolors='black', zorder=15)
-    ax2.annotate(f"Trump T2: {last_pt['net_approval']:+.1f}% Net\n(-13 pts below T1 & Biden)",
+    ax2.annotate(f"Trump T2: {last_pt['net_approval']:+.1f}% Net\n(-13.5 pts below T1 & Biden)",
                  xy=(last_pt['years_into_presidency'], last_pt['net_approval']),
                  xytext=(last_pt['years_into_presidency'] + 0.15, last_pt['net_approval'] - 7),
                  arrowprops=dict(arrowstyle='->', color='#dc2626', lw=1.5),
@@ -503,13 +503,13 @@ for pres, st in pres_styles.items():
         visible=False
     ))
 
-# Add vertical marker at Year 1.72
+# Add vertical marker at Year 1.78
 fig_historical.add_vline(
-    x=1.72,
+    x=1.78,
     line_width=2,
     line_dash='dash',
     line_color='#b91c1c',
-    annotation_text='<b>Current Stage (Year 1.72 / Oct 2026)</b>',
+    annotation_text='<b>Current Stage (Year 1.78 / Late Oct 2026)</b>',
     annotation_position='top right',
     annotation_font=dict(size=11, color='#b91c1c')
 )

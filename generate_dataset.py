@@ -21,36 +21,38 @@ start = text.rfind('[', 0, pos)
 end = text.find(']', pos)
 raw_approval = json.loads(text[start:end+1])
 
-# Latest October 2026 polling updates (Civiqs rolling tracking & Economist/YouGov Oct 2-5, 2026 wave)
+# Latest October 2026 pre-election polling updates (Civiqs rolling tracking & Economist/YouGov Oct 24-28, 2026 wave)
 OCTOBER_2026_UPDATES = {
-    'Texas': {'approve': 37, 'disapprove': 57},        # Net -20
-    'Florida': {'approve': 38, 'disapprove': 54},      # Net -16
-    'Georgia': {'approve': 35, 'disapprove': 60},      # Net -25
-    'Michigan': {'approve': 36, 'disapprove': 60},     # Net -24
-    'Pennsylvania': {'approve': 37, 'disapprove': 59}, # Net -22
-    'Nevada': {'approve': 37, 'disapprove': 57},       # Net -20
-    'Wisconsin': {'approve': 40, 'disapprove': 56},    # Net -16
-    'North Carolina': {'approve': 40, 'disapprove': 55},# Net -15
-    'Arizona': {'approve': 42, 'disapprove': 53},      # Net -11
-    'Ohio': {'approve': 43, 'disapprove': 51},         # Net -8
-    'Iowa': {'approve': 41, 'disapprove': 53},         # Net -12
-    'Missouri': {'approve': 46, 'disapprove': 49},     # Net -3
-    'Nebraska': {'approve': 47, 'disapprove': 49},     # Net -2
-    'Kentucky': {'approve': 47, 'disapprove': 49},     # Net -2
-    'Louisiana': {'approve': 47, 'disapprove': 49},    # Net -2
-    'Mississippi': {'approve': 47, 'disapprove': 49},  # Net -2
-    'Alaska': {'approve': 42, 'disapprove': 52},       # Net -10
-    'Alabama': {'approve': 50, 'disapprove': 43},      # Net +7
-    'Arkansas': {'approve': 53, 'disapprove': 41},     # Net +12
-    'Idaho': {'approve': 53, 'disapprove': 41},        # Net +12
-    'Kansas': {'approve': 48, 'disapprove': 46},       # Net +2
-    'Montana': {'approve': 50, 'disapprove': 45},      # Net +5
-    'North Dakota': {'approve': 56, 'disapprove': 40}, # Net +16
-    'Oklahoma': {'approve': 56, 'disapprove': 40},     # Net +16
-    'South Dakota': {'approve': 51, 'disapprove': 42}, # Net +9
-    'Utah': {'approve': 48, 'disapprove': 45},         # Net +3
-    'West Virginia': {'approve': 56, 'disapprove': 37},# Net +19
-    'Wyoming': {'approve': 59, 'disapprove': 34},      # Net +25
+    'Texas': {'approve': 36, 'disapprove': 58},        # Net -22
+    'Florida': {'approve': 37, 'disapprove': 55},      # Net -18
+    'Georgia': {'approve': 35, 'disapprove': 61},      # Net -26
+    'Michigan': {'approve': 35, 'disapprove': 61},     # Net -26
+    'Pennsylvania': {'approve': 36, 'disapprove': 60}, # Net -24
+    'Nevada': {'approve': 36, 'disapprove': 58},       # Net -22
+    'Wisconsin': {'approve': 39, 'disapprove': 57},    # Net -18
+    'North Carolina': {'approve': 39, 'disapprove': 56},# Net -17
+    'Arizona': {'approve': 41, 'disapprove': 54},      # Net -13
+    'Ohio': {'approve': 42, 'disapprove': 52},         # Net -10
+    'Iowa': {'approve': 40, 'disapprove': 54},         # Net -14
+    'Maine': {'approve': 36, 'disapprove': 58},        # Net -22
+    'New Hampshire': {'approve': 38, 'disapprove': 57},# Net -19
+    'Missouri': {'approve': 45, 'disapprove': 50},     # Net -5
+    'Nebraska': {'approve': 46, 'disapprove': 50},     # Net -4
+    'Kentucky': {'approve': 46, 'disapprove': 50},     # Net -4
+    'Louisiana': {'approve': 46, 'disapprove': 50},    # Net -4
+    'Mississippi': {'approve': 46, 'disapprove': 50},  # Net -4
+    'Alaska': {'approve': 41, 'disapprove': 53},       # Net -12
+    'Alabama': {'approve': 50, 'disapprove': 44},      # Net +6
+    'Arkansas': {'approve': 52, 'disapprove': 42},     # Net +10
+    'Idaho': {'approve': 52, 'disapprove': 42},        # Net +10
+    'Kansas': {'approve': 47, 'disapprove': 48},       # Net -1
+    'Montana': {'approve': 49, 'disapprove': 47},      # Net +2
+    'North Dakota': {'approve': 55, 'disapprove': 41}, # Net +14
+    'Oklahoma': {'approve': 55, 'disapprove': 41},     # Net +14
+    'South Dakota': {'approve': 50, 'disapprove': 43}, # Net +7
+    'Utah': {'approve': 47, 'disapprove': 48},         # Net -1
+    'West Virginia': {'approve': 55, 'disapprove': 38},# Net +17
+    'Wyoming': {'approve': 58, 'disapprove': 35},      # Net +23
 }
 
 approval_by_state = {}

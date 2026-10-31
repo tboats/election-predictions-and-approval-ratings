@@ -1,59 +1,59 @@
 {
   "model_tilted": {
-    "mean_dem_seats": 48.58,
-    "median_dem_seats": 48,
-    "mean_rep_seats": 51.42,
-    "median_rep_seats": 52,
+    "mean_dem_seats": 49.49,
+    "median_dem_seats": 49,
+    "mean_rep_seats": 50.51,
+    "median_rep_seats": 51,
     "ci_80_dem": [
       47,
-      51
+      52
     ],
     "ci_80_rep": [
       53,
-      49
+      48
     ],
     "ci_95_dem": [
       46,
-      52
+      53
     ],
     "ci_95_rep": [
       54,
-      48
+      47
     ],
-    "prob_dem_majority_51plus": 14.7,
-    "prob_tie_50_50": 13.7,
-    "prob_rep_majority_51plus": 71.5,
-    "prob_rep_control_50plus": 85.3
+    "prob_dem_majority_51plus": 28.4,
+    "prob_tie_50_50": 19.7,
+    "prob_rep_majority_51plus": 51.9,
+    "prob_rep_control_50plus": 71.6
   },
   "model_raw_polls": {
-    "mean_dem_seats": 47.83,
-    "median_dem_seats": 48,
-    "mean_rep_seats": 52.17,
-    "median_rep_seats": 52,
+    "mean_dem_seats": 48.64,
+    "median_dem_seats": 49,
+    "mean_rep_seats": 51.36,
+    "median_rep_seats": 51,
     "ci_80_dem": [
       46,
-      50
+      51
     ],
     "ci_80_rep": [
       54,
-      50
+      49
     ],
     "ci_95_dem": [
       45,
-      52
+      53
     ],
     "ci_95_rep": [
       55,
-      48
+      47
     ],
-    "prob_dem_majority_51plus": 7.9,
-    "prob_tie_50_50": 8.6,
-    "prob_rep_majority_51plus": 83.4,
-    "prob_rep_control_50plus": 92.1
+    "prob_dem_majority_51plus": 15.4,
+    "prob_tie_50_50": 14.0,
+    "prob_rep_majority_51plus": 70.6,
+    "prob_rep_control_50plus": 84.6
   },
   "tilt_impact": {
-    "dem_seat_delta": 0.75,
-    "dem_majority_prob_delta": 6.8,
-    "gop_control_prob_delta": -6.8
+    "dem_seat_delta": 0.85,
+    "dem_majority_prob_delta": 13.0,
+    "gop_control_prob_delta": -13.0
   }
 }

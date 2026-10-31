@@ -643,22 +643,22 @@ To determine how unusual President Trump's current polling position is, we evalu
 - **Jimmy Carter (1977–1981)**
 - **Richard Nixon (Term 1, 1969–1973)**
 
-### Key Observations at the Current Stage (Year 1.70 / Month 20.4 / Fall of Year 2):
-1. **Lowest Net Standing in Modern Polling History:** At Year 1.70, Donald Trump (Term 2) records **36.6% job approval** and **-24.8% net approval**. Across the entire post-1968 dataset, no president has registered a net approval this deeply underwater at this stage.
-2. **5 Points Behind Trump Term 1 and Joe Biden:** In Fall 2018 (Year 1.70), Donald Trump's first term held a 41.4% approval rating (-11.8% net). In Fall 2022, Joe Biden held a 41.6% approval rating (-11.6% net). Trump's second term is running ~5 percentage points lower in gross approval and ~13 points deeper underwater in net approval.
+### Key Observations at the Current Stage (Year 1.78 / Month 21.4 / Late October 2026 Pre-Election):
+1. **Lowest Net Standing in Modern Polling History:** At Year 1.78, Donald Trump (Term 2) records **36.0% job approval** and **-26.0% net approval**. Across the entire post-1968 dataset, no president has registered a net approval this deeply underwater at this pre-midterm stage.
+2. **Substantially Behind Trump Term 1 and Joe Biden:** In Fall 2018 (Year 1.78), Donald Trump's first term held a 41.2% approval rating (-12.4% net). In Fall 2022, Joe Biden held a 42.2% approval rating (-10.3% net). Trump's second term is running ~5 to 6 percentage points lower in gross approval and ~14 to 16 points deeper underwater in net approval.
 3. **Absence of a Post-Inaugural Honeymoon:** While past presidents typically entered office with robust honeymoon ratings (Obama 67%, Carter 66%, Nixon 59%, Clinton 58%, G.W. Bush 57%, Biden 55%), Trump Term 2 began with virtually even net ratings (~47% App / 48% Disapp) and slid continuously downward.
-4. **Midterm Dip vs. Recovery Trajectories:** Early-term economic headwinds previously dragged Ronald Reagan (down to 42.1% approval / -5.7% net at Year 1.70, troughing at 35% in early 1983) and Bill Clinton (44.0% approval / -3.5% net at Year 1.70 in Fall 1994). However, both staged dramatic economic recoveries, rebounding past 55%–60% approval and securing commanding re-election victories in Year 4.
+4. **Midterm Dip vs. Recovery Trajectories:** Early-term economic headwinds previously dragged Ronald Reagan (down to 40.9% approval / -8.3% net at Year 1.78, troughing at 35% in early 1983) and Bill Clinton (44.2% approval / -3.1% net at Year 1.78 in Fall 1994). However, both staged dramatic economic recoveries, rebounding past 55%–60% approval and securing commanding re-election victories in Year 4.
 """))
 
 # Cell 19: Historical Table Code & Output
-stage_ts = df_ts[df_ts['years_into_presidency'] == 1.70].copy().sort_values(by='net_approval', ascending=False)
+stage_ts = df_ts[df_ts['years_into_presidency'] == 1.78].copy().sort_values(by='net_approval', ascending=False)
 stage_ts['rank'] = range(1, len(stage_ts) + 1)
 stage_display = stage_ts[['rank', 'president', 'approval', 'disapproval', 'net_approval']].rename(
     columns={'rank': 'Rank', 'president': 'President', 'approval': 'Job Approval (%)', 'disapproval': 'Disapproval (%)', 'net_approval': 'Net Approval (%)'}
 )
 
-code_hist_table = """# Historical Standings at Current Stage (Year 1.70 / Month 20.4 / Fall of Year 2)
-stage_ts = df_ts[df_ts['years_into_presidency'] == 1.70].copy().sort_values(by='net_approval', ascending=False)
+code_hist_table = """# Historical Standings at Current Stage (Year 1.78 / Month 21.4 / Late October 2026)
+stage_ts = df_ts[df_ts['years_into_presidency'] == 1.78].copy().sort_values(by='net_approval', ascending=False)
 stage_ts['rank'] = range(1, len(stage_ts) + 1)
 stage_display = stage_ts[['rank', 'president', 'approval', 'disapproval', 'net_approval']].rename(
     columns={'rank': 'Rank', 'president': 'President', 'approval': 'Job Approval (%)', 'disapproval': 'Disapproval (%)', 'net_approval': 'Net Approval (%)'}
@@ -680,7 +680,7 @@ with open('figures/fig6_presidential_historical_comparison.png', 'rb') as f:
 
 code_hist_plot = """# Plot Presidential Trajectories Across First 4 Years
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7), dpi=180)
-current_x = 1.70
+current_x = 1.78
 
 for pres in df_ts['president'].unique():
     sub = df_ts[df_ts['president'] == pres]
@@ -689,7 +689,7 @@ for pres in df_ts['president'].unique():
     ax1.plot(sub['years_into_presidency'], sub['approval'], label=pres, linewidth=lw, color=color)
     ax2.plot(sub['years_into_presidency'], sub['net_approval'], label=pres, linewidth=lw, color=color)
 
-ax1.axvline(current_x, color='#b91c1c', linestyle='--', label='Current Stage (Year 1.70)')
+ax1.axvline(current_x, color='#b91c1c', linestyle='--', label='Current Stage (Year 1.78)')
 ax1.axhline(50, color='gray', linestyle=':')
 ax1.set_title("Presidential Job Approval (Years 0-4)", fontweight='bold')
 ax1.set_xlabel("Years into Presidency")
@@ -697,7 +697,7 @@ ax1.set_ylabel("Job Approval Rating (%)")
 ax1.set_xlim(0, 4)
 ax1.legend(loc='upper right', fontsize=8, ncol=2)
 
-ax2.axvline(current_x, color='#b91c1c', linestyle='--', label='Current Stage (Year 1.70)')
+ax2.axvline(current_x, color='#b91c1c', linestyle='--', label='Current Stage (Year 1.78)')
 ax2.axhline(0, color='gray', linestyle='-')
 ax2.set_title("Presidential Net Job Approval (Years 0-4)", fontweight='bold')
 ax2.set_xlabel("Years into Presidency")
@@ -721,15 +721,15 @@ nb.cells.append(new_markdown_cell(r"""## 9. 2026 Senate Midterm Forecasting Mode
 In the 2026 midterm elections, 35 Senate seats are contested (33 Class 2 seats + 2 special elections in Ohio and Florida). 
 - **Non-up Baseline:** Democrats enter with **34 seats not up**, while Republicans enter with **31 seats not up**.
 - **The Majority Hurdle:** Because Vice President JD Vance breaks ties in the Senate, a 50-50 result retains **Republican control**. To achieve an outright majority, Democrats must reach **51 seats** (a net gain of +4 seats).
-- **The Presidential Approval Tilt:** In modern midterm elections, deeply underwater presidential approval (Trump at -25% net) exerts an empirical gravity on competitive races: late-deciding independent voters break toward the out-party, and differential turnout elevates Democratic performance by an estimated **+1.0 to +1.9 percentage points** over raw pre-election polls.
+- **The Presidential Approval Tilt:** In modern midterm elections, deeply underwater presidential approval (Trump at -26% net) exerts an empirical gravity on competitive races: late-deciding independent voters break toward the out-party, and differential turnout elevates Democratic performance by an estimated **+1.0 to +2.0 percentage points** over raw pre-election polls.
 
-### Key Simulation Findings (50,000 Correlated Monte Carlo Iterations):
-- **Expected Seat Totals:** Democrats average **48.6 seats** (median 48); Republicans average **51.4 seats** (median 52).
-- **80% Confidence Band:** **[47 to 51 seats]** for Democrats | **[49 to 53 seats]** for Republicans.
-- **95% Confidence Band:** **[46 to 52 seats]** for Democrats | **[48 to 54 seats]** for Republicans.
-- **Probability of Democratic Majority ($\ge 51$ seats):** **14.7%**.
-- **Probability of 50-50 Split (GOP Control via VP Vance):** **13.7%**.
-- **Overall Probability of Republican Control ($\ge 50$ seats):** **85.3%**.
+### Key Simulation Findings (50,000 Correlated Monte Carlo Iterations - Late October 2026):
+- **Expected Seat Totals:** Democrats average **49.5 seats** (median 49); Republicans average **50.5 seats** (median 51).
+- **80% Confidence Band:** **[47 to 52 seats]** for Democrats | **[48 to 53 seats]** for Republicans.
+- **95% Confidence Band:** **[46 to 53 seats]** for Democrats | **[47 to 54 seats]** for Republicans.
+- **Probability of Democratic Majority ($\ge 51$ seats):** **28.4%** (up from 15.4% without tilt, almost double).
+- **Probability of 50-50 Split (GOP Control via VP Vance):** **19.7%**.
+- **Overall Probability of Republican Control ($\ge 50$ seats):** **71.6%** (down from 84.6% pure polling and 85.3% early October).
 """))
 
 # Cell 21: Senate Battleground Table Code & Output
@@ -757,17 +757,19 @@ c20.outputs.append(new_output(
 nb.cells.append(c20)
 
 # Cell 22: Aggregate Breakdown Code & Output
+p_raw = senate_sim['model_raw_polls']
+p_tilt = senate_sim['model_tilted']
 agg_summary_rows = [
-    {'Metric': 'Mean Expected Seats', 'Pure Polling Model': '47.8 Dem / 52.2 GOP', 'Tilted Model (Polls + Approval)': '48.6 Dem / 51.4 GOP'},
-    {'Metric': 'Median Expected Seats', 'Pure Polling Model': '48 Dem / 52 GOP', 'Tilted Model (Polls + Approval)': '48 Dem / 52 GOP'},
-    {'Metric': '80% Confidence Band (Dems)', 'Pure Polling Model': '[46, 50] Seats', 'Tilted Model (Polls + Approval)': '[47, 51] Seats'},
-    {'Metric': '80% Confidence Band (GOP)', 'Pure Polling Model': '[54, 50] Seats', 'Tilted Model (Polls + Approval)': '[53, 49] Seats'},
-    {'Metric': '95% Confidence Band (Dems)', 'Pure Polling Model': '[45, 52] Seats', 'Tilted Model (Polls + Approval)': '[46, 52] Seats'},
-    {'Metric': '95% Confidence Band (GOP)', 'Pure Polling Model': '[55, 48] Seats', 'Tilted Model (Polls + Approval)': '[54, 48] Seats'},
-    {'Metric': 'Dem Majority Probability (51+ Seats)', 'Pure Polling Model': '7.9%', 'Tilted Model (Polls + Approval)': '14.7% (+6.8 pts)'},
-    {'Metric': '50-50 Split Probability (GOP via VP)', 'Pure Polling Model': '8.6%', 'Tilted Model (Polls + Approval)': '13.7% (+5.1 pts)'},
-    {'Metric': 'GOP Outright Majority (51+ Seats)', 'Pure Polling Model': '83.4%', 'Tilted Model (Polls + Approval)': '71.5% (-11.9 pts)'},
-    {'Metric': 'Overall GOP Control (50+ Seats)', 'Pure Polling Model': '92.1%', 'Tilted Model (Polls + Approval)': '85.3% (-6.8 pts)'},
+    {'Metric': 'Mean Expected Seats', 'Pure Polling Model': f"{p_raw['mean_dem_seats']:.1f} Dem / {p_raw['mean_rep_seats']:.1f} GOP", 'Tilted Model (Polls + Approval)': f"{p_tilt['mean_dem_seats']:.1f} Dem / {p_tilt['mean_rep_seats']:.1f} GOP"},
+    {'Metric': 'Median Expected Seats', 'Pure Polling Model': f"{p_raw['median_dem_seats']} Dem / {p_raw['median_rep_seats']} GOP", 'Tilted Model (Polls + Approval)': f"{p_tilt['median_dem_seats']} Dem / {p_tilt['median_rep_seats']} GOP"},
+    {'Metric': '80% Confidence Band (Dems)', 'Pure Polling Model': f"[{p_raw['ci_80_dem'][0]}, {p_raw['ci_80_dem'][1]}] Seats", 'Tilted Model (Polls + Approval)': f"[{p_tilt['ci_80_dem'][0]}, {p_tilt['ci_80_dem'][1]}] Seats"},
+    {'Metric': '80% Confidence Band (GOP)', 'Pure Polling Model': f"[{min(p_raw['ci_80_rep'])}, {max(p_raw['ci_80_rep'])}] Seats", 'Tilted Model (Polls + Approval)': f"[{min(p_tilt['ci_80_rep'])}, {max(p_tilt['ci_80_rep'])}] Seats"},
+    {'Metric': '95% Confidence Band (Dems)', 'Pure Polling Model': f"[{p_raw['ci_95_dem'][0]}, {p_raw['ci_95_dem'][1]}] Seats", 'Tilted Model (Polls + Approval)': f"[{p_tilt['ci_95_dem'][0]}, {p_tilt['ci_95_dem'][1]}] Seats"},
+    {'Metric': '95% Confidence Band (GOP)', 'Pure Polling Model': f"[{min(p_raw['ci_95_rep'])}, {max(p_raw['ci_95_rep'])}] Seats", 'Tilted Model (Polls + Approval)': f"[{min(p_tilt['ci_95_rep'])}, {max(p_tilt['ci_95_rep'])}] Seats"},
+    {'Metric': 'Dem Majority Probability (51+ Seats)', 'Pure Polling Model': f"{p_raw['prob_dem_majority_51plus']:.1f}%", 'Tilted Model (Polls + Approval)': f"{p_tilt['prob_dem_majority_51plus']:.1f}% (+{p_tilt['prob_dem_majority_51plus'] - p_raw['prob_dem_majority_51plus']:.1f} pts)"},
+    {'Metric': '50-50 Split Probability (GOP via VP)', 'Pure Polling Model': f"{p_raw['prob_tie_50_50']:.1f}%", 'Tilted Model (Polls + Approval)': f"{p_tilt['prob_tie_50_50']:.1f}% (+{p_tilt['prob_tie_50_50'] - p_raw['prob_tie_50_50']:.1f} pts)"},
+    {'Metric': 'GOP Outright Majority (51+ Seats)', 'Pure Polling Model': f"{p_raw['prob_rep_majority_51plus']:.1f}%", 'Tilted Model (Polls + Approval)': f"{p_tilt['prob_rep_majority_51plus']:.1f}% ({p_tilt['prob_rep_majority_51plus'] - p_raw['prob_rep_majority_51plus']:.1f} pts)"},
+    {'Metric': 'Overall GOP Control (50+ Seats)', 'Pure Polling Model': f"{p_raw['prob_rep_control_50plus']:.1f}%", 'Tilted Model (Polls + Approval)': f"{p_tilt['prob_rep_control_50plus']:.1f}% ({p_tilt['prob_rep_control_50plus'] - p_raw['prob_rep_control_50plus']:.1f} pts)"},
 ]
 df_agg_comp = pd.DataFrame(agg_summary_rows)
 
@@ -809,14 +811,14 @@ nb.cells.append(c22)
 nb.cells.append(new_markdown_cell(r"""## 10. Conclusions & Strategic Takeaways
 
 1. **Universal Electoral Erosion Below Parity:**
-   President Trump's net approval sits **21.6 points lower** than his 2024 election win margins on average. 50 out of 51 jurisdictions fall directly in the negative erosion zone, shifting once-comfortable victories into contested territory.
+   President Trump's net approval sits **22.2 points lower** than his 2024 election win margins on average (-23.4 points in 2024 battlegrounds). 50 out of 51 jurisdictions fall directly in the negative erosion zone, shifting once-comfortable victories into contested territory.
 2. **Historic Deficit in Presidential Comparisons:**
-   At Year 1.70 into his second term, Trump's net job approval (-24.8% net) is the lowest recorded for any modern president at this stage, running 13 points behind both Trump Term 1 (-11.8%) and Joe Biden (-11.6%).
+   At Year 1.78 into his second term, Trump's net job approval (-26.0% net) is the lowest recorded for any modern president at this stage, running ~14 points behind both Trump Term 1 (-12.4%) and Joe Biden (-10.3%).
 3. **The Senate Midterm Dynamic (Tilt vs. Structural Map):**
-   - The presidential approval deficit exerts a measurable **+1.0 to +1.9 percentage point tilt** in favor of Democratic Senate candidates in key battlegrounds, nearly doubling the probability of an outright Democratic majority from 7.9% to **14.7%**, and raising the probability of a 50-50 tie to **13.7%**.
-   - However, because Republicans enter with a 53-47 majority, only 13 Democratic seats are up, and Vice President JD Vance breaks ties, **Republicans remain favored to retain control in 85.3% of simulations** (80% CI: [49, 53] GOP seats; 95% CI: [48, 54] GOP seats).
+   - The presidential approval deficit exerts an empirical **+1.0 to +2.0 percentage point tilt** in favor of Democratic Senate candidates in key battlegrounds, surging the probability of an outright Democratic majority from 15.4% to **28.4%**, and raising the probability of a 50-50 tie to **19.7%**.
+   - Because Republicans enter with a 53-47 majority and Vice President JD Vance breaks ties, **Republicans maintain a favored 71.6% path to control** (80% CI: [48, 53] GOP seats; 95% CI: [47, 54] GOP seats), but their firewall has narrowed significantly.
 4. **The Critical Tipping Points:**
-   Maine (Collins, 56.2% Dem win prob) and North Carolina (Tillis, 48.9% Dem win prob) represent the two premier flip opportunities. To flip the majority outright ($\ge 51$ seats), Democrats must sweep ME, NC, GA, MI and win at least one additional reach state (Texas, Iowa, or Ohio).
+   Maine (Collins now trailing at 76.8% Dem win prob) and North Carolina (Tillis now trailing at 68.3% Dem win prob) have broken towards Democrats. Texas (Cornyn leading narrowly at 47.5% Dem win prob) has become a true tossup. To flip the Senate outright ($\ge 51$ seats), Democrats must hold GA and MI, flip ME and NC, and capture either Texas, Iowa, or Ohio.
 """))
 
 # Write the executed notebook
@@ -866,8 +868,8 @@ pop_sizes_json = json.dumps(pop_sizes_js)
 uniform_sizes_json = json.dumps(uniform_sizes_js)
 trace_indices_json = json.dumps(trace_indices_js)
 
-# Historical standings table rows at Year 1.70 / Month 20.4
-stage_ts_sorted = df_ts[df_ts['years_into_presidency'] == 1.70].sort_values(by='net_approval', ascending=False)
+# Historical standings table rows at Year 1.78 / Month 21.4
+stage_ts_sorted = df_ts[df_ts['years_into_presidency'] == 1.78].sort_values(by='net_approval', ascending=False)
 pres_stage_table_html = ""
 for rank, (_, r) in enumerate(stage_ts_sorted.iterrows(), 1):
     is_t2 = 'Trump (Term 2)' in r['president']
@@ -1165,8 +1167,8 @@ html_content = f"""<!DOCTYPE html>
     <div class="grid-kpi">
         <div class="kpi-card">
             <div class="kpi-label">National Net Approval</div>
-            <div class="kpi-value" style="color: var(--accent-red);">-25.0%</div>
-            <div class="kpi-subtext">37% Approve vs. 62% Disapprove (Economist/YouGov)</div>
+            <div class="kpi-value" style="color: var(--accent-red);">-26.0%</div>
+            <div class="kpi-subtext">36% Approve vs. 62% Disapprove (Oct 24–28 wave)</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">States Below Parity</div>
@@ -1175,16 +1177,16 @@ html_content = f"""<!DOCTYPE html>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">Average Approval Erosion</div>
-            <div class="kpi-value" style="color: var(--accent-red);">-21.6 pts</div>
+            <div class="kpi-value" style="color: var(--accent-red);">-22.2 pts</div>
             <div class="kpi-subtext">Drop from 2024 certified win margin to current net approval</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-label">2024 Battleground Gap</div>
-            <div class="kpi-value" style="color: var(--accent-red);">-21.6 pts</div>
+            <div class="kpi-value" style="color: var(--accent-red);">-23.4 pts</div>
             <div class="kpi-subtext">Average erosion across AZ, GA, MI, NV, NC, PA, WI</div>
         </div>
         <div class="kpi-card">
-            <div class="kpi-label">Historical Rank (Yr 1.7)</div>
+            <div class="kpi-label">Historical Rank (Yr 1.78)</div>
             <div class="kpi-value" style="color: var(--accent-red);">10th of 10</div>
             <div class="kpi-subtext">Lowest net approval of any modern president at this stage</div>
         </div>
@@ -1195,11 +1197,11 @@ html_content = f"""<!DOCTYPE html>
         <h2 class="section-title">1. Executive Summary: The Post-Election Reversal</h2>
         <p class="section-desc">Key takeaways from our cross-sectional analysis of state approvals and economic performance.</p>
         
-        <p>Following President Donald Trump's comprehensive victory in the November 2024 presidential election—carrying 31 states, 312 electoral votes, and the national popular vote by +1.5%—his administration has faced an unprecedented erosion in public standing by Fall 2026. Across the nation, public approval has fallen to between 33% and 37%, with disapproval exceeding 60%.</p>
+        <p>Following President Donald Trump's comprehensive victory in the November 2024 presidential election—carrying 31 states, 312 electoral votes, and the national popular vote by +1.5%—his administration has faced an unprecedented erosion in public standing heading into the November 2026 midterms. Across the nation, public approval has fallen to between 33% and 36%, with disapproval exceeding 60%.</p>
 
         <div class="callout-box">
             <div class="callout-title">Core Finding: Universal Shift Below the 1:1 Parity Line</div>
-            When plotting Trump's 2024 certified win margin on the x-axis against his current net approval (Approve - Disapprove) on the y-axis, <strong>50 out of 51 jurisdictions fall directly inside the Erosion Zone</strong> below the 1:1 parity guide line. The regression line reveals a near-uniform <strong>-19.4 percentage point nationwide penalty</strong> ($y = 0.88x - 19.4$, $R^2 = 0.89$). State partisanship continues to anchor relative positioning, but the entire distribution has shifted deeply underwater.
+            When plotting Trump's 2024 certified win margin on the x-axis against his current net approval (Approve - Disapprove) on the y-axis, <strong>50 out of 51 jurisdictions fall directly inside the Erosion Zone</strong> below the 1:1 parity guide line. The regression line reveals a near-uniform <strong>-21.6 percentage point nationwide penalty</strong> ($y = 0.88x - 21.6$, $R^2 = 0.94$). State partisanship continues to anchor relative positioning, but the entire distribution has shifted deeply underwater.
         </div>
     </div>
 
@@ -1278,8 +1280,8 @@ html_content = f"""<!DOCTYPE html>
             {plot_json['historical_html']}
         </div>
 
-        <h3>Standings at This Stage of the Presidency (Year 1.70 / Month 20.4 / Fall of Year 2):</h3>
-        <p>At approximately 1 year and 8.5 months into their presidencies, modern presidents recorded the following job approval ratings:</p>
+        <h3>Standings at This Stage of the Presidency (Year 1.78 / Month 21.4 / Late October 2026 Pre-Election):</h3>
+        <p>At approximately 1 year and 9.5 months into their presidencies (Day 650 pre-midterm benchmark), modern presidents recorded the following job approval ratings:</p>
 
         <div style="overflow-x: auto; margin-bottom: 20px;">
             <table class="data-table" style="max-width: 850px;">
@@ -1302,10 +1304,10 @@ html_content = f"""<!DOCTYPE html>
         <div class="callout-box">
             <div class="callout-title">Key Historical Takeaways:</div>
             <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-                <li><strong>Lowest Rating on Record at Year 1.7:</strong> At 36.6% job approval and -24.8% net approval, Donald Trump (Term 2) occupies the lowest public standing of any modern president at this stage of their presidency.</li>
-                <li><strong>Comparison with Trump Term 1 and Joe Biden:</strong> At the same point before the midterms, Donald Trump in Term 1 held 41.4% approval (-11.8% net), and Joe Biden in 2022 held 41.6% approval (-11.6% net). Trump's second term is running approximately 5 points lower in gross approval and 13 points deeper underwater in net approval.</li>
+                <li><strong>Lowest Rating on Record at Year 1.78:</strong> At 36.0% job approval and -26.0% net approval, Donald Trump (Term 2) occupies the lowest public standing of any modern president at this stage of their presidency.</li>
+                <li><strong>Comparison with Trump Term 1 and Joe Biden:</strong> At the same point before the midterms, Donald Trump in Term 1 held 41.2% approval (-12.4% net), and Joe Biden in 2022 held 42.2% approval (-10.3% net). Trump's second term is running approximately 5 to 6 points lower in gross approval and 14 to 16 points deeper underwater in net approval.</li>
                 <li><strong>Absence of a Post-Inaugural Honeymoon:</strong> While past presidents typically entered office with robust honeymoon ratings (Obama 67%, Carter 66%, Nixon 59%, Clinton 58%, G.W. Bush 57%, Biden 55%), Trump Term 2 began with virtually even net ratings (~47% App / 48% Disapp) and slid continuously downward.</li>
-                <li><strong>The Midterm Recovery Asymmetry:</strong> Ronald Reagan (-5.7% net at Yr 1.7 during the 1982 recession) and Bill Clinton (-3.5% net at Yr 1.7 during the 1994 midterms) both suffered early dips before staging dramatic economic-driven rebounds to >55% approval and convincing re-elections. In contrast, Trump Term 2 shows a continuous downward slope without an initial post-election honeymoon.</li>
+                <li><strong>The Midterm Recovery Asymmetry:</strong> Ronald Reagan (-8.3% net at Yr 1.78 during the 1982 recession) and Bill Clinton (-3.1% net at Yr 1.78 during the 1994 midterms) both suffered early dips before staging dramatic economic-driven rebounds to >55% approval and convincing re-elections. In contrast, Trump Term 2 shows a continuous downward slope without an initial post-election honeymoon.</li>
             </ul>
         </div>
     </div>
@@ -1319,27 +1321,27 @@ html_content = f"""<!DOCTYPE html>
         <div class="grid-kpi" style="margin-bottom: 24px;">
             <div class="kpi-card">
                 <div class="kpi-label">Expected Senate Balance</div>
-                <div class="kpi-value" style="color: var(--accent-blue);">48.6 D – 51.4 R</div>
-                <div class="kpi-subtext">Median: 48 Dem / 52 GOP (34 D & 31 R non-up)</div>
+                <div class="kpi-value" style="color: var(--accent-blue);">{p_tilt['mean_dem_seats']:.1f} D – {p_tilt['mean_rep_seats']:.1f} R</div>
+                <div class="kpi-subtext">Median: {p_tilt['median_dem_seats']} Dem / {p_tilt['median_rep_seats']} GOP (34 D & 31 R non-up)</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">80% Confidence Band</div>
-                <div class="kpi-value" style="color: #475569;">[47, 51] Dem</div>
-                <div class="kpi-subtext">Republicans: [49, 53] Seats</div>
+                <div class="kpi-value" style="color: #475569;">[{p_tilt['ci_80_dem'][0]}, {p_tilt['ci_80_dem'][1]}] Dem</div>
+                <div class="kpi-subtext">Republicans: [{min(p_tilt['ci_80_rep'])}, {max(p_tilt['ci_80_rep'])}] Seats</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">95% Confidence Band</div>
-                <div class="kpi-value" style="color: #475569;">[46, 52] Dem</div>
-                <div class="kpi-subtext">Republicans: [48, 54] Seats</div>
+                <div class="kpi-value" style="color: #475569;">[{p_tilt['ci_95_dem'][0]}, {p_tilt['ci_95_dem'][1]}] Dem</div>
+                <div class="kpi-subtext">Republicans: [{min(p_tilt['ci_95_rep'])}, {max(p_tilt['ci_95_rep'])}] Seats</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">GOP Control Probability</div>
-                <div class="kpi-value" style="color: var(--accent-red);">85.3%</div>
-                <div class="kpi-subtext">50-50 tie (13.7%) broken by VP Vance + 71.5% GOP maj</div>
+                <div class="kpi-value" style="color: var(--accent-red);">{p_tilt['prob_rep_control_50plus']:.1f}%</div>
+                <div class="kpi-subtext">50-50 tie ({p_tilt['prob_tie_50_50']:.1f}%) broken by VP Vance + {p_tilt['prob_rep_majority_51plus']:.1f}% GOP maj</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Dem Majority Probability</div>
-                <div class="kpi-value" style="color: var(--accent-blue);">14.7%</div>
+                <div class="kpi-value" style="color: var(--accent-blue);">{p_tilt['prob_dem_majority_51plus']:.1f}%</div>
                 <div class="kpi-subtext">Requires 51+ seats (+4 net gain from 47 baseline)</div>
             </div>
         </div>
@@ -1353,11 +1355,11 @@ html_content = f"""<!DOCTYPE html>
         </div>
 
         <h3>The "Approval Tilt" Mechanism: Does Presidential Approval Shift Senate Races?</h3>
-        <p>In midterms, congressional races are heavily nationalized. When a president's net approval is deeply negative (Trump at -25% net), historical data demonstrates two empirical dynamics:</p>
+        <p>In midterms, congressional races are heavily nationalized. When a president's net approval is deeply negative (Trump at -26% net), historical data demonstrates two empirical dynamics:</p>
         <ul>
             <li><strong>Differential Turnout & Motivation:</strong> Base voters of the opposition party (Democrats) exhibit elevated enthusiasm, while casual presidential partisans turn out at lower rates due to economic discontent.</li>
             <li><strong>Undecided Voter Break:</strong> In close contests, undecided independent voters break 2-to-1 or 3-to-1 against the party in the White House.</li>
-            <li><strong>Quantitative Shift:</strong> Accounting for state-level and national approval deficits provides an estimated <strong>+1.0 to +1.9 percentage point boost</strong> for Democratic candidates over raw pre-election polls (e.g., Maine flips from Collins +0.5% to Dem +0.5%; North Carolina becomes a pure dead-heat at Tillis +0.07%; Georgia lean expands to Ossoff +4.4%).</li>
+            <li><strong>Quantitative Shift:</strong> Accounting for state-level and national approval deficits provides an estimated <strong>+1.0 to +2.0 percentage point boost</strong> for Democratic candidates over raw pre-election polls (e.g., Maine flips to Dem +2.4%; North Carolina flips to Dem +1.6%; Georgia lean expands to Dem +5.8%; Texas tightens to GOP +0.2%).</li>
         </ul>
 
         <h3>Model Comparison: Pure Polling vs. Approval-Tilted Forecast</h3>
@@ -1374,39 +1376,39 @@ html_content = f"""<!DOCTYPE html>
                 <tbody>
                     <tr>
                         <td><strong>Mean Democratic Seats</strong></td>
-                        <td style="text-align:right;">47.83 Seats</td>
-                        <td style="text-align:right;"><strong>48.58 Seats</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+0.75 Seats</span></td>
+                        <td style="text-align:right;">{p_raw['mean_dem_seats']:.2f} Seats</td>
+                        <td style="text-align:right;"><strong>{p_tilt['mean_dem_seats']:.2f} Seats</strong></td>
+                        <td style="text-align:right;"><span class="badge positive">+{p_tilt['mean_dem_seats'] - p_raw['mean_dem_seats']:.2f} Seats</span></td>
                     </tr>
                     <tr>
                         <td><strong>80% Confidence Band (Dems)</strong></td>
-                        <td style="text-align:right;">[46 to 50] Seats</td>
-                        <td style="text-align:right;"><strong>[47 to 51] Seats</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+1 Seat at Boundary</span></td>
+                        <td style="text-align:right;">[{p_raw['ci_80_dem'][0]} to {p_raw['ci_80_dem'][1]}] Seats</td>
+                        <td style="text-align:right;"><strong>[{p_tilt['ci_80_dem'][0]} to {p_tilt['ci_80_dem'][1]}] Seats</strong></td>
+                        <td style="text-align:right;"><span class="badge positive">+{p_tilt['ci_80_dem'][1] - p_raw['ci_80_dem'][1]} Seat at Boundary</span></td>
                     </tr>
                     <tr>
                         <td><strong>95% Confidence Band (Dems)</strong></td>
-                        <td style="text-align:right;">[45 to 52] Seats</td>
-                        <td style="text-align:right;"><strong>[46 to 52] Seats</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+1 Seat on Floor</span></td>
+                        <td style="text-align:right;">[{p_raw['ci_95_dem'][0]} to {p_raw['ci_95_dem'][1]}] Seats</td>
+                        <td style="text-align:right;"><strong>[{p_tilt['ci_95_dem'][0]} to {p_tilt['ci_95_dem'][1]}] Seats</strong></td>
+                        <td style="text-align:right;"><span class="badge positive">+{p_tilt['ci_95_dem'][0] - p_raw['ci_95_dem'][0]} Seat on Floor</span></td>
                     </tr>
                     <tr>
                         <td><strong>Democratic Majority (51+ Seats)</strong></td>
-                        <td style="text-align:right;">7.9%</td>
-                        <td style="text-align:right;"><strong>14.7%</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+6.8 pts</span> (nearly doubled)</td>
+                        <td style="text-align:right;">{p_raw['prob_dem_majority_51plus']:.1f}%</td>
+                        <td style="text-align:right;"><strong>{p_tilt['prob_dem_majority_51plus']:.1f}%</strong></td>
+                        <td style="text-align:right;"><span class="badge positive">+{p_tilt['prob_dem_majority_51plus'] - p_raw['prob_dem_majority_51plus']:.1f} pts</span> (nearly doubled)</td>
                     </tr>
                     <tr>
                         <td><strong>50-50 Split (GOP via VP Vance)</strong></td>
-                        <td style="text-align:right;">8.6%</td>
-                        <td style="text-align:right;"><strong>13.7%</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+5.1 pts</span></td>
+                        <td style="text-align:right;">{p_raw['prob_tie_50_50']:.1f}%</td>
+                        <td style="text-align:right;"><strong>{p_tilt['prob_tie_50_50']:.1f}%</strong></td>
+                        <td style="text-align:right;"><span class="badge positive">+{p_tilt['prob_tie_50_50'] - p_raw['prob_tie_50_50']:.1f} pts</span></td>
                     </tr>
                     <tr>
                         <td><strong>Republican Control (&ge; 50 Seats)</strong></td>
-                        <td style="text-align:right;">92.1%</td>
-                        <td style="text-align:right;"><strong>85.3%</strong></td>
-                        <td style="text-align:right;"><span class="badge negative">-6.8 pts</span></td>
+                        <td style="text-align:right;">{p_raw['prob_rep_control_50plus']:.1f}%</td>
+                        <td style="text-align:right;"><strong>{p_tilt['prob_rep_control_50plus']:.1f}%</strong></td>
+                        <td style="text-align:right;"><span class="badge negative">{p_tilt['prob_rep_control_50plus'] - p_raw['prob_rep_control_50plus']:.1f} pts</span></td>
                     </tr>
                 </tbody>
             </table>
