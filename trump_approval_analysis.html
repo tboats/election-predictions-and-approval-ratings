@@ -484,103 +484,552 @@
         </div>
     </div>
 
-    <!-- Section 6: 2026 Senate Midterm Forecasting Model -->
+        <!-- Section 6: Fundamentals Tension Index (FTI) & Polling Anomalies -->
     <div class="section-card">
-        <h2 class="section-title">6. 2026 Senate Midterm Model: Presidential Approval Tilt & Likely Outcomes</h2>
-        <p class="section-desc">Empirical simulation model across all 35 contested races (33 Class 2 seats + 2 special elections in Ohio and Florida). Evaluates how deep presidential disapproval tilts Senate races and projects 80% and 95% confidence bands for Senate control.</p>
+        <h2 class="section-title">6. The Fundamentals Tension Index (FTI): Diagnosing & Correcting Polling Anomalies</h2>
+        <p class="section-desc">Why have polls recently tilted toward Democrats while Republicans outperformed on Election Day? We evaluate the empirical relationship between polling error and fundamentals tension across 31 competitive Senate races.</p>
+
+        <!-- KPI Grid for FTI -->
+        <div class="grid-kpi" style="margin-bottom: 24px;">
+            <div class="kpi-card">
+                <div class="kpi-label">Correlation with Polling Error</div>
+                <div class="kpi-value" style="color: var(--accent-red);">r = +0.64</div>
+                <div class="kpi-subtext">Statistically significant: p = 1.04e-4 (R² = 41.0%)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Regression Sensitivity (Slope)</div>
+                <div class="kpi-value" style="color: #475569;">+0.56 pts / FTI pt</div>
+                <div class="kpi-subtext">Each +1 pt of tension yields +0.56 pt pro-Dem polling bias</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Average Base Pro-Dem Error</div>
+                <div class="kpi-value" style="color: #475569;">+2.1 pts</div>
+                <div class="kpi-subtext">Intercept baseline bias across 2014–2022 Senate battlegrounds</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Highest Tension Race (2026)</div>
+                <div class="kpi-value" style="color: var(--accent-red);">Texas (+7.4 FTI)</div>
+                <div class="kpi-subtext">Cornyn poll (-0.2%) stretches +13.5 pts past 2024 baseline</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Lowest Tension Race (2026)</div>
+                <div class="kpi-value" style="color: var(--accent-blue);">Maine (+0.7 FTI)</div>
+                <div class="kpi-subtext">Collins trailing (-2.2%) aligns with D+6.9% state baseline</div>
+            </div>
+        </div>
+
+        <div style="width: 100%; min-height: 500px; margin-bottom: 30px;">
+            <div>                            <div id="fa8546ac-d0c8-41fa-8450-72c02ef09092" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("fa8546ac-d0c8-41fa-8450-72c02ef09092")) {                    Plotly.newPlot(                        "fa8546ac-d0c8-41fa-8450-72c02ef09092",                        [{"hovertemplate":"%{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#f59e0b","line":{"color":"black","width":1},"size":11},"mode":"markers","name":"2014 Senate Races","text":["\u003cb\u003eIowa (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Bruce Braley (D) vs Joni Ernst (R)\u003cbr\u003ePoll Margin: -0.5%\u003cbr\u003eActual Margin: -8.3%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +7.8%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +5.8%\u003cbr\u003eNon-College White: 65%\u003cbr\u003e\u003cb\u003eFTI Score: -1.36\u003c\u002fb\u003e","\u003cb\u003eColorado (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Mark Udall (D) vs Cory Gardner (R)\u003cbr\u003ePoll Margin: -0.5%\u003cbr\u003eActual Margin: -1.9%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +1.4%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +5.4%\u003cbr\u003eNon-College White: 44%\u003cbr\u003e\u003cb\u003eFTI Score: -4.09\u003c\u002fb\u003e","\u003cb\u003eNorth Carolina (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Kay Hagan (D) vs Thom Tillis (R)\u003cbr\u003ePoll Margin: +0.7%\u003cbr\u003eActual Margin: -1.6%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +2.3%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -2.0%\u003cbr\u003eNon-College White: 53%\u003cbr\u003e\u003cb\u003eFTI Score: +1.91\u003c\u002fb\u003e","\u003cb\u003eArkansas (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Mark Pryor (D) vs Tom Cotton (R)\u003cbr\u003ePoll Margin: -4.5%\u003cbr\u003eActual Margin: -17.1%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +12.6%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -23.7%\u003cbr\u003eNon-College White: 68%\u003cbr\u003e\u003cb\u003eFTI Score: +13.08\u003c\u002fb\u003e","\u003cb\u003eAlaska (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Mark Begich (D) vs Dan Sullivan (R)\u003cbr\u003ePoll Margin: -1.5%\u003cbr\u003eActual Margin: -6.0%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +4.5%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -14.0%\u003cbr\u003eNon-College White: 54%\u003cbr\u003e\u003cb\u003eFTI Score: +7.44\u003c\u002fb\u003e","\u003cb\u003eGeorgia (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Michelle Nunn (D) vs David Perdue (R)\u003cbr\u003ePoll Margin: -2.0%\u003cbr\u003eActual Margin: -7.7%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +5.7%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -7.8%\u003cbr\u003eNon-College White: 44%\u003cbr\u003e\u003cb\u003eFTI Score: +2.35\u003c\u002fb\u003e","\u003cb\u003eKentucky (2014)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Alison Grimes (D) vs Mitch McConnell (R)\u003cbr\u003ePoll Margin: -3.0%\u003cbr\u003eActual Margin: -15.5%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +12.5%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -25.7%\u003cbr\u003eNon-College White: 67%\u003cbr\u003e\u003cb\u003eFTI Score: +14.87\u003c\u002fb\u003e"],"x":{"dtype":"f8","bdata":"1qNwPQrX9b\u002fYo3A9ClcQwH4Urkfhev4\u002fKlyPwvUoKkA\u002fCtejcL0dQM3MzMzMzAJAfBSuR+G6LUA="},"y":{"dtype":"f8","bdata":"NDMzMzMzH0BmZmZmZmb2P2ZmZmZmZgJANDMzMzMzKUAAAAAAAAASQM3MzMzMzBZAAAAAAAAAKUA="},"type":"scatter"},{"hovertemplate":"%{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#dc2626","line":{"color":"black","width":1},"size":11},"mode":"markers","name":"2016 Senate Races","text":["\u003cb\u003eWisconsin (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Russ Feingold (D) vs Ron Johnson (R)\u003cbr\u003ePoll Margin: +2.7%\u003cbr\u003eActual Margin: -3.4%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +6.1%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -3.8%\u003cbr\u003eNon-College White: 62%\u003cbr\u003e\u003cb\u003eFTI Score: +5.25\u003c\u002fb\u003e","\u003cb\u003ePennsylvania (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Katie McGinty (D) vs Pat Toomey (R)\u003cbr\u003ePoll Margin: +1.8%\u003cbr\u003eActual Margin: -1.5%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +3.3%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -3.7%\u003cbr\u003eNon-College White: 56%\u003cbr\u003e\u003cb\u003eFTI Score: +3.87\u003c\u002fb\u003e","\u003cb\u003eNorth Carolina (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Deborah Ross (D) vs Richard Burr (R)\u003cbr\u003ePoll Margin: -1.5%\u003cbr\u003eActual Margin: -5.7%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +4.2%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -6.7%\u003cbr\u003eNon-College White: 53%\u003cbr\u003e\u003cb\u003eFTI Score: +3.28\u003c\u002fb\u003e","\u003cb\u003eIndiana (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Evan Bayh (D) vs Todd Young (R)\u003cbr\u003ePoll Margin: +0.5%\u003cbr\u003eActual Margin: -9.7%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +10.2%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -19.2%\u003cbr\u003eNon-College White: 67%\u003cbr\u003e\u003cb\u003eFTI Score: +13.22\u003c\u002fb\u003e","\u003cb\u003eMissouri (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Jason Kander (D) vs Roy Blunt (R)\u003cbr\u003ePoll Margin: -1.0%\u003cbr\u003eActual Margin: -2.8%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +1.8%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -21.6%\u003cbr\u003eNon-College White: 64%\u003cbr\u003e\u003cb\u003eFTI Score: +13.29\u003c\u002fb\u003e","\u003cb\u003eNevada (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Catherine Cortez Masto (D) vs Joe Heck (R)\u003cbr\u003ePoll Margin: +0.8%\u003cbr\u003eActual Margin: +2.4%\u003cbr\u003e\u003cb\u003eSigned Polling Error: -1.6%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +2.4%\u003cbr\u003eNon-College White: 38%\u003cbr\u003e\u003cb\u003eFTI Score: -2.56\u003c\u002fb\u003e","\u003cb\u003eNew Hampshire (2016)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Maggie Hassan (D) vs Kelly Ayotte (R)\u003cbr\u003ePoll Margin: +1.5%\u003cbr\u003eActual Margin: +0.1%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +1.4%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -2.6%\u003cbr\u003eNon-College White: 54%\u003cbr\u003e\u003cb\u003eFTI Score: +2.82\u003c\u002fb\u003e"],"x":{"dtype":"f8","bdata":"hetRuB4FFUDuUbgehesOQD8K16NwPQpAr0fhehRuKkAWrkfhepQqQHsUrkfhegTAhutRuB6FBkA="},"y":{"dtype":"f8","bdata":"ZmZmZmZmGEBmZmZmZmYKQM3MzMzMzBBAZmZmZmZmJEDMzMzMzMz8P5mZmZmZmfm\u002fZmZmZmZm9j8="},"type":"scatter"},{"hovertemplate":"%{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#2563eb","line":{"color":"black","width":1},"size":11},"mode":"markers","name":"2020 Senate Races","text":["\u003cb\u003eMaine (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Sara Gideon (D) vs Susan Collins (R)\u003cbr\u003ePoll Margin: +3.2%\u003cbr\u003eActual Margin: -8.6%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +11.8%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +6.1%\u003cbr\u003eNon-College White: 61%\u003cbr\u003e\u003cb\u003eFTI Score: -0.05\u003c\u002fb\u003e","\u003cb\u003eNorth Carolina (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Cal Cunningham (D) vs Thom Tillis (R)\u003cbr\u003ePoll Margin: +2.6%\u003cbr\u003eActual Margin: -1.7%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +4.3%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -4.3%\u003cbr\u003eNon-College White: 53%\u003cbr\u003e\u003cb\u003eFTI Score: +4.22\u003c\u002fb\u003e","\u003cb\u003eIowa (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Theresa Greenfield (D) vs Joni Ernst (R)\u003cbr\u003ePoll Margin: +1.4%\u003cbr\u003eActual Margin: -6.6%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +8.0%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -11.2%\u003cbr\u003eNon-College White: 65%\u003cbr\u003e\u003cb\u003eFTI Score: +9.03\u003c\u002fb\u003e","\u003cb\u003eMontana (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Steve Bullock (D) vs Steve Daines (R)\u003cbr\u003ePoll Margin: -2.5%\u003cbr\u003eActual Margin: -10.0%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +7.5%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -19.4%\u003cbr\u003eNon-College White: 62%\u003cbr\u003e\u003cb\u003eFTI Score: +10.97\u003c\u002fb\u003e","\u003cb\u003eSouth Carolina (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Jaime Harrison (D) vs Lindsey Graham (R)\u003cbr\u003ePoll Margin: -1.8%\u003cbr\u003eActual Margin: -10.3%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +8.5%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -14.7%\u003cbr\u003eNon-College White: 51%\u003cbr\u003e\u003cb\u003eFTI Score: +7.23\u003c\u002fb\u003e","\u003cb\u003eGeorgia (Reg) (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Jon Ossoff (D) vs David Perdue (R)\u003cbr\u003ePoll Margin: -0.8%\u003cbr\u003eActual Margin: -1.8%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +1.0%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -2.8%\u003cbr\u003eNon-College White: 44%\u003cbr\u003e\u003cb\u003eFTI Score: +0.26\u003c\u002fb\u003e","\u003cb\u003eMichigan (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Gary Peters (D) vs John James (R)\u003cbr\u003ePoll Margin: +5.4%\u003cbr\u003eActual Margin: +1.7%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +3.7%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +2.8%\u003cbr\u003eNon-College White: 58%\u003cbr\u003e\u003cb\u003eFTI Score: +2.55\u003c\u002fb\u003e","\u003cb\u003eTexas (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: MJ Hegar (D) vs John Cornyn (R)\u003cbr\u003ePoll Margin: -3.2%\u003cbr\u003eActual Margin: -9.6%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +6.4%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -8.6%\u003cbr\u003eNon-College White: 38%\u003cbr\u003e\u003cb\u003eFTI Score: +1.29\u003c\u002fb\u003e","\u003cb\u003eKansas (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Barbara Bollier (D) vs Roger Marshall (R)\u003cbr\u003ePoll Margin: -3.0%\u003cbr\u003eActual Margin: -11.4%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +8.4%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -14.6%\u003cbr\u003eNon-College White: 58%\u003cbr\u003e\u003cb\u003eFTI Score: +7.50\u003c\u002fb\u003e","\u003cb\u003eAlaska (2020)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Al Gross (D) vs Dan Sullivan (R)\u003cbr\u003ePoll Margin: -2.8%\u003cbr\u003eActual Margin: -12.7%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +9.9%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -13.1%\u003cbr\u003eNon-College White: 54%\u003cbr\u003e\u003cb\u003eFTI Score: +6.23\u003c\u002fb\u003e"],"x":{"dtype":"f8","bdata":"IFyPwvUorL9dj8L1KNwQQJDC9ShcDyJAMzMzMzPzJUBwPQrXo\u002fAcQKJwPQrXo9A\u002fZmZmZmZmBECjcD0K16P0P\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002fx1AaGZmZmbmGEA="},"y":{"dtype":"f8","bdata":"mpmZmZmZJ0AzMzMzMzMRQAAAAAAAACBAAAAAAAAAHkAAAAAAAAAhQAAAAAAAAPA\u002fmpmZmZmZDUCZmZmZmZkZQM3MzMzMzCBAzMzMzMzMI0A="},"type":"scatter"},{"hovertemplate":"%{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#10b981","line":{"color":"black","width":1},"size":11},"mode":"markers","name":"2022 Senate Races","text":["\u003cb\u003eGeorgia (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Raphael Warnock (D) vs Herschel Walker (R)\u003cbr\u003ePoll Margin: +0.5%\u003cbr\u003eActual Margin: +2.8%\u003cbr\u003e\u003cb\u003eSigned Polling Error: -2.3%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +0.2%\u003cbr\u003eNon-College White: 44%\u003cbr\u003e\u003cb\u003eFTI Score: -0.67\u003c\u002fb\u003e","\u003cb\u003ePennsylvania (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: John Fetterman (D) vs Mehmet Oz (R)\u003cbr\u003ePoll Margin: +3.5%\u003cbr\u003eActual Margin: +4.9%\u003cbr\u003e\u003cb\u003eSigned Polling Error: -1.4%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +1.2%\u003cbr\u003eNon-College White: 56%\u003cbr\u003e\u003cb\u003eFTI Score: +2.11\u003c\u002fb\u003e","\u003cb\u003eWisconsin (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Mandela Barnes (D) vs Ron Johnson (R)\u003cbr\u003ePoll Margin: -1.0%\u003cbr\u003eActual Margin: -1.0%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +0.0%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -2.4%\u003cbr\u003eNon-College White: 62%\u003cbr\u003e\u003cb\u003eFTI Score: +2.45\u003c\u002fb\u003e","\u003cb\u003eNevada (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Catherine Cortez Masto (D) vs Adam Laxalt (R)\u003cbr\u003ePoll Margin: -1.2%\u003cbr\u003eActual Margin: +0.8%\u003cbr\u003e\u003cb\u003eSigned Polling Error: -2.0%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +2.4%\u003cbr\u003eNon-College White: 38%\u003cbr\u003e\u003cb\u003eFTI Score: -3.66\u003c\u002fb\u003e","\u003cb\u003eOhio (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Tim Ryan (D) vs JD Vance (R)\u003cbr\u003ePoll Margin: -2.2%\u003cbr\u003eActual Margin: -6.1%\u003cbr\u003e\u003cb\u003eSigned Polling Error: +3.9%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -8.0%\u003cbr\u003eNon-College White: 62%\u003cbr\u003e\u003cb\u003eFTI Score: +4.87\u003c\u002fb\u003e","\u003cb\u003eNorth Carolina (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Cheri Beasley (D) vs Ted Budd (R)\u003cbr\u003ePoll Margin: -3.5%\u003cbr\u003eActual Margin: -3.2%\u003cbr\u003e\u003cb\u003eSigned Polling Error: -0.3%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: -1.3%\u003cbr\u003eNon-College White: 53%\u003cbr\u003e\u003cb\u003eFTI Score: -0.79\u003c\u002fb\u003e","\u003cb\u003eArizona (2022)\u003c\u002fb\u003e\u003cbr\u003eCandidates: Mark Kelly (D) vs Blake Masters (R)\u003cbr\u003ePoll Margin: +2.5%\u003cbr\u003eActual Margin: +4.9%\u003cbr\u003e\u003cb\u003eSigned Polling Error: -2.4%\u003c\u002fb\u003e\u003cbr\u003eFundamentals Baseline: +0.3%\u003cbr\u003eNon-College White: 45%\u003cbr\u003e\u003cb\u003eFTI Score: +0.51\u003c\u002fb\u003e"],"x":{"dtype":"f8","bdata":"mZmZmZmZ5b\u002fYo3A9CtcAQJqZmZmZmQNASOF6FK5HDcB7FK5H4XoTQEbhehSuR+m\u002fVbgehetR4D8="},"y":{"dtype":"f8","bdata":"ZmZmZmZmAsBoZmZmZmb2vwAAAAAAAAAAAAAAAAAAAMAyMzMzMzMPQDAzMzMzM9O\u002fNDMzMzMzA8A="},"type":"scatter"},{"line":{"color":"#dc2626","dash":"solid","width":2.5},"mode":"lines","name":"Regression Fit (r = 0.641, R² = 0.410)","x":{"dtype":"f8","bdata":"2KNwPQpXFMCq2jpVWH4TwHwRBW2mpRLATkjPhPTMEcAgf5mcQvQQwPK1Y7SQGxDAh9lbmL2FDsArR\u002fDHWdQMwM+0hPf1IgvAcyIZJ5JxCcAXkK1WLsAHwLv9QYbKDgbAXmvWtWZdBMAC2WrlAqwCwKZG\u002fxSf+gDAlGgniXaS\u002fr\u002fcQ1Dori\u002f7vyQfeUfnzPe\u002fbPqhph9q9L+01coFWAfxv\u002fhh58kgSeu\u002fiBg5iJGD5L8wnhWNBHzbv6AWchPM4cu\u002fABgel+Fxeb8ANQD6rUrKP2CtXIB1sNo\u002fIKDcAcod5D+Q6YpDWePqP4CZnEJ01PA\u002fOL5z4zs39D\u002fw4kqEA5r3P6gHIiXL\u002fPo\u002fYCz5xZJf\u002fj+MKGgzLeEAQOi60wORkgJARE0\u002f1PRDBECg36qkWPUFQPxxFnW8pgdAWASCRSBYCUC0lu0VhAkLQBApWebnugxAbLvEtktsDkDkJpjD1w4QQBLwzauJ5xBAQLkDlDvAEUBugjl87ZgSQJxLb2SfcRNAzBSlTFFKFED63do0AyMVQCinEB21+xVAVnBGBWfUFkCEOXztGK0XQLICstXKhRhA4MvnvXxeGUAOlR2mLjcaQDxeU47gDxtAaieJdpLoG0CY8L5eRMEcQMa59Eb2mR1A9IIqL6hyHkAiTGAXWksfQKgKy\u002f8FEiBAP+\u002fl815+IEDW0wDot+ogQG24G9wQVyFABJ020GnDIUCbgVHEwi8iQDJmbLgbnCJAyUqHrHQII0BgL6KgzXQjQPcTvZQm4SNAjvjXiH9NJEAl3fJ82LkkQLzBDXExJiVAU6YoZYqSJUDqikNZ4\u002f4lQIJvXk08ayZAGFR5QZXXJkCwOJQ17kMnQEYdrylHsCdA3gHKHaAcKEB05uQR+YgoQAzL\u002fwVS9ShAoq8a+qphKUA6lDXuA84pQNB4UOJcOipAaF1r1rWmKkD+QYbKDhMrQJYmob5nfytALAu8ssDrK0DE79amGVgsQFrU8ZpyxCxA8rgMj8swLUCInSeDJJ0tQCCCQnd9CS5AuGZda9Z1LkBOS3hfL+IuQOYvk1OITi9AfBSuR+G6L0A="},"y":{"dtype":"f8","bdata":"ZBzjv\u002f7a57+QQvk\u002f7wvkv7xoD8DfPOC\u002f0B1LgKDb2L8oaneAgT3RvxBtRwHFPsO\u002fwBaABhwKoL9Aww78bXO2P+jIrv30dco\u002fHBirfhnZ1D\u002fAy35+OHfcP7Q\u002fKb+rCuI\u002fihkTP7vZ5T9e8\u002fy+yqjpPzDN5j7ad+0\u002fglNo33Sj8D9sQF2f\u002fIryP1UtUl+EcvQ\u002fPxpHHwxa9j8oBzzfk0H4PxL0MJ8bKfo\u002f\u002fOAlX6MQ\u002fD\u002fmzRofK\u002fj9P8+6D9+y3\u002f8\u002f3lOCT53jAEBSynwvYdcBQMdAdw8lywJAPLdx7+i+A0CxLWzPrLIEQCakZq9wpgVAmhphjzSaBkAQkVtv+I0HQIQHVk+8gQhA+X1QL4B1CUBu9EoPRGkKQOJqRe8HXQtAWOE\u002fz8tQDEDMVzqvj0QNQEHONI9TOA5AtkQvbxcsD0CW3ZSn7Q8QQNAYkpfPiRBAClSPh7EDEUBEj4x3k30RQH\u002fKiWd19xFAugWHV1dxEkD0QIRHOesSQC58gTcbZRNAard+J\u002f3eE0Ck8nsX31gUQN4teQfB0hRAGWl296JMFUBUpHPnhMYVQI7fcNdmQBZAyBpux0i6FkADVmu3KjQXQD2RaKcMrhdAeMxll+4nGECyB2OH0KEYQOxCYHeyGxlAJ35dZ5SVGUBhuVpXdg8aQJz0V0dYiRpA1i9VNzoDG0ARa1InHH0bQEumTxf+9htAheFMB+BwHEDAHEr3weocQPpXR+ejZB1ANZNE14XeHUBvzkHHZ1geQKkJP7dJ0h5A5EQ8pytMH0AegDmXDcYfQKxdm8P3HyBASvuZu+hcIEDnmJiz2ZkgQIQ2l6vK1iBAIdSVo7sTIUC\u002fcZSbrFAhQFwPk5OdjSFA+qyRi47KIUCWSpCDfwciQDTojntwRCJA0IWNc2GBIkBuI4xrUr4iQAvBimND+yJAqF6JWzQ4I0BG\u002fIdTJXUjQOOZhksWsiNAgDeFQwfvI0Ae1YM7+CskQLpygjPpaCRAWBCBK9qlJED0rX8jy+IkQJJLfhu8HyVAMOl8E61cJUDMhnsLnpklQGokegOP1iVACMJ4+38TJkA="},"type":"scatter"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"legend":{"orientation":"h","yanchor":"bottom","y":1.02,"xanchor":"right","x":1},"margin":{"l":40,"r":40,"t":80,"b":40},"title":{"text":"\u003cb\u003eEmpirical Validation: Fundamentals Tension Index (FTI) vs. Realized Polling Anomalies\u003c\u002fb\u003e\u003cbr\u003e\u003csup\u003ePearson r = 0.641 | R² = 0.410 | p-value = 1.04e-04 (31 competitive Senate races from 2014 to 2022)\u003c\u002fsup\u003e"},"xaxis":{"title":{"text":"Fundamentals Tension Index (FTI)"}},"yaxis":{"title":{"text":"Signed Polling Error (%) [Poll Margin - Actual Margin (D - R)]"}},"height":500},                        {"responsive": true}                    )                };            </script>        </div>
+        </div>
+
+        <h3>The Anatomy of Modern Polling Anomalies: Why Did Polls Overestimate Democrats?</h3>
+        <p>In 2016, 2020, and 2024, state and national polls exhibited a persistent pro-Democratic skew (+2.0 to +3.5% nationally, and up to +6 to +11% in specific battlegrounds like Maine, Wisconsin, Ohio, and Iowa). Our analysis reveals three distinct mechanisms driving this anomaly:</p>
+        <ul>
+            <li><strong>1. Candidate Partisan Stretch (The Incumbency / Challenger Mirage):</strong> Early in midterm campaigns, out-party challengers post impressive poll margins driven by anti-presidential protest sentiment. However, on Election Day, down-ballot contests snap back heavily toward the structural presidential baseline of the state. When a candidate polls 8 to 14 points ahead of their state's presidential baseline (e.g. Hegar in TX '20, Greenfield in IA '20, Bullock in MT '20, Bayh in IN '16), that lead is largely illusory.</li>
+            <li><strong>2. Demographic Non-Response Bias:</strong> Low-propensity, non-college-educated, low-trust, and rural voters systematically refuse to answer phone and internet surveys. Even when pollsters weight for educational attainment, non-college respondents who agree to complete a 15-minute survey are systematically more liberal than non-respondents who hang up.</li>
+            <li><strong>3. The Macro Economic Discontent Wedge:</strong> When national Consumer Sentiment is below 70 and "Wrong Track" exceeds 65%, undecided pocketbook voters tell pollsters they are undecided or dislike both choices, but in the privacy of the voting booth they disproportionately vote for the Republican challenger or against the incumbent party.</li>
+        </ul>
+
+        <h3>Historical Empirical Validation: 31 Competitive Senate Races (2014–2022)</h3>
+        <p>Below is the empirical dataset proving the predictive power of the Fundamentals Tension Index (FTI). Positive signed error indicates Democratic overstatement (Republican outperformance on Election Day):</p>
+        <input type="text" id="ftiSearch" class="search-box" placeholder="Search historical race, candidate, or state..." onkeyup="filterFtiTable()">
+        <div style="overflow-x: auto; margin-bottom: 24px;">
+            <table class="data-table" id="ftiTable">
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>Cycle</th>
+                        <th>Candidates</th>
+                        <th style="text-align:right;">Poll Margin (D - R)</th>
+                        <th style="text-align:right;">Actual Result (D - R)</th>
+                        <th style="text-align:right;">Polling Error</th>
+                        <th style="text-align:right;">Pres Baseline</th>
+                        <th style="text-align:right;">Non-College White</th>
+                        <th style="text-align:right;">FTI Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+    <tr>
+        <td><strong>Arkansas</strong> <span style='color:#64748b; font-size:0.85em;'>(AR)</span></td>
+        <td>2014</td>
+        <td>Mark Pryor (D) vs. Tom Cotton (R)</td>
+        <td style='text-align:right;'>-4.5%</td>
+        <td style='text-align:right;'>-17.1%</td>
+        <td style='text-align:right;'><span class='badge negative'>+12.6%</span></td>
+        <td style='text-align:right;'>-23.7%</td>
+        <td style='text-align:right;'>68%</td>
+        <td style='text-align:right;'><span class='badge negative'>+13.08</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Kentucky</strong> <span style='color:#64748b; font-size:0.85em;'>(KY)</span></td>
+        <td>2014</td>
+        <td>Alison Grimes (D) vs. Mitch McConnell (R)</td>
+        <td style='text-align:right;'>-3.0%</td>
+        <td style='text-align:right;'>-15.5%</td>
+        <td style='text-align:right;'><span class='badge negative'>+12.5%</span></td>
+        <td style='text-align:right;'>-25.7%</td>
+        <td style='text-align:right;'>67%</td>
+        <td style='text-align:right;'><span class='badge negative'>+14.87</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Maine</strong> <span style='color:#64748b; font-size:0.85em;'>(ME)</span></td>
+        <td>2020</td>
+        <td>Sara Gideon (D) vs. Susan Collins (R)</td>
+        <td style='text-align:right;'>+3.2%</td>
+        <td style='text-align:right;'>-8.6%</td>
+        <td style='text-align:right;'><span class='badge negative'>+11.8%</span></td>
+        <td style='text-align:right;'>+6.1%</td>
+        <td style='text-align:right;'>61%</td>
+        <td style='text-align:right;'><span class='badge positive'>-0.05</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Indiana</strong> <span style='color:#64748b; font-size:0.85em;'>(IN)</span></td>
+        <td>2016</td>
+        <td>Evan Bayh (D) vs. Todd Young (R)</td>
+        <td style='text-align:right;'>+0.5%</td>
+        <td style='text-align:right;'>-9.7%</td>
+        <td style='text-align:right;'><span class='badge negative'>+10.2%</span></td>
+        <td style='text-align:right;'>-19.2%</td>
+        <td style='text-align:right;'>67%</td>
+        <td style='text-align:right;'><span class='badge negative'>+13.22</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Alaska</strong> <span style='color:#64748b; font-size:0.85em;'>(AK)</span></td>
+        <td>2020</td>
+        <td>Al Gross (D) vs. Dan Sullivan (R)</td>
+        <td style='text-align:right;'>-2.8%</td>
+        <td style='text-align:right;'>-12.7%</td>
+        <td style='text-align:right;'><span class='badge negative'>+9.9%</span></td>
+        <td style='text-align:right;'>-13.1%</td>
+        <td style='text-align:right;'>54%</td>
+        <td style='text-align:right;'><span class='badge negative'>+6.23</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>South Carolina</strong> <span style='color:#64748b; font-size:0.85em;'>(SC)</span></td>
+        <td>2020</td>
+        <td>Jaime Harrison (D) vs. Lindsey Graham (R)</td>
+        <td style='text-align:right;'>-1.8%</td>
+        <td style='text-align:right;'>-10.3%</td>
+        <td style='text-align:right;'><span class='badge negative'>+8.5%</span></td>
+        <td style='text-align:right;'>-14.7%</td>
+        <td style='text-align:right;'>51%</td>
+        <td style='text-align:right;'><span class='badge negative'>+7.23</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Kansas</strong> <span style='color:#64748b; font-size:0.85em;'>(KS)</span></td>
+        <td>2020</td>
+        <td>Barbara Bollier (D) vs. Roger Marshall (R)</td>
+        <td style='text-align:right;'>-3.0%</td>
+        <td style='text-align:right;'>-11.4%</td>
+        <td style='text-align:right;'><span class='badge negative'>+8.4%</span></td>
+        <td style='text-align:right;'>-14.6%</td>
+        <td style='text-align:right;'>58%</td>
+        <td style='text-align:right;'><span class='badge negative'>+7.50</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Iowa</strong> <span style='color:#64748b; font-size:0.85em;'>(IA)</span></td>
+        <td>2020</td>
+        <td>Theresa Greenfield (D) vs. Joni Ernst (R)</td>
+        <td style='text-align:right;'>+1.4%</td>
+        <td style='text-align:right;'>-6.6%</td>
+        <td style='text-align:right;'><span class='badge negative'>+8.0%</span></td>
+        <td style='text-align:right;'>-11.2%</td>
+        <td style='text-align:right;'>65%</td>
+        <td style='text-align:right;'><span class='badge negative'>+9.03</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Iowa</strong> <span style='color:#64748b; font-size:0.85em;'>(IA)</span></td>
+        <td>2014</td>
+        <td>Bruce Braley (D) vs. Joni Ernst (R)</td>
+        <td style='text-align:right;'>-0.5%</td>
+        <td style='text-align:right;'>-8.3%</td>
+        <td style='text-align:right;'><span class='badge negative'>+7.8%</span></td>
+        <td style='text-align:right;'>+5.8%</td>
+        <td style='text-align:right;'>65%</td>
+        <td style='text-align:right;'><span class='badge positive'>-1.36</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Montana</strong> <span style='color:#64748b; font-size:0.85em;'>(MT)</span></td>
+        <td>2020</td>
+        <td>Steve Bullock (D) vs. Steve Daines (R)</td>
+        <td style='text-align:right;'>-2.5%</td>
+        <td style='text-align:right;'>-10.0%</td>
+        <td style='text-align:right;'><span class='badge negative'>+7.5%</span></td>
+        <td style='text-align:right;'>-19.4%</td>
+        <td style='text-align:right;'>62%</td>
+        <td style='text-align:right;'><span class='badge negative'>+10.97</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Texas</strong> <span style='color:#64748b; font-size:0.85em;'>(TX)</span></td>
+        <td>2020</td>
+        <td>MJ Hegar (D) vs. John Cornyn (R)</td>
+        <td style='text-align:right;'>-3.2%</td>
+        <td style='text-align:right;'>-9.6%</td>
+        <td style='text-align:right;'><span class='badge negative'>+6.4%</span></td>
+        <td style='text-align:right;'>-8.6%</td>
+        <td style='text-align:right;'>38%</td>
+        <td style='text-align:right;'><span class='badge negative'>+1.29</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Wisconsin</strong> <span style='color:#64748b; font-size:0.85em;'>(WI)</span></td>
+        <td>2016</td>
+        <td>Russ Feingold (D) vs. Ron Johnson (R)</td>
+        <td style='text-align:right;'>+2.7%</td>
+        <td style='text-align:right;'>-3.4%</td>
+        <td style='text-align:right;'><span class='badge negative'>+6.1%</span></td>
+        <td style='text-align:right;'>-3.8%</td>
+        <td style='text-align:right;'>62%</td>
+        <td style='text-align:right;'><span class='badge negative'>+5.25</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Georgia</strong> <span style='color:#64748b; font-size:0.85em;'>(GA)</span></td>
+        <td>2014</td>
+        <td>Michelle Nunn (D) vs. David Perdue (R)</td>
+        <td style='text-align:right;'>-2.0%</td>
+        <td style='text-align:right;'>-7.7%</td>
+        <td style='text-align:right;'><span class='badge negative'>+5.7%</span></td>
+        <td style='text-align:right;'>-7.8%</td>
+        <td style='text-align:right;'>44%</td>
+        <td style='text-align:right;'><span class='badge negative'>+2.35</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Alaska</strong> <span style='color:#64748b; font-size:0.85em;'>(AK)</span></td>
+        <td>2014</td>
+        <td>Mark Begich (D) vs. Dan Sullivan (R)</td>
+        <td style='text-align:right;'>-1.5%</td>
+        <td style='text-align:right;'>-6.0%</td>
+        <td style='text-align:right;'><span class='badge negative'>+4.5%</span></td>
+        <td style='text-align:right;'>-14.0%</td>
+        <td style='text-align:right;'>54%</td>
+        <td style='text-align:right;'><span class='badge negative'>+7.44</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>North Carolina</strong> <span style='color:#64748b; font-size:0.85em;'>(NC)</span></td>
+        <td>2020</td>
+        <td>Cal Cunningham (D) vs. Thom Tillis (R)</td>
+        <td style='text-align:right;'>+2.6%</td>
+        <td style='text-align:right;'>-1.7%</td>
+        <td style='text-align:right;'><span class='badge negative'>+4.3%</span></td>
+        <td style='text-align:right;'>-4.3%</td>
+        <td style='text-align:right;'>53%</td>
+        <td style='text-align:right;'><span class='badge negative'>+4.22</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>North Carolina</strong> <span style='color:#64748b; font-size:0.85em;'>(NC)</span></td>
+        <td>2016</td>
+        <td>Deborah Ross (D) vs. Richard Burr (R)</td>
+        <td style='text-align:right;'>-1.5%</td>
+        <td style='text-align:right;'>-5.7%</td>
+        <td style='text-align:right;'><span class='badge negative'>+4.2%</span></td>
+        <td style='text-align:right;'>-6.7%</td>
+        <td style='text-align:right;'>53%</td>
+        <td style='text-align:right;'><span class='badge negative'>+3.28</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Ohio</strong> <span style='color:#64748b; font-size:0.85em;'>(OH)</span></td>
+        <td>2022</td>
+        <td>Tim Ryan (D) vs. JD Vance (R)</td>
+        <td style='text-align:right;'>-2.2%</td>
+        <td style='text-align:right;'>-6.1%</td>
+        <td style='text-align:right;'><span class='badge negative'>+3.9%</span></td>
+        <td style='text-align:right;'>-8.0%</td>
+        <td style='text-align:right;'>62%</td>
+        <td style='text-align:right;'><span class='badge negative'>+4.87</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Michigan</strong> <span style='color:#64748b; font-size:0.85em;'>(MI)</span></td>
+        <td>2020</td>
+        <td>Gary Peters (D) vs. John James (R)</td>
+        <td style='text-align:right;'>+5.4%</td>
+        <td style='text-align:right;'>+1.7%</td>
+        <td style='text-align:right;'><span class='badge negative'>+3.7%</span></td>
+        <td style='text-align:right;'>+2.8%</td>
+        <td style='text-align:right;'>58%</td>
+        <td style='text-align:right;'><span class='badge negative'>+2.55</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Pennsylvania</strong> <span style='color:#64748b; font-size:0.85em;'>(PA)</span></td>
+        <td>2016</td>
+        <td>Katie McGinty (D) vs. Pat Toomey (R)</td>
+        <td style='text-align:right;'>+1.8%</td>
+        <td style='text-align:right;'>-1.5%</td>
+        <td style='text-align:right;'><span class='badge negative'>+3.3%</span></td>
+        <td style='text-align:right;'>-3.7%</td>
+        <td style='text-align:right;'>56%</td>
+        <td style='text-align:right;'><span class='badge negative'>+3.87</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>North Carolina</strong> <span style='color:#64748b; font-size:0.85em;'>(NC)</span></td>
+        <td>2014</td>
+        <td>Kay Hagan (D) vs. Thom Tillis (R)</td>
+        <td style='text-align:right;'>+0.7%</td>
+        <td style='text-align:right;'>-1.6%</td>
+        <td style='text-align:right;'><span class='badge negative'>+2.3%</span></td>
+        <td style='text-align:right;'>-2.0%</td>
+        <td style='text-align:right;'>53%</td>
+        <td style='text-align:right;'><span class='badge negative'>+1.91</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Missouri</strong> <span style='color:#64748b; font-size:0.85em;'>(MO)</span></td>
+        <td>2016</td>
+        <td>Jason Kander (D) vs. Roy Blunt (R)</td>
+        <td style='text-align:right;'>-1.0%</td>
+        <td style='text-align:right;'>-2.8%</td>
+        <td style='text-align:right;'><span class='badge negative'>+1.8%</span></td>
+        <td style='text-align:right;'>-21.6%</td>
+        <td style='text-align:right;'>64%</td>
+        <td style='text-align:right;'><span class='badge negative'>+13.29</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>New Hampshire</strong> <span style='color:#64748b; font-size:0.85em;'>(NH)</span></td>
+        <td>2016</td>
+        <td>Maggie Hassan (D) vs. Kelly Ayotte (R)</td>
+        <td style='text-align:right;'>+1.5%</td>
+        <td style='text-align:right;'>+0.1%</td>
+        <td style='text-align:right;'><span class='badge negative'>+1.4%</span></td>
+        <td style='text-align:right;'>-2.6%</td>
+        <td style='text-align:right;'>54%</td>
+        <td style='text-align:right;'><span class='badge negative'>+2.82</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Colorado</strong> <span style='color:#64748b; font-size:0.85em;'>(CO)</span></td>
+        <td>2014</td>
+        <td>Mark Udall (D) vs. Cory Gardner (R)</td>
+        <td style='text-align:right;'>-0.5%</td>
+        <td style='text-align:right;'>-1.9%</td>
+        <td style='text-align:right;'><span class='badge negative'>+1.4%</span></td>
+        <td style='text-align:right;'>+5.4%</td>
+        <td style='text-align:right;'>44%</td>
+        <td style='text-align:right;'><span class='badge positive'>-4.09</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Georgia (Reg)</strong> <span style='color:#64748b; font-size:0.85em;'>(GA)</span></td>
+        <td>2020</td>
+        <td>Jon Ossoff (D) vs. David Perdue (R)</td>
+        <td style='text-align:right;'>-0.8%</td>
+        <td style='text-align:right;'>-1.8%</td>
+        <td style='text-align:right;'><span class='badge negative'>+1.0%</span></td>
+        <td style='text-align:right;'>-2.8%</td>
+        <td style='text-align:right;'>44%</td>
+        <td style='text-align:right;'><span class='badge negative'>+0.26</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Wisconsin</strong> <span style='color:#64748b; font-size:0.85em;'>(WI)</span></td>
+        <td>2022</td>
+        <td>Mandela Barnes (D) vs. Ron Johnson (R)</td>
+        <td style='text-align:right;'>-1.0%</td>
+        <td style='text-align:right;'>-1.0%</td>
+        <td style='text-align:right;'><span class='badge positive'>+0.0%</span></td>
+        <td style='text-align:right;'>-2.4%</td>
+        <td style='text-align:right;'>62%</td>
+        <td style='text-align:right;'><span class='badge negative'>+2.45</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>North Carolina</strong> <span style='color:#64748b; font-size:0.85em;'>(NC)</span></td>
+        <td>2022</td>
+        <td>Cheri Beasley (D) vs. Ted Budd (R)</td>
+        <td style='text-align:right;'>-3.5%</td>
+        <td style='text-align:right;'>-3.2%</td>
+        <td style='text-align:right;'><span class='badge positive'>-0.3%</span></td>
+        <td style='text-align:right;'>-1.3%</td>
+        <td style='text-align:right;'>53%</td>
+        <td style='text-align:right;'><span class='badge positive'>-0.79</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Pennsylvania</strong> <span style='color:#64748b; font-size:0.85em;'>(PA)</span></td>
+        <td>2022</td>
+        <td>John Fetterman (D) vs. Mehmet Oz (R)</td>
+        <td style='text-align:right;'>+3.5%</td>
+        <td style='text-align:right;'>+4.9%</td>
+        <td style='text-align:right;'><span class='badge positive'>-1.4%</span></td>
+        <td style='text-align:right;'>+1.2%</td>
+        <td style='text-align:right;'>56%</td>
+        <td style='text-align:right;'><span class='badge negative'>+2.11</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Nevada</strong> <span style='color:#64748b; font-size:0.85em;'>(NV)</span></td>
+        <td>2016</td>
+        <td>Catherine Cortez Masto (D) vs. Joe Heck (R)</td>
+        <td style='text-align:right;'>+0.8%</td>
+        <td style='text-align:right;'>+2.4%</td>
+        <td style='text-align:right;'><span class='badge positive'>-1.6%</span></td>
+        <td style='text-align:right;'>+2.4%</td>
+        <td style='text-align:right;'>38%</td>
+        <td style='text-align:right;'><span class='badge positive'>-2.56</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Nevada</strong> <span style='color:#64748b; font-size:0.85em;'>(NV)</span></td>
+        <td>2022</td>
+        <td>Catherine Cortez Masto (D) vs. Adam Laxalt (R)</td>
+        <td style='text-align:right;'>-1.2%</td>
+        <td style='text-align:right;'>+0.8%</td>
+        <td style='text-align:right;'><span class='badge positive'>-2.0%</span></td>
+        <td style='text-align:right;'>+2.4%</td>
+        <td style='text-align:right;'>38%</td>
+        <td style='text-align:right;'><span class='badge positive'>-3.66</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Georgia</strong> <span style='color:#64748b; font-size:0.85em;'>(GA)</span></td>
+        <td>2022</td>
+        <td>Raphael Warnock (D) vs. Herschel Walker (R)</td>
+        <td style='text-align:right;'>+0.5%</td>
+        <td style='text-align:right;'>+2.8%</td>
+        <td style='text-align:right;'><span class='badge positive'>-2.3%</span></td>
+        <td style='text-align:right;'>+0.2%</td>
+        <td style='text-align:right;'>44%</td>
+        <td style='text-align:right;'><span class='badge positive'>-0.67</span></td>
+    </tr>
+    
+    <tr>
+        <td><strong>Arizona</strong> <span style='color:#64748b; font-size:0.85em;'>(AZ)</span></td>
+        <td>2022</td>
+        <td>Mark Kelly (D) vs. Blake Masters (R)</td>
+        <td style='text-align:right;'>+2.5%</td>
+        <td style='text-align:right;'>+4.9%</td>
+        <td style='text-align:right;'><span class='badge positive'>-2.4%</span></td>
+        <td style='text-align:right;'>+0.3%</td>
+        <td style='text-align:right;'>45%</td>
+        <td style='text-align:right;'><span class='badge negative'>+0.51</span></td>
+    </tr>
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Section 7: 2026 Senate Midterm Forecasting Model -->
+    <div class="section-card">
+        <h2 class="section-title">7. 2026 Senate Midterm Model: 3-Model Comparison & Confidence Bands</h2>
+        <p class="section-desc">Empirical simulation model across all 35 contested races (33 Class 2 seats + 2 special elections in Ohio and Florida). We compare three modeling paradigms: Pure Polling, Approval-Tilted, and FTI-Calibrated.</p>
 
         <!-- Senate KPI Grid -->
         <div class="grid-kpi" style="margin-bottom: 24px;">
             <div class="kpi-card">
                 <div class="kpi-label">Expected Senate Balance</div>
-                <div class="kpi-value" style="color: var(--accent-blue);">49.5 D – 50.5 R</div>
-                <div class="kpi-subtext">Median: 49 Dem / 51 GOP (34 D & 31 R non-up)</div>
+                <div class="kpi-value" style="color: var(--accent-blue);">48.6 D – 51.4 R</div>
+                <div class="kpi-subtext">FTI Median: 49 Dem / 51 GOP (34 D & 31 R non-up)</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">80% Confidence Band</div>
-                <div class="kpi-value" style="color: #475569;">[47, 52] Dem</div>
-                <div class="kpi-subtext">Republicans: [48, 53] Seats</div>
+                <div class="kpi-value" style="color: #475569;">[47, 51] Dem</div>
+                <div class="kpi-subtext">Republicans: [49, 53] Seats</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">95% Confidence Band</div>
-                <div class="kpi-value" style="color: #475569;">[46, 53] Dem</div>
-                <div class="kpi-subtext">Republicans: [47, 54] Seats</div>
+                <div class="kpi-value" style="color: #475569;">[46, 52] Dem</div>
+                <div class="kpi-subtext">Republicans: [48, 54] Seats</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">GOP Control Probability</div>
-                <div class="kpi-value" style="color: var(--accent-red);">71.6%</div>
-                <div class="kpi-subtext">50-50 tie (19.7%) broken by VP Vance + 51.9% GOP maj</div>
+                <div class="kpi-value" style="color: var(--accent-red);">89.5%</div>
+                <div class="kpi-subtext">50-50 tie (16.0%) broken by VP Vance + 73.4% GOP maj</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Dem Majority Probability</div>
-                <div class="kpi-value" style="color: var(--accent-blue);">28.4%</div>
+                <div class="kpi-value" style="color: var(--accent-blue);">10.5%</div>
                 <div class="kpi-subtext">Requires 51+ seats (+4 net gain from 47 baseline)</div>
             </div>
         </div>
 
         <div style="width: 100%; min-height: 500px; margin-bottom: 30px;">
-            <div>                            <div id="0881ee3a-8b3d-4849-b009-78e7c948efac" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("0881ee3a-8b3d-4849-b009-78e7c948efac")) {                    Plotly.newPlot(                        "0881ee3a-8b3d-4849-b009-78e7c948efac",                        [{"hovertemplate":["\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 57\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 56\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 55\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 54\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 53\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 52\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 51\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 50\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 49\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 48\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 47\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 46\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 45\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003eDemocratic Seats: %{x}\u003c\u002fb\u003e\u003cbr\u003eRepublican Seats: 44\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e"],"marker":{"color":["#93c5fd","#93c5fd","#93c5fd","#93c5fd","#93c5fd","#93c5fd","#93c5fd","#fde047","#2563eb","#2563eb","#2563eb","#2563eb","#2563eb","#2563eb"],"line":{"color":"black","width":1}},"name":"Probability (%)","x":{"dtype":"i1","bdata":"KywtLi8wMTIzNDU2Nzg="},"y":{"dtype":"f8","bdata":"exSuR+F6lD9qvHSTGAS2PzzfT42XbuI\u002fHVpkO99PBUCbxCCwcugkQEFg5dAi2zFAw\u002fUoXI9CNEAzMzMzM7MzQC2yne+nRitAIbByaJHtIED0\u002fdR46SYTQIcW2c73U\u002fc\u002fuB6F61G4nj8AAAAAAAAAAA=="},"type":"bar"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"shapes":[{"line":{"color":"#dc2626","dash":"dash","width":2.5},"type":"line","x0":50.5,"x1":50.5,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"#d97706","dash":"dot","width":2},"type":"line","x0":49.5,"x1":49.5,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"annotations":[{"showarrow":false,"text":"\u003cb\u003eDem Majority (51+ Seats)\u003c\u002fb\u003e","x":50.5,"xanchor":"left","xref":"x","y":1,"yanchor":"top","yref":"y domain"},{"showarrow":false,"text":"\u003cb\u003e50-50 Split (GOP Control via VP Vance)\u003c\u002fb\u003e","x":49.5,"xanchor":"right","xref":"x","y":1,"yanchor":"top","yref":"y domain"}],"xaxis":{"title":{"text":"Total Democratic Seats (out of 100)"},"tickmode":"linear","tick0":42,"dtick":1,"range":[42.5,56.5]},"margin":{"l":40,"r":40,"t":80,"b":40},"title":{"text":"\u003cb\u003e2026 Senate Midterm Projection: Distribution of Democratic Seats (50,000 Simulations)\u003c\u002fb\u003e\u003cbr\u003e\u003csup\u003eMean: 49.49 Dem \u002f 50.51 GOP | 80% CI: [47, 52] Dem | 95% CI: [46, 53] Dem | GOP Control: 71.6%\u003c\u002fsup\u003e"},"yaxis":{"title":{"text":"Probability (%) across Simulations"}},"height":500},                        {"responsive": true}                    )                };            </script>        </div>
+            <div>                            <div id="8a646455-65ce-4565-9b3c-afe8d2978d31" class="plotly-graph-div" style="height:500px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("8a646455-65ce-4565-9b3c-afe8d2978d31")) {                    Plotly.newPlot(                        "8a646455-65ce-4565-9b3c-afe8d2978d31",                        [{"hovertemplate":"\u003cb\u003eTilted Model\u003c\u002fb\u003e\u003cbr\u003eDem Seats: %{x}\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#93c5fd","line":{"color":"black","width":0.8}},"name":"Approval-Tilted Model","width":0.38,"x":{"dtype":"f8","bdata":"ZmZmZmZmRUBmZmZmZuZFQGZmZmZmZkZAZmZmZmbmRkBmZmZmZmZHQGZmZmZm5kdAZmZmZmZmSEBmZmZmZuZIQGZmZmZmZklAZmZmZmbmSUBmZmZmZmZKQGZmZmZm5kpAZmZmZmZmS0BmZmZmZuZLQA=="},"y":{"dtype":"f8","bdata":"exSuR+F6hD8bL90kBoGlP\u002f7UeOkmMeA\u002f5dAi2\u002fl+BkCF61G4HoUkQMl2vp8a7zFABoGVQ4tsNEDP91PjpdszQIGVQ4ts5ypA2\u002fl+arz0IEDLoUW28\u002f0SQIcW2c73U\u002fc\u002fPN9PjZdukj8AAAAAAAAAAA=="},"type":"bar"},{"hovertemplate":"\u003cb\u003eFTI-Calibrated Model\u003c\u002fb\u003e\u003cbr\u003eDem Seats: %{x}\u003cbr\u003eProbability: %{y:.2f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#2563eb","line":{"color":"black","width":0.8}},"name":"FTI-Calibrated Model","width":0.38,"x":{"dtype":"f8","bdata":"mpmZmZmZRUCamZmZmRlGQJqZmZmZmUZAmpmZmZkZR0CamZmZmZlHQJqZmZmZGUhAmpmZmZmZSECamZmZmRlJQJqZmZmZmUlAmpmZmZkZSkCamZmZmZlKQJqZmZmZGUtAmpmZmZmZS0CamZmZmRlMQA=="},"y":{"dtype":"f8","bdata":"ObTIdr6fmj\u002f8qfHSTWLAP4\u002fC9Shcj\u002fY\u002f46WbxCCwE0Bdj8L1KFwtQFCNl24SgzpAPgrXo3C9OUBjEFg5tAgwQD0K16NwPRtAJzEIrBxaBEBg5dAi2\u002fnuP9Ii2\u002fl+asw\u002f\u002fKnx0k1icD8AAAAAAAAAAA=="},"type":"bar"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"shapes":[{"line":{"color":"#dc2626","dash":"dash","width":2.5},"type":"line","x0":50.5,"x1":50.5,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"#d97706","dash":"dot","width":2},"type":"line","x0":49.5,"x1":49.5,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"annotations":[{"showarrow":false,"text":"\u003cb\u003eDem Majority (51+ Seats)\u003c\u002fb\u003e","x":50.5,"xanchor":"left","xref":"x","y":1,"yanchor":"top","yref":"y domain"},{"showarrow":false,"text":"\u003cb\u003e50-50 Split (GOP Control via VP Vance)\u003c\u002fb\u003e","x":49.5,"xanchor":"right","xref":"x","y":1,"yanchor":"top","yref":"y domain"}],"xaxis":{"title":{"text":"Total Democratic Seats (out of 100)"},"tickmode":"linear","tick0":42,"dtick":1,"range":[42.5,56.5]},"legend":{"orientation":"h","yanchor":"bottom","y":1.02,"xanchor":"right","x":1},"margin":{"l":40,"r":40,"t":80,"b":40},"title":{"text":"\u003cb\u003e2026 Senate Midterm Projection: Democratic Seats Distribution (50,000 Simulations)\u003c\u002fb\u003e\u003cbr\u003e\u003csup\u003eFTI Mean: 48.65 D \u002f 51.35 R | 80% CI: [47, 51] D | 95% CI: [46, 52] D | GOP Control: 89.5%\u003c\u002fsup\u003e"},"yaxis":{"title":{"text":"Probability (%) across Simulations"}},"height":500},                        {"responsive": true}                    )                };            </script>        </div>
         </div>
 
         <div style="width: 100%; min-height: 540px; margin-bottom: 24px;">
-            <div>                            <div id="e2893fef-835d-40eb-9b28-a175b9b5f885" class="plotly-graph-div" style="height:540px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e2893fef-835d-40eb-9b28-a175b9b5f885")) {                    Plotly.newPlot(                        "e2893fef-835d-40eb-9b28-a175b9b5f885",                        [{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eRaw Poll Margin: %{x:+.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#94a3b8"},"name":"Raw Poll Margin (Dem % - Rep %)","orientation":"h","x":{"dtype":"f8","bdata":"AAAAAAAAGMBmZmZmZmYOwAAAAAAAABLAmpmZmZmZCcCamZmZmZkBwDMzMzMzM+M\u002fMzMzMzMz8z9mZmZmZmYOQAAAAAAAABJA"},"y":["Alaska (AK) - Dan Sullivan","Ohio (Special) (OH) - Appointed (Vance Seat)","Florida (Special) (FL) - Appointed (Rubio Seat)","Iowa (IA) - Joni Ernst","Texas (TX) - John Cornyn","North Carolina (NC) - Thom Tillis","Maine (ME) - Susan Collins","Georgia (GA) - Jon Ossoff","Michigan (MI) - Gary Peters"],"type":"bar"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eDem Win Prob: %{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#2563eb"},"name":"Approval-Tilted Projected Margin","orientation":"h","text":["Dem Win: 5.3%","Dem Win: 15.3%","Dem Win: 17.6%","Dem Win: 25.1%","Dem Win: 47.5%","Dem Win: 68.3%","Dem Win: 76.8%","Dem Win: 96.3%","Dem Win: 97.7%"],"textposition":"outside","x":{"dtype":"f8","bdata":"7FG4HoXrFMDNzMzMzMwKwClcj8L1KAjAhetRuB6FAcDhehSuR+HKvx+F61G4Hvk\u002f4XoUrkfhAkA9CtejcD0XQOxRuB6F6xlA"},"y":["Alaska (AK) - Dan Sullivan","Ohio (Special) (OH) - Appointed (Vance Seat)","Florida (Special) (FL) - Appointed (Rubio Seat)","Iowa (IA) - Joni Ernst","Texas (TX) - John Cornyn","North Carolina (NC) - Thom Tillis","Maine (ME) - Susan Collins","Georgia (GA) - Jon Ossoff","Michigan (MI) - Gary Peters"],"type":"bar"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"legend":{"orientation":"h","yanchor":"bottom","y":1.02,"xanchor":"right","x":1},"margin":{"l":40,"r":40,"t":80,"b":40},"barmode":"group","title":{"text":"\u003cb\u003eCompetitive Battleground Senate Races: Raw Polling vs. Approval-Tilted Projections\u003c\u002fb\u003e\u003cbr\u003e\u003csup\u003ePresidential approval deficit provides an average +1.0 to +1.9 pt tailwind for Democratic challengers\u002fincumbents.\u003c\u002fsup\u003e"},"xaxis":{"title":{"text":"Democratic Net Margin (%) [Dem % - Rep %]"}},"height":540},                        {"responsive": true}                    )                };            </script>        </div>
+            <div>                            <div id="d3a6c0e6-4b86-4bf8-9589-46171ff01e9e" class="plotly-graph-div" style="height:550px; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("d3a6c0e6-4b86-4bf8-9589-46171ff01e9e")) {                    Plotly.newPlot(                        "d3a6c0e6-4b86-4bf8-9589-46171ff01e9e",                        [{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eRaw Poll Margin: %{x:+.1f}%\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#94a3b8"},"name":"Raw Poll Margin","orientation":"h","x":{"dtype":"f8","bdata":"AAAAAAAAGMBmZmZmZmYOwAAAAAAAABLAmpmZmZmZCcCamZmZmZkBwDMzMzMzM+M\u002fMzMzMzMz8z9mZmZmZmYOQAAAAAAAABJA"},"y":["Alaska (AK) - Dan Sullivan","Ohio (Special) (OH) - Appointed (Vance Seat)","Florida (Special) (FL) - Appointed (Rubio Seat)","Iowa (IA) - Joni Ernst","Texas (TX) - John Cornyn","North Carolina (NC) - Thom Tillis","Maine (ME) - Susan Collins","Georgia (GA) - Jon Ossoff","Michigan (MI) - Gary Peters"],"type":"bar"},{"hovertemplate":["\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +0.77 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +0.45 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +1.48 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +1.01 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +1.99 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +0.97 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +1.16 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +2.01 pts\u003cextra\u003e\u003c\u002fextra\u003e","\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eTilted Margin: %{x:+.1f}%\u003cbr\u003eTilt Impact: +1.98 pts\u003cextra\u003e\u003c\u002fextra\u003e"],"marker":{"color":"#60a5fa"},"name":"Approval-Tilted Margin","orientation":"h","x":{"dtype":"f8","bdata":"7FG4HoXrFMDNzMzMzMwKwClcj8L1KAjAhetRuB6FAcDhehSuR+HKvx+F61G4Hvk\u002f4XoUrkfhAkA9CtejcD0XQOxRuB6F6xlA"},"y":["Alaska (AK) - Dan Sullivan","Ohio (Special) (OH) - Appointed (Vance Seat)","Florida (Special) (FL) - Appointed (Rubio Seat)","Iowa (IA) - Joni Ernst","Texas (TX) - John Cornyn","North Carolina (NC) - Thom Tillis","Maine (ME) - Susan Collins","Georgia (GA) - Jon Ossoff","Michigan (MI) - Gary Peters"],"type":"bar"},{"hovertemplate":"\u003cb\u003e%{y}\u003c\u002fb\u003e\u003cbr\u003eFTI Calibrated Margin: %{x:+.1f}%\u003cbr\u003eFTI Win Prob: %{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#1d4ed8"},"name":"FTI-Calibrated Projected Margin","orientation":"h","text":["FTI Win: 1.7%","FTI Win: 5.2%","FTI Win: 7.2%","FTI Win: 7.6%","FTI Win: 26.4%","FTI Win: 54.9%","FTI Win: 75.1%","FTI Win: 93.5%","FTI Win: 94.1%"],"textposition":"outside","x":{"dtype":"f8","bdata":"exSuR+F6G8AK16NwPQoVwAAAAAAAABPAj8L1KFyPEsB7FK5H4XoAwPYoXI\u002fC9dg\u002fhetRuB6FAUCuR+F6FK4TQHE9CtejcBRA"},"y":["Alaska (AK) - Dan Sullivan","Ohio (Special) (OH) - Appointed (Vance Seat)","Florida (Special) (FL) - Appointed (Rubio Seat)","Iowa (IA) - Joni Ernst","Texas (TX) - John Cornyn","North Carolina (NC) - Thom Tillis","Maine (ME) - Susan Collins","Georgia (GA) - Jon Ossoff","Michigan (MI) - Gary Peters"],"type":"bar"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"legend":{"orientation":"h","yanchor":"bottom","y":1.02,"xanchor":"right","x":1},"margin":{"l":40,"r":40,"t":80,"b":40},"barmode":"group","title":{"text":"\u003cb\u003eCompetitive Battleground Senate Races: Raw Polls vs. Approval Tilt vs. FTI Model\u003c\u002fb\u003e\u003cbr\u003e\u003csup\u003eFTI corrects for excessive partisan stretch and demographic non-response risk, deflating phantom leads in red\u002fpurple territory.\u003c\u002fsup\u003e"},"xaxis":{"title":{"text":"Democratic Net Margin (%) [Dem % - Rep %]"}},"height":550},                        {"responsive": true}                    )                };            </script>        </div>
         </div>
 
-        <h3>The "Approval Tilt" Mechanism: Does Presidential Approval Shift Senate Races?</h3>
-        <p>In midterms, congressional races are heavily nationalized. When a president's net approval is deeply negative (Trump at -26% net), historical data demonstrates two empirical dynamics:</p>
+        <h3>Model Comparison Across Three Methodological Paradigms</h3>
+        <p>By comparing the three models, we see how presidential approval tailwinds and fundamentals tension interact:</p>
         <ul>
-            <li><strong>Differential Turnout & Motivation:</strong> Base voters of the opposition party (Democrats) exhibit elevated enthusiasm, while casual presidential partisans turn out at lower rates due to economic discontent.</li>
-            <li><strong>Undecided Voter Break:</strong> In close contests, undecided independent voters break 2-to-1 or 3-to-1 against the party in the White House.</li>
-            <li><strong>Quantitative Shift:</strong> Accounting for state-level and national approval deficits provides an estimated <strong>+1.0 to +2.0 percentage point boost</strong> for Democratic candidates over raw pre-election polls (e.g., Maine flips to Dem +2.4%; North Carolina flips to Dem +1.6%; Georgia lean expands to Dem +5.8%; Texas tightens to GOP +0.2%).</li>
+            <li><strong>Pure Polling Model:</strong> Assumes raw polls are unbiased. Gives Republicans an 84.6% chance of control and Democrats 15.4%.</li>
+            <li><strong>Approval-Tilted Model:</strong> Accounts for Trump's -26% approval deficit, boosting Democrats by +1.0 to +2.0 pts across battlegrounds. This surges Democratic majority chances to 28.2% by making Texas a 47.6% coin flip.</li>
+            <li><strong>FTI-Calibrated Model (Full Model):</strong> Corrects for the high risk of polling error in states where Democrats stretch far past baseline (Texas, Iowa, Ohio). It recognizes that Texas is an unnatural +13.5 pt stretch and deflates it back to Cornyn -2.06% (26.4% Dem win prob). As a result, Democratic majority chances drop to 10.5%, and total GOP control climbs to 89.5%.</li>
         </ul>
 
-        <h3>Model Comparison: Pure Polling vs. Approval-Tilted Forecast</h3>
         <div style="overflow-x: auto; margin-bottom: 24px;">
-            <table class="data-table" style="max-width: 900px;">
+            <table class="data-table" style="max-width: 950px;">
                 <thead>
                     <tr>
                         <th>Metric</th>
-                        <th style="text-align:right;">Pure Polling Model</th>
-                        <th style="text-align:right;">Polls + Approval Tilt (Full Model)</th>
-                        <th style="text-align:right;">Approval Tilt Impact</th>
+                        <th style="text-align:right;">1. Pure Polling</th>
+                        <th style="text-align:right;">2. Approval-Tilted</th>
+                        <th style="text-align:right;">3. FTI-Calibrated (Full)</th>
+                        <th style="text-align:right;">FTI Net Impact vs. Tilted</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Mean Democratic Seats</strong></td>
-                        <td style="text-align:right;">48.64 Seats</td>
-                        <td style="text-align:right;"><strong>49.49 Seats</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+0.85 Seats</span></td>
+                        <td style="text-align:right;">48.65</td>
+                        <td style="text-align:right;">49.49</td>
+                        <td style="text-align:right;"><strong>48.65</strong></td>
+                        <td style="text-align:right;"><span class="badge negative">-0.84 Seats</span></td>
                     </tr>
                     <tr>
                         <td><strong>80% Confidence Band (Dems)</strong></td>
-                        <td style="text-align:right;">[46 to 51] Seats</td>
-                        <td style="text-align:right;"><strong>[47 to 52] Seats</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+1 Seat at Boundary</span></td>
+                        <td style="text-align:right;">[46, 51]</td>
+                        <td style="text-align:right;">[47, 52]</td>
+                        <td style="text-align:right;"><strong>[47, 51]</strong></td>
+                        <td style="text-align:right;"><span class="badge negative">-1 Seat at Ceiling</span></td>
                     </tr>
                     <tr>
                         <td><strong>95% Confidence Band (Dems)</strong></td>
-                        <td style="text-align:right;">[45 to 53] Seats</td>
-                        <td style="text-align:right;"><strong>[46 to 53] Seats</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+1 Seat on Floor</span></td>
+                        <td style="text-align:right;">[45, 53]</td>
+                        <td style="text-align:right;">[46, 53]</td>
+                        <td style="text-align:right;"><strong>[46, 52]</strong></td>
+                        <td style="text-align:right;"><span class="badge negative">-1 Seat at Ceiling</span></td>
                     </tr>
                     <tr>
                         <td><strong>Democratic Majority (51+ Seats)</strong></td>
                         <td style="text-align:right;">15.4%</td>
-                        <td style="text-align:right;"><strong>28.4%</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+13.0 pts</span> (nearly doubled)</td>
+                        <td style="text-align:right;">28.2%</td>
+                        <td style="text-align:right;"><strong>10.5%</strong></td>
+                        <td style="text-align:right;"><span class="badge negative">-17.7 pts</span></td>
                     </tr>
                     <tr>
                         <td><strong>50-50 Split (GOP via VP Vance)</strong></td>
-                        <td style="text-align:right;">14.0%</td>
-                        <td style="text-align:right;"><strong>19.7%</strong></td>
-                        <td style="text-align:right;"><span class="badge positive">+5.7 pts</span></td>
+                        <td style="text-align:right;">14.2%</td>
+                        <td style="text-align:right;">19.9%</td>
+                        <td style="text-align:right;"><strong>16.0%</strong></td>
+                        <td style="text-align:right;"><span class="badge negative">-3.9 pts</span></td>
                     </tr>
                     <tr>
                         <td><strong>Republican Control (&ge; 50 Seats)</strong></td>
                         <td style="text-align:right;">84.6%</td>
-                        <td style="text-align:right;"><strong>71.6%</strong></td>
-                        <td style="text-align:right;"><span class="badge negative">-13.0 pts</span></td>
+                        <td style="text-align:right;">71.8%</td>
+                        <td style="text-align:right;"><strong>89.5%</strong></td>
+                        <td style="text-align:right;"><span class="badge positive">+17.7 pts</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -596,24 +1045,42 @@
                         <th>Seat Type</th>
                         <th>Incumbent</th>
                         <th>Party</th>
-                        <th style="text-align:right;">Trump Approval</th>
-                        <th style="text-align:right;">Raw Poll Margin (D - R)</th>
+                        <th style="text-align:right;">Raw Poll</th>
                         <th style="text-align:right;">Approval Tilt</th>
-                        <th style="text-align:right;">Projected Margin (D - R)</th>
-                        <th style="text-align:right;">Win Probability</th>
+                        <th style="text-align:right;">Tilted Margin</th>
+                        <th style="text-align:right;">FTI Score</th>
+                        <th style="text-align:right;">FTI Adj</th>
+                        <th style="text-align:right;">FTI Margin</th>
+                        <th style="text-align:right;">FTI Win Prob</th>
                     </tr>
                 </thead>
                 <tbody>
                     
     <tr >
+        <td><strong>Colorado</strong> <span style='color:#64748b; font-size:0.85em;'>(CO)</span></td>
+        <td>Class 2</td>
+        <td>John Hickenlooper</td>
+        <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+13.0%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.72 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+14.7%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+1.21</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.30 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+14.4%</span></td>
+        <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
+    </tr>
+    
+    <tr >
         <td><strong>Delaware</strong> <span style='color:#64748b; font-size:0.85em;'>(DE)</span></td>
         <td>Class 2</td>
         <td>Chris Coons</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-32.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+17.0%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+2.05 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+19.1%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+19.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+2.81</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.70 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+18.4%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -622,10 +1089,12 @@
         <td>Class 2</td>
         <td>Dick Durbin</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-30.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+16.0%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.96 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+18.0%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+18.0%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+3.47</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.87 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+17.1%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -634,10 +1103,12 @@
         <td>Class 2</td>
         <td>Ed Markey</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-48.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+26.0%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+3.55 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+29.6%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+29.6%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+0.71</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.18 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+29.4%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -646,10 +1117,12 @@
         <td>Class 2</td>
         <td>Cory Booker</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-31.0%</td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+12.5%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+13.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+2.28 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+14.8%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+15.8%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+4.31</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.08 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+14.7%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -658,10 +1131,12 @@
         <td>Class 2</td>
         <td>Jeff Merkley</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-37.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+16.0%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+2.67 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+18.7%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+18.7%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+2.40</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.60 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+18.1%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -670,22 +1145,12 @@
         <td>Class 2</td>
         <td>Jack Reed</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-34.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+20.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+2.33 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+22.8%</span></td>
-        <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
-    </tr>
-    
-    <tr >
-        <td><strong>Colorado</strong> <span style='color:#64748b; font-size:0.85em;'>(CO)</span></td>
-        <td>Class 2</td>
-        <td>John Hickenlooper</td>
-        <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-28.0%</td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+13.0%</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.72 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+14.7%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+22.8%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+4.70</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.17 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+21.6%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -694,10 +1159,12 @@
         <td>Class 2</td>
         <td>Ben Ray Luján</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-28.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+9.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.92 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+11.4%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+11.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+0.88</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.22 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+11.2%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -706,10 +1173,12 @@
         <td>Class 2</td>
         <td>Mark Warner</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-25.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+9.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.57 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+11.1%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+11.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+2.21</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.55 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+10.5%</span></td>
         <td style='text-align:right;'><span class='badge positive'>100.0% D / 0.0% R</span></td>
     </tr>
     
@@ -718,11 +1187,13 @@
         <td>Class 2</td>
         <td>Tina Smith</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-26.0%</td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+7.5%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+9.0%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.75 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+9.2%</span></td>
-        <td style='text-align:right;'><span class='badge positive'>99.8% D / 0.2% R</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+10.8%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+4.14</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.04 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+9.7%</span></td>
+        <td style='text-align:right;'><span class='badge positive'>99.9% D / 0.1% R</span></td>
     </tr>
     
     <tr >
@@ -730,10 +1201,12 @@
         <td>Class 2</td>
         <td>Jeanne Shaheen</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-19.0%</td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+8.0%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+9.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.97 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+9.0%</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+10.5%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+4.79</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.20 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+9.3%</span></td>
         <td style='text-align:right;'><span class='badge positive'>99.7% D / 0.3% R</span></td>
     </tr>
     
@@ -742,11 +1215,13 @@
         <td>Class 2</td>
         <td>Gary Peters</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-26.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+4.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.98 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+6.5%</span></td>
-        <td style='text-align:right;'><span class='badge positive'>97.7% D / 2.3% R</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+6.5%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.46</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.37 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+5.1%</span></td>
+        <td style='text-align:right;'><span class='badge positive'>94.1% D / 5.9% R</span></td>
     </tr>
     
     <tr >
@@ -754,11 +1229,13 @@
         <td>Class 2</td>
         <td>Jon Ossoff</td>
         <td><span class='badge' style='background-color: #eff6ff; color: #1e40af;'>D</span></td>
-        <td style='text-align:right;'>-26.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+3.8%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+2.01 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+5.8%</span></td>
-        <td style='text-align:right;'><span class='badge positive'>96.3% D / 3.7% R</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+5.8%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+3.56</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.89 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+4.9%</span></td>
+        <td style='text-align:right;'><span class='badge positive'>93.5% D / 6.5% R</span></td>
     </tr>
     
     <tr >
@@ -766,35 +1243,41 @@
         <td>Class 2</td>
         <td>Susan Collins</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-22.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.2%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.16 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+2.4%</span></td>
-        <td style='text-align:right;'><span class='badge positive'>76.8% D / 23.2% R</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+2.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+0.67</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.17 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+2.2%</span></td>
+        <td style='text-align:right;'><span class='badge positive'>75.1% D / 24.9% R</span></td>
     </tr>
     
-    <tr >
+    <tr style='background-color: #fffbeb;'>
         <td><strong>North Carolina</strong> <span style='color:#64748b; font-size:0.85em;'>(NC)</span></td>
         <td>Class 2</td>
         <td>Thom Tillis</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-17.0%</td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.6%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.97 pts</span></td>
-        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+1.6%</span></td>
-        <td style='text-align:right;'><span class='badge positive'>68.3% D / 31.7% R</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.6%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+4.70</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.17 pts</span></td>
+        <td style='text-align:right;'><span style='color: #16a34a; font-weight: 700;'>+0.4%</span></td>
+        <td style='text-align:right;'><span class='badge positive'>54.9% D / 45.1% R</span></td>
     </tr>
     
-    <tr style='background-color: #fffbeb;'>
+    <tr >
         <td><strong>Texas</strong> <span style='color:#64748b; font-size:0.85em;'>(TX)</span></td>
         <td>Class 2</td>
         <td>John Cornyn</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-22.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-2.2%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.99 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-0.2%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>47.5% D / 52.5% R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.2%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+7.38</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.84 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-2.1%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>26.4% D / 73.6% R</span></td>
     </tr>
     
     <tr >
@@ -802,11 +1285,13 @@
         <td>Class 2</td>
         <td>Joni Ernst</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-14.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-3.2%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.01 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-2.2%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>25.1% D / 74.9% R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-2.2%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+9.81</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-2.45 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-4.6%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>7.6% D / 92.4% R</span></td>
     </tr>
     
     <tr >
@@ -814,11 +1299,13 @@
         <td>Special</td>
         <td>Appointed (Rubio Seat)</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-18.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-4.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+1.48 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-3.0%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>17.6% D / 82.4% R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-3.0%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+6.92</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.73 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-4.8%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>7.2% D / 92.8% R</span></td>
     </tr>
     
     <tr >
@@ -826,11 +1313,13 @@
         <td>Special</td>
         <td>Appointed (Vance Seat)</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-10.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-3.8%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.45 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-3.4%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>15.3% D / 84.7% R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-3.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+7.65</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.91 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-5.3%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>5.2% D / 94.8% R</span></td>
     </tr>
     
     <tr >
@@ -838,11 +1327,13 @@
         <td>Class 2</td>
         <td>Dan Sullivan</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-12.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-6.0%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.77 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-5.2%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>5.3% D / 94.7% R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-5.2%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+6.55</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.64 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-6.9%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>1.7% D / 98.3% R</span></td>
     </tr>
     
     <tr >
@@ -850,10 +1341,12 @@
         <td>Class 2</td>
         <td>Lindsey Graham</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-3.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-11.0%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.13 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-11.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-11.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.50</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.37 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-12.5%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -862,34 +1355,12 @@
         <td>Class 2</td>
         <td>Roger Marshall</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-1.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-11.5%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.44 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-11.9%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
-    </tr>
-    
-    <tr >
-        <td><strong>Montana</strong> <span style='color:#64748b; font-size:0.85em;'>(MT)</span></td>
-        <td>Class 2</td>
-        <td>Steve Daines</td>
-        <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+2.0%</td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-12.5%</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.64 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-13.1%</span></td>
-        <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
-    </tr>
-    
-    <tr >
-        <td><strong>South Dakota</strong> <span style='color:#64748b; font-size:0.85em;'>(SD)</span></td>
-        <td>Class 2</td>
-        <td>Mike Rounds</td>
-        <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+7.0%</td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-25.5%</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.87 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-26.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-11.9%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.07</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.27 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-13.2%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -898,10 +1369,12 @@
         <td>Class 2</td>
         <td>Cynthia Lummis</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+23.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-39.5%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-2.13 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-41.6%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-41.6%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+6.30</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.58 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-43.2%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -910,10 +1383,12 @@
         <td>Class 2</td>
         <td>Shelley Moore Capito</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+17.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-32.5%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.57 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-34.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-34.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+9.30</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-2.33 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-36.4%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -922,10 +1397,12 @@
         <td>Class 2</td>
         <td>Tommy Tuberville</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+6.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-26.5%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.70 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-27.2%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-27.2%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.55</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.39 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-28.6%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -934,10 +1411,26 @@
         <td>Class 2</td>
         <td>Bill Hagerty</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+12.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-24.0%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.45 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-25.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-25.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+6.24</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.56 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-27.0%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
+    </tr>
+    
+    <tr >
+        <td><strong>South Dakota</strong> <span style='color:#64748b; font-size:0.85em;'>(SD)</span></td>
+        <td>Class 2</td>
+        <td>Mike Rounds</td>
+        <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-25.5%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.87 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-26.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.16</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.29 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-27.7%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -946,10 +1439,12 @@
         <td>Class 2</td>
         <td>Jim Risch</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+10.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-31.0%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.94 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-31.9%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-31.9%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+6.53</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.63 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-33.6%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -958,10 +1453,26 @@
         <td>Class 2</td>
         <td>Pete Ricketts</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-4.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-15.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.10 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-15.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-15.4%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.69</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.42 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-16.8%</span></td>
+        <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
+    </tr>
+    
+    <tr >
+        <td><strong>Montana</strong> <span style='color:#64748b; font-size:0.85em;'>(MT)</span></td>
+        <td>Class 2</td>
+        <td>Steve Daines</td>
+        <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-12.5%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.64 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-13.1%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+7.06</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.77 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-14.9%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -970,10 +1481,12 @@
         <td>Class 2</td>
         <td>Cindy Hyde-Smith</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-4.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-17.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.20 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-17.3%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-17.3%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+4.72</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.18 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-18.5%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -982,10 +1495,12 @@
         <td>Class 2</td>
         <td>Tom Cotton</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+10.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-27.5%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.17 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-28.7%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-28.7%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.25</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.31 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-30.0%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -994,10 +1509,12 @@
         <td>Class 2</td>
         <td>Bill Cassidy</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-4.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-18.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.16 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-18.3%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-18.3%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+3.95</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-0.99 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-19.3%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -1006,10 +1523,12 @@
         <td>Class 2</td>
         <td>Mitch McConnell (or Open)</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>-4.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-16.5%</span></td>
         <td style='text-align:right;'><span style='color: #16a34a; font-weight: 600;'>+0.50 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-16.0%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-16.0%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+12.02</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-2.50 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-18.5%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -1018,10 +1537,12 @@
         <td>Class 2</td>
         <td>Markwayne Mullin</td>
         <td><span class='badge' style='background-color: #fef2f2; color: #991b1b;'>R</span></td>
-        <td style='text-align:right;'>+14.0%</td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-28.5%</span></td>
         <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.51 pts</span></td>
-        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-30.0%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-30.0%</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>+5.53</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 600;'>-1.38 pts</span></td>
+        <td style='text-align:right;'><span style='color: #dc2626; font-weight: 700;'>-31.4%</span></td>
         <td style='text-align:right;'><span class='badge negative'>0.0% D / 100.0% R</span></td>
     </tr>
     
@@ -1030,9 +1551,9 @@
         </div>
     </div>
 
-    <!-- Section 7: Demographic Signals & Issue Drivers -->
+<!-- Section 7: Demographic Signals & Issue Drivers -->
     <div class="section-card">
-        <h2 class="section-title">7. Demographic Signals & Issue Drivers</h2>
+        <h2 class="section-title">8. Demographic Signals & Issue Drivers</h2>
         <p class="section-desc">Why are voters turning away? Insights from national issue polling and demographic tracking.</p>
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px;">
@@ -1063,7 +1584,7 @@
 
     <!-- Section 8: Comprehensive 50-State Data Table -->
     <div class="section-card">
-        <h2 class="section-title">8. Complete 50-State & D.C. Dataset</h2>
+        <h2 class="section-title">9. Complete 50-State & D.C. Dataset</h2>
         <p class="section-desc">Search and inspect all underlying metrics: certified 2024 win margin, current approval/disapproval, net gap, real GDP growth, unemployment, and median income.</p>
         
         <input type="text" id="stateSearch" class="search-box" placeholder="Search state, code, or economic segment..." onkeyup="filterTable()">
