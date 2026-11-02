@@ -776,25 +776,24 @@ In the 2026 midterm elections, 35 Senate seats are contested (33 Class 2 seats +
 - **Non-up Baseline:** Democrats enter with **34 seats not up**, while Republicans enter with **31 seats not up**.
 - **The Majority Hurdle:** Because Vice President JD Vance breaks ties in the Senate, a 50-50 result retains **Republican control**. To achieve an outright majority, Democrats must reach **51 seats** (a net gain of +4 seats).
 
-### We evaluate THREE distinct modeling paradigms across 50,000 Monte Carlo simulations:
-1. **Model 1: Pure Polling Model** (Raw pre-election polls without structural adjustment)
-   - Expected Seats: **49.0 Dem / 51.0 GOP** (Median: 49 Dem / 51 GOP)
-   - Dem Majority: **19.3%** | GOP Control: **80.7%**
-2. **Model 2: Approval-Tilted Model** (Raw polls + +0.5 to +2.0 pt presidential approval tailwinds)
-   - Expected Seats: **49.8 Dem / 50.2 GOP** (Median: 50 Dem / 50 GOP)
-   - Dem Majority: **32.2%** | 50-50 Tie: **23.1%** | GOP Control: **67.8%**
-   - *Driver:* Texas (Ken Paxton vs. James Talarico) surges to a 52.3% Dem coin flip, and North Carolina (Roy Cooper) reaches 83.6% Dem win prob.
-3. **Model 3: FTI-Calibrated Model (Full Model: Polls + Approval Tilt - Fundamentals Tension Adjustment)**
-   - Expected Seats: **49.0 Dem / 51.0 GOP** (Median: 49 Dem / 51 GOP)
-   - **80% Confidence Band:** **[47 to 51 seats]** Dem | **[49 to 53 seats]** GOP
-   - **95% Confidence Band:** **[46 to 52 seats]** Dem | **[48 to 54 seats]** GOP
-   - Dem Majority: **15.2%** | 50-50 Tie: **21.1%** | GOP Outright Maj: **63.7%** | Total GOP Control: **84.8%**
+### We evaluate THREE distinct modeling paradigms across 50,000 Monte Carlo simulations (incorporating live Pollsmax aggregated polling):
+1. **Model 1: Pure Polling Model** (Raw Pollsmax pre-election polling averages without structural adjustment)
+   - Expected Seats: **52.1 Dem / 47.9 GOP** (Median: 53 Dem / 47 GOP)
+   - Dem Majority: **75.2%** | GOP Control: **24.8%**
+   - *Key Pollsmax Baselines:* Democrats lead raw polls in OH (+2.9%), TX (+2.9%), NC (+9.6%), GA (+9.2%), ME (+2.1%), MI (+3.2%), IA (+0.8%), and AK (+0.5%).
+2. **Model 2: Approval-Tilted Model** (Raw Pollsmax polls + presidential approval tailwinds)
+   - Expected Seats: **52.7 Dem / 47.3 GOP** (Median: 53 Dem / 47 GOP)
+   - Dem Majority: **85.3%** | 50-50 Tie: **6.6%** | GOP Control: **14.7%**
+3. **Model 3: FTI-Calibrated Model (Full Model: Live Polls + Approval Tilt - Fundamentals Tension Adjustment)**
+   - Expected Seats: **51.2 Dem / 48.8 GOP** (Median: 51 Dem / 49 GOP)
+   - **80% Confidence Band:** **[48 to 54 seats]** Dem | **[46 to 52 seats]** GOP
+   - **95% Confidence Band:** **[47 to 55 seats]** Dem | **[45 to 53 seats]** GOP
+   - Dem Majority: **62.8%** | 50-50 Tie: **15.8%** | GOP Outright Maj: **21.4%** | Total GOP Control: **37.2%**
    - *Key Corrections:* 
-     - **Texas (Ken Paxton vs. James Talarico):** Paxton won the GOP primary after ousting John Cornyn. While Talarico polls near even in raw/tilted surveys (+0.19%), Texas voted Trump +13.7% in 2024. FTI imposes a -1.49 pt penalty, projecting Paxton +1.30% (65.5% GOP hold prob).
-     - **North Carolina (Michael Whatley vs. Roy Cooper):** Cooper's gubernatorial popularity gives Democrats a genuine edge, but FTI narrows it to +2.19% (74.9% Dem win prob).
-     - **Maine (Susan Collins vs. Troy Jackson):** Maine's D+6.9% presidential baseline creates minimal tension (+0.73 FTI), preserving a +2.78% lead for Jackson (80.4% Dem flip prob).
-     - **Michigan (Mike Rogers vs. Abdul El-Sayed):** Open seat holds at +4.25% for El-Sayed (90.5% Dem hold).
-     - **Ohio Special (Jon Husted vs. Sherrod Brown):** Brown makes it competitive (-2.05% tilted), but Ohio's R+11.2% baseline pushes Husted to +3.73% calibrated (87.6% GOP hold).
+     - **Ohio Special (Jon Husted vs. Sherrod Brown):** Brown leads raw polls by +2.9% on Pollsmax. But Ohio voted Trump +11.2% in 2024 and is 62% non-college white. FTI imposes a -2.42 pt correction, narrowing Brown's lead to **+0.93%** (win prob drops from 85% to 61.3%—a live tossup).
+     - **Texas (Ken Paxton vs. James Talarico):** Talarico leads raw polls by +2.9% on Pollsmax (48.2% to 45.3%). In a state that voted Trump +13.7%, FTI cuts this lead down to **+2.75%** (80.2% Dem win prob).
+     - **Iowa & Alaska:** Both states flip back to Republicans! In Iowa, Turek's +0.8% poll deflates to **Hinson +0.69%** (58.5% GOP hold). In Alaska, Peltola's +0.5% poll deflates to **Sullivan +1.20%** (64.5% GOP hold).
+     - **Maine (Susan Collins vs. Troy Jackson):** Jackson's +2.1% Pollsmax lead matches Maine's D+6.9% baseline, producing minimal tension (+0.89 FTI) and preserving **Jackson +3.04%** (82.5% Dem flip prob).
 """))
 
 # Cell 22: Battleground 3-Model Table Code & Output
@@ -1434,13 +1433,13 @@ html_content = f"""<!DOCTYPE html>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Highest Tension Race (2026)</div>
-                <div class="kpi-value" style="color: var(--accent-red);">Iowa (+7.7 FTI) / Texas (+6.0 FTI)</div>
-                <div class="kpi-subtext">Talarico vs. Paxton poll (+0.2%) stretches +13.9 pts past 2024 baseline</div>
+                <div class="kpi-value" style="color: var(--accent-red);">Ohio (+9.7 FTI) / Iowa (+10.4 FTI)</div>
+                <div class="kpi-subtext">Brown vs. Husted poll (+2.9%) stretches +14.6 pts past 2024 baseline</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Lowest Tension Race (2026)</div>
-                <div class="kpi-value" style="color: var(--accent-blue);">Maine (+0.7 FTI)</div>
-                <div class="kpi-subtext">Jackson vs. Collins (+2.8%) aligns with D+6.9% state baseline</div>
+                <div class="kpi-value" style="color: var(--accent-blue);">Maine (+0.9 FTI)</div>
+                <div class="kpi-subtext">Jackson vs. Collins (+3.0%) aligns with D+6.9% state baseline</div>
             </div>
         </div>
 
@@ -1528,7 +1527,7 @@ html_content = f"""<!DOCTYPE html>
         <ul>
             <li><strong>Pure Polling Model:</strong> Assumes raw polls are unbiased. Gives Republicans an 84.6% chance of control and Democrats 15.4%.</li>
             <li><strong>Approval-Tilted Model:</strong> Accounts for Trump's -26% approval deficit, boosting Democrats by +1.0 to +2.0 pts across battlegrounds. This surges Democratic majority chances to 28.2% by making Texas a 47.6% coin flip.</li>
-            <li><strong>FTI-Calibrated Model (Full Model):</strong> Corrects for the high risk of polling error in states where Democrats stretch far past baseline (Texas, Iowa, Ohio). It recognizes that Texas (Ken Paxton vs. James Talarico) is an unnatural +13.9 pt stretch above baseline and deflates it back to Paxton +1.30% (65.5% GOP win prob). As a result, Democratic majority chances drop to 15.2%, and total GOP control climbs to 84.8%.</li>
+            <li><strong>FTI-Calibrated Model (Full Model):</strong> Corrects for the high risk of polling error in states where Democrats stretch far past baseline (Texas, Iowa, Ohio). It recognizes that Ohio (Sherrod Brown vs. Jon Husted) and Texas (James Talarico vs. Ken Paxton) stretch 14 to 18 pts above baseline. FTI applies haircuts of 2.1 to 2.4 pts, compressing Brown's lead in Ohio to +0.93% (a pure tossup) and flipping Iowa and Alaska back to Republicans. As a result, Democratic blowout odds cool to a narrow 51-seat majority projection (62.8% Dem majority / 37.2% GOP control).</li>
         </ul>
 
         <div style="overflow-x: auto; margin-bottom: 24px;">

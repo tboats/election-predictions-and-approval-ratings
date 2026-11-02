@@ -1,91 +1,91 @@
 {
   "model_raw_polls": {
-    "mean_dem_seats": 48.98,
-    "median_dem_seats": 49,
-    "mean_rep_seats": 51.02,
-    "median_rep_seats": 51,
-    "ci_80_dem": [
-      46,
-      51
-    ],
-    "ci_80_rep": [
-      54,
-      49
-    ],
-    "ci_95_dem": [
-      45,
-      53
-    ],
-    "ci_95_rep": [
-      55,
-      47
-    ],
-    "prob_dem_majority_51plus": 19.3,
-    "prob_tie_50_50": 17.4,
-    "prob_rep_majority_51plus": 63.3,
-    "prob_rep_control_50plus": 80.7
-  },
-  "model_tilted": {
-    "mean_dem_seats": 49.83,
-    "median_dem_seats": 50,
-    "mean_rep_seats": 50.17,
-    "median_rep_seats": 50,
+    "mean_dem_seats": 52.1,
+    "median_dem_seats": 53,
+    "mean_rep_seats": 47.9,
+    "median_rep_seats": 47,
     "ci_80_dem": [
       48,
-      52
+      55
     ],
     "ci_80_rep": [
       52,
-      48
+      45
     ],
     "ci_95_dem": [
       46,
-      54
+      55
     ],
     "ci_95_rep": [
       54,
-      46
+      45
     ],
-    "prob_dem_majority_51plus": 32.2,
-    "prob_tie_50_50": 23.1,
-    "prob_rep_majority_51plus": 44.7,
-    "prob_rep_control_50plus": 67.8
+    "prob_dem_majority_51plus": 75.2,
+    "prob_tie_50_50": 8.3,
+    "prob_rep_majority_51plus": 16.5,
+    "prob_rep_control_50plus": 24.8
   },
-  "model_fti_calibrated": {
-    "mean_dem_seats": 49.04,
-    "median_dem_seats": 49,
-    "mean_rep_seats": 50.96,
-    "median_rep_seats": 51,
+  "model_tilted": {
+    "mean_dem_seats": 52.74,
+    "median_dem_seats": 53,
+    "mean_rep_seats": 47.26,
+    "median_rep_seats": 47,
     "ci_80_dem": [
-      47,
-      51
+      50,
+      55
     ],
     "ci_80_rep": [
-      53,
-      49
+      50,
+      45
     ],
     "ci_95_dem": [
-      46,
-      52
+      48,
+      56
     ],
     "ci_95_rep": [
-      54,
-      48
+      52,
+      44
     ],
-    "prob_dem_majority_51plus": 15.2,
-    "prob_tie_50_50": 21.1,
-    "prob_rep_majority_51plus": 63.7,
-    "prob_rep_control_50plus": 84.8
+    "prob_dem_majority_51plus": 85.3,
+    "prob_tie_50_50": 6.6,
+    "prob_rep_majority_51plus": 8.0,
+    "prob_rep_control_50plus": 14.7
+  },
+  "model_fti_calibrated": {
+    "mean_dem_seats": 51.18,
+    "median_dem_seats": 51,
+    "mean_rep_seats": 48.82,
+    "median_rep_seats": 49,
+    "ci_80_dem": [
+      48,
+      54
+    ],
+    "ci_80_rep": [
+      52,
+      46
+    ],
+    "ci_95_dem": [
+      47,
+      55
+    ],
+    "ci_95_rep": [
+      53,
+      45
+    ],
+    "prob_dem_majority_51plus": 62.8,
+    "prob_tie_50_50": 15.8,
+    "prob_rep_majority_51plus": 21.4,
+    "prob_rep_control_50plus": 37.2
   },
   "tilt_impact": {
-    "dem_seat_delta": 0.85,
-    "dem_majority_prob_delta": 12.9,
-    "gop_control_prob_delta": -12.9
+    "dem_seat_delta": 0.64,
+    "dem_majority_prob_delta": 10.1,
+    "gop_control_prob_delta": -10.1
   },
   "fti_calibration_impact": {
-    "dem_seat_delta": -0.79,
-    "dem_majority_prob_delta": -17.0,
-    "gop_control_prob_delta": 17.0
+    "dem_seat_delta": -1.56,
+    "dem_majority_prob_delta": -22.5,
+    "gop_control_prob_delta": 22.5
   },
   "historical_fti_validation": {
     "sample_size": 31,
