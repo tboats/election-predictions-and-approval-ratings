@@ -135,43 +135,43 @@ df_hist = pd.DataFrame(historical_midterms)
 # -----------------------------------------------------------------------------
 races_data = [
     # Democratic Defending Seats (13 seats)
-    {'state': 'Colorado', 'code': 'CO', 'seat_type': 'Class 2', 'incumbent': 'John Hickenlooper', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 13.0},
-    {'state': 'Delaware', 'code': 'DE', 'seat_type': 'Class 2', 'incumbent': 'Chris Coons', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 17.0},
-    {'state': 'Georgia', 'code': 'GA', 'seat_type': 'Class 2', 'incumbent': 'Jon Ossoff', 'party': 'D', 'region': 'South', 'raw_poll_dem_margin': 3.8},
-    {'state': 'Illinois', 'code': 'IL', 'seat_type': 'Class 2', 'incumbent': 'Dick Durbin', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 16.0},
-    {'state': 'Massachusetts', 'code': 'MA', 'seat_type': 'Class 2', 'incumbent': 'Ed Markey', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 26.0},
-    {'state': 'Michigan', 'code': 'MI', 'seat_type': 'Class 2', 'incumbent': 'Gary Peters', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 4.5},
-    {'state': 'Minnesota', 'code': 'MN', 'seat_type': 'Class 2', 'incumbent': 'Tina Smith', 'party': 'D', 'region': 'Midwest', 'raw_poll_dem_margin': 9.0},
-    {'state': 'New Hampshire', 'code': 'NH', 'seat_type': 'Class 2', 'incumbent': 'Jeanne Shaheen', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 9.5},
-    {'state': 'New Jersey', 'code': 'NJ', 'seat_type': 'Class 2', 'incumbent': 'Cory Booker', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 13.5},
-    {'state': 'New Mexico', 'code': 'NM', 'seat_type': 'Class 2', 'incumbent': 'Ben Ray Luján', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 9.5},
-    {'state': 'Oregon', 'code': 'OR', 'seat_type': 'Class 2', 'incumbent': 'Jeff Merkley', 'party': 'D', 'region': 'West', 'raw_poll_dem_margin': 16.0},
-    {'state': 'Rhode Island', 'code': 'RI', 'seat_type': 'Class 2', 'incumbent': 'Jack Reed', 'party': 'D', 'region': 'Northeast', 'raw_poll_dem_margin': 20.5},
-    {'state': 'Virginia', 'code': 'VA', 'seat_type': 'Class 2', 'incumbent': 'Mark Warner', 'party': 'D', 'region': 'South', 'raw_poll_dem_margin': 9.5},
+    {'state': 'Colorado', 'code': 'CO', 'seat_type': 'Class 2', 'rep_candidate': 'Gabe Evans', 'dem_candidate': 'John Hickenlooper', 'party': 'D', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': 13.0},
+    {'state': 'Delaware', 'code': 'DE', 'seat_type': 'Class 2', 'rep_candidate': 'Lauren Witzke', 'dem_candidate': 'Chris Coons', 'party': 'D', 'is_incumbent': True, 'region': 'Northeast', 'raw_poll_dem_margin': 17.0},
+    {'state': 'Georgia', 'code': 'GA', 'seat_type': 'Class 2', 'rep_candidate': 'Mike Collins', 'dem_candidate': 'Jon Ossoff', 'party': 'D', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': 3.8},
+    {'state': 'Illinois', 'code': 'IL', 'seat_type': 'Class 2', 'rep_candidate': 'Erika Harold', 'dem_candidate': 'Dick Durbin', 'party': 'D', 'is_incumbent': True, 'region': 'Midwest', 'raw_poll_dem_margin': 16.0},
+    {'state': 'Massachusetts', 'code': 'MA', 'seat_type': 'Class 2', 'rep_candidate': 'John Kingston', 'dem_candidate': 'Ed Markey', 'party': 'D', 'is_incumbent': True, 'region': 'Northeast', 'raw_poll_dem_margin': 26.0},
+    {'state': 'Michigan', 'code': 'MI', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'Mike Rogers', 'dem_candidate': 'Abdul El-Sayed', 'party': 'D', 'is_incumbent': False, 'region': 'Midwest', 'raw_poll_dem_margin': 3.5},
+    {'state': 'Minnesota', 'code': 'MN', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'Michele Tafoya', 'dem_candidate': 'Peggy Flanagan', 'party': 'D', 'is_incumbent': False, 'region': 'Midwest', 'raw_poll_dem_margin': 8.0},
+    {'state': 'New Hampshire', 'code': 'NH', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'John Sununu', 'dem_candidate': 'Chris Pappas', 'party': 'D', 'is_incumbent': False, 'region': 'Northeast', 'raw_poll_dem_margin': 7.0},
+    {'state': 'New Jersey', 'code': 'NJ', 'seat_type': 'Class 2', 'rep_candidate': 'Curtis Bashaw', 'dem_candidate': 'Cory Booker', 'party': 'D', 'is_incumbent': True, 'region': 'Northeast', 'raw_poll_dem_margin': 13.5},
+    {'state': 'New Mexico', 'code': 'NM', 'seat_type': 'Class 2', 'rep_candidate': 'Nella Domenici', 'dem_candidate': 'Ben Ray Luján', 'party': 'D', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': 9.5},
+    {'state': 'Oregon', 'code': 'OR', 'seat_type': 'Class 2', 'rep_candidate': 'Cliff Bentz', 'dem_candidate': 'Jeff Merkley', 'party': 'D', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': 16.0},
+    {'state': 'Rhode Island', 'code': 'RI', 'seat_type': 'Class 2', 'rep_candidate': 'Allen Waters', 'dem_candidate': 'Jack Reed', 'party': 'D', 'is_incumbent': True, 'region': 'Northeast', 'raw_poll_dem_margin': 20.5},
+    {'state': 'Virginia', 'code': 'VA', 'seat_type': 'Class 2', 'rep_candidate': 'Hung Cao', 'dem_candidate': 'Mark Warner', 'party': 'D', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': 9.5},
 
     # Republican Defending Seats (22 seats: 20 regular Class 2 + 2 specials)
-    {'state': 'Alabama', 'code': 'AL', 'seat_type': 'Class 2', 'incumbent': 'Tommy Tuberville', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -26.5},
-    {'state': 'Alaska', 'code': 'AK', 'seat_type': 'Class 2', 'incumbent': 'Dan Sullivan', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -6.0},
-    {'state': 'Arkansas', 'code': 'AR', 'seat_type': 'Class 2', 'incumbent': 'Tom Cotton', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -27.5},
-    {'state': 'Idaho', 'code': 'ID', 'seat_type': 'Class 2', 'incumbent': 'Jim Risch', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -31.0},
-    {'state': 'Iowa', 'code': 'IA', 'seat_type': 'Class 2', 'incumbent': 'Joni Ernst', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -3.2},
-    {'state': 'Kansas', 'code': 'KS', 'seat_type': 'Class 2', 'incumbent': 'Roger Marshall', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -11.5},
-    {'state': 'Kentucky', 'code': 'KY', 'seat_type': 'Class 2', 'incumbent': 'Mitch McConnell (or Open)', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -16.5},
-    {'state': 'Louisiana', 'code': 'LA', 'seat_type': 'Class 2', 'incumbent': 'Bill Cassidy', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -18.5},
-    {'state': 'Maine', 'code': 'ME', 'seat_type': 'Class 2', 'incumbent': 'Susan Collins', 'party': 'R', 'region': 'Northeast', 'raw_poll_dem_margin': 1.2},
-    {'state': 'Mississippi', 'code': 'MS', 'seat_type': 'Class 2', 'incumbent': 'Cindy Hyde-Smith', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -17.5},
-    {'state': 'Montana', 'code': 'MT', 'seat_type': 'Class 2', 'incumbent': 'Steve Daines', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -12.5},
-    {'state': 'Nebraska', 'code': 'NE', 'seat_type': 'Class 2', 'incumbent': 'Pete Ricketts', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -15.5},
-    {'state': 'North Carolina', 'code': 'NC', 'seat_type': 'Class 2', 'incumbent': 'Thom Tillis', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': 0.6},
-    {'state': 'Oklahoma', 'code': 'OK', 'seat_type': 'Class 2', 'incumbent': 'Markwayne Mullin', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -28.5},
-    {'state': 'South Carolina', 'code': 'SC', 'seat_type': 'Class 2', 'incumbent': 'Lindsey Graham', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -11.0},
-    {'state': 'South Dakota', 'code': 'SD', 'seat_type': 'Class 2', 'incumbent': 'Mike Rounds', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -25.5},
-    {'state': 'Tennessee', 'code': 'TN', 'seat_type': 'Class 2', 'incumbent': 'Bill Hagerty', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -24.0},
-    {'state': 'Texas', 'code': 'TX', 'seat_type': 'Class 2', 'incumbent': 'John Cornyn', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -2.2},
-    {'state': 'West Virginia', 'code': 'WV', 'seat_type': 'Class 2', 'incumbent': 'Shelley Moore Capito', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -32.5},
-    {'state': 'Wyoming', 'code': 'WY', 'seat_type': 'Class 2', 'incumbent': 'Cynthia Lummis', 'party': 'R', 'region': 'West', 'raw_poll_dem_margin': -39.5},
-    {'state': 'Ohio (Special)', 'code': 'OH', 'seat_type': 'Special', 'incumbent': 'Appointed (Vance Seat)', 'party': 'R', 'region': 'Midwest', 'raw_poll_dem_margin': -3.8},
-    {'state': 'Florida (Special)', 'code': 'FL', 'seat_type': 'Special', 'incumbent': 'Appointed (Rubio Seat)', 'party': 'R', 'region': 'South', 'raw_poll_dem_margin': -4.5},
+    {'state': 'Alabama', 'code': 'AL', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'Steve Marshall', 'dem_candidate': 'Will Boyd', 'party': 'R', 'is_incumbent': False, 'region': 'South', 'raw_poll_dem_margin': -26.5},
+    {'state': 'Alaska', 'code': 'AK', 'seat_type': 'Class 2', 'rep_candidate': 'Dan Sullivan', 'dem_candidate': 'Mary Peltola', 'party': 'R', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': -4.5},
+    {'state': 'Arkansas', 'code': 'AR', 'seat_type': 'Class 2', 'rep_candidate': 'Tom Cotton', 'dem_candidate': 'Ricky Dale Harrington', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -27.5},
+    {'state': 'Idaho', 'code': 'ID', 'seat_type': 'Class 2', 'rep_candidate': 'Jim Risch', 'dem_candidate': 'Paulette Jordan', 'party': 'R', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': -31.0},
+    {'state': 'Iowa', 'code': 'IA', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'Ashley Hinson', 'dem_candidate': 'Josh Turek', 'party': 'R', 'is_incumbent': False, 'region': 'Midwest', 'raw_poll_dem_margin': -4.0},
+    {'state': 'Kansas', 'code': 'KS', 'seat_type': 'Class 2', 'rep_candidate': 'Roger Marshall', 'dem_candidate': 'Adam Hamilton', 'party': 'R', 'is_incumbent': True, 'region': 'Midwest', 'raw_poll_dem_margin': -8.5},
+    {'state': 'Kentucky', 'code': 'KY', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'Daniel Cameron', 'dem_candidate': 'Democratic Challenger', 'party': 'R', 'is_incumbent': False, 'region': 'South', 'raw_poll_dem_margin': -15.0},
+    {'state': 'Louisiana', 'code': 'LA', 'seat_type': 'Class 2', 'rep_candidate': 'Bill Cassidy', 'dem_candidate': 'Adrian Perkins', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -18.5},
+    {'state': 'Maine', 'code': 'ME', 'seat_type': 'Class 2', 'rep_candidate': 'Susan Collins', 'dem_candidate': 'Troy Jackson', 'party': 'R', 'is_incumbent': True, 'region': 'Northeast', 'raw_poll_dem_margin': 1.8},
+    {'state': 'Mississippi', 'code': 'MS', 'seat_type': 'Class 2', 'rep_candidate': 'Cindy Hyde-Smith', 'dem_candidate': 'Ty Pinkins', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -17.5},
+    {'state': 'Montana', 'code': 'MT', 'seat_type': 'Class 2', 'rep_candidate': 'Steve Daines', 'dem_candidate': 'Monica Tranel', 'party': 'R', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': -11.5},
+    {'state': 'Nebraska', 'code': 'NE', 'seat_type': 'Class 2', 'rep_candidate': 'Pete Ricketts', 'dem_candidate': 'Dan Osborn (Ind)', 'party': 'R', 'is_incumbent': True, 'region': 'Midwest', 'raw_poll_dem_margin': -6.0},
+    {'state': 'North Carolina', 'code': 'NC', 'seat_type': 'Class 2 (Open)', 'rep_candidate': 'Michael Whatley', 'dem_candidate': 'Roy Cooper', 'party': 'R', 'is_incumbent': False, 'region': 'South', 'raw_poll_dem_margin': 2.2},
+    {'state': 'Oklahoma', 'code': 'OK', 'seat_type': 'Class 2', 'rep_candidate': 'Markwayne Mullin', 'dem_candidate': 'Madison Horn', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -28.5},
+    {'state': 'South Carolina', 'code': 'SC', 'seat_type': 'Class 2', 'rep_candidate': 'Lindsey Graham', 'dem_candidate': 'Christale Spain', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -10.5},
+    {'state': 'South Dakota', 'code': 'SD', 'seat_type': 'Class 2', 'rep_candidate': 'Mike Rounds', 'dem_candidate': 'Dan Ahlers', 'party': 'R', 'is_incumbent': True, 'region': 'Midwest', 'raw_poll_dem_margin': -25.5},
+    {'state': 'Tennessee', 'code': 'TN', 'seat_type': 'Class 2', 'rep_candidate': 'Bill Hagerty', 'dem_candidate': 'Gloria Johnson', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -24.0},
+    {'state': 'Texas', 'code': 'TX', 'seat_type': 'Class 2 (Open/Primary Flip)', 'rep_candidate': 'Ken Paxton', 'dem_candidate': 'James Talarico', 'party': 'R', 'is_incumbent': False, 'region': 'South', 'raw_poll_dem_margin': -1.8},
+    {'state': 'West Virginia', 'code': 'WV', 'seat_type': 'Class 2', 'rep_candidate': 'Shelley Moore Capito', 'dem_candidate': 'Glenn Elliott', 'party': 'R', 'is_incumbent': True, 'region': 'South', 'raw_poll_dem_margin': -32.5},
+    {'state': 'Wyoming', 'code': 'WY', 'seat_type': 'Class 2', 'rep_candidate': 'Cynthia Lummis', 'dem_candidate': 'Merav Ben-David', 'party': 'R', 'is_incumbent': True, 'region': 'West', 'raw_poll_dem_margin': -39.5},
+    {'state': 'Ohio (Special)', 'code': 'OH', 'seat_type': 'Special (Appointed)', 'rep_candidate': 'Jon Husted', 'dem_candidate': 'Sherrod Brown', 'party': 'R', 'is_incumbent': False, 'region': 'Midwest', 'raw_poll_dem_margin': -2.5},
+    {'state': 'Florida (Special)', 'code': 'FL', 'seat_type': 'Special (Appointed)', 'rep_candidate': 'Ashley Moody', 'dem_candidate': 'Angie Nixon', 'party': 'R', 'is_incumbent': False, 'region': 'South', 'raw_poll_dem_margin': -5.0},
 ]
 
 # Merge with state approval metrics and calculate Approval Tilt & FTI
@@ -192,8 +192,10 @@ for r in races_data:
     # Measures the degree to which current polling for a candidate overperforms the fundamental baseline,
     # and evaluates demographic non-response risk (non-college white share).
     ncw = ncw_lookup.get(code, 0.52)
-    gop_inc = 1 if r['party'] == 'R' else 0
-    expected_baseline = -trump_margin_2024 - gop_inc * 3.0
+    gop_inc = 1 if (r['party'] == 'R' and r.get('is_incumbent', False)) else 0
+    dem_inc = 1 if (r['party'] == 'D' and r.get('is_incumbent', False)) else 0
+    # True elected incumbents receive a +2.5 pt historical baseline advantage; open seats receive 0.0
+    expected_baseline = -trump_margin_2024 - gop_inc * 2.5 + dem_inc * 2.5
     cand_stretch = tilted_margin - expected_baseline
     fti = 0.55 * cand_stretch + 14.0 * (ncw - 0.50)
 
@@ -203,11 +205,20 @@ for r in races_data:
     fti_adj = np.clip(0.25 * fti, -1.0, 2.5)
     fti_calibrated_margin = tilted_margin - fti_adj
 
+    matchup_str = f"{r['rep_candidate']} (R) vs. {r['dem_candidate']} (D)"
+    inc_label = r['rep_candidate'] if r['party'] == 'R' else r['dem_candidate']
+    if not r.get('is_incumbent', False):
+        inc_label += " (Nominee)"
+
     processed_races.append({
         'state': r['state'],
         'code': r['code'],
         'seat_type': r['seat_type'],
-        'incumbent': r['incumbent'],
+        'rep_candidate': r['rep_candidate'],
+        'dem_candidate': r['dem_candidate'],
+        'matchup': matchup_str,
+        'incumbent': inc_label,
+        'is_incumbent': r.get('is_incumbent', False),
         'current_party': r['party'],
         'region': r['region'],
         'trump_margin_2024': round(trump_margin_2024, 2),
@@ -429,7 +440,7 @@ for i, (_, r) in enumerate(battlegrounds.iterrows()):
     ax.text(val + offset, i + h, f"FTI Dem Win: {p_dem_fti:.1f}% ({val:+.1f}%)", va='center', ha=ha, fontsize=8.5, fontweight='bold', color=color)
 
 ax.set_yticks(y_pos)
-y_labels = [f"{r['state']} ({r['incumbent']})" for _, r in battlegrounds.iterrows()]
+y_labels = [f"{r['state']}: {r['rep_candidate']} (R) vs. {r['dem_candidate']} (D)" for _, r in battlegrounds.iterrows()]
 ax.set_yticklabels(y_labels, fontsize=10.5, fontweight='bold')
 ax.axvline(0, color='black', linestyle='-', linewidth=1.2)
 ax.axvspan(-10, 0, color='#fee2e2', alpha=0.22, label='Republican Zone')
@@ -564,7 +575,7 @@ fig_plotly_bg = go.Figure()
 bg_sorted = battlegrounds.sort_values(by='fti_calibrated_dem_margin', ascending=True)
 
 fig_plotly_bg.add_trace(go.Bar(
-    y=[f"{r['state']} ({r['code']}) - {r['incumbent']}" for _, r in bg_sorted.iterrows()],
+    y=[f"{r['state']} ({r['code']}): {r['rep_candidate']} (R) vs. {r['dem_candidate']} (D)" for _, r in bg_sorted.iterrows()],
     x=bg_sorted['raw_poll_dem_margin'],
     orientation='h',
     name='Raw Poll Margin',
@@ -573,7 +584,7 @@ fig_plotly_bg.add_trace(go.Bar(
 ))
 
 fig_plotly_bg.add_trace(go.Bar(
-    y=[f"{r['state']} ({r['code']}) - {r['incumbent']}" for _, r in bg_sorted.iterrows()],
+    y=[f"{r['state']} ({r['code']}): {r['rep_candidate']} (R) vs. {r['dem_candidate']} (D)" for _, r in bg_sorted.iterrows()],
     x=bg_sorted['tilted_poll_dem_margin'],
     orientation='h',
     name='Approval-Tilted Margin',
@@ -582,7 +593,7 @@ fig_plotly_bg.add_trace(go.Bar(
 ))
 
 fig_plotly_bg.add_trace(go.Bar(
-    y=[f"{r['state']} ({r['code']}) - {r['incumbent']}" for _, r in bg_sorted.iterrows()],
+    y=[f"{r['state']} ({r['code']}): {r['rep_candidate']} (R) vs. {r['dem_candidate']} (D)" for _, r in bg_sorted.iterrows()],
     x=bg_sorted['fti_calibrated_dem_margin'],
     orientation='h',
     name='FTI-Calibrated Projected Margin',

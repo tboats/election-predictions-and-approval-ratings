@@ -1,36 +1,36 @@
-state,code,seat_type,incumbent,current_party,region,trump_margin_2024,trump_net_approval_2026,approval_erosion_gap,ncw_pct,raw_poll_dem_margin,approval_tilt,tilted_poll_dem_margin,fti_score,fti_adjustment,fti_calibrated_dem_margin,dem_win_prob_raw,rep_win_prob_raw,dem_win_prob_tilted,rep_win_prob_tilted,dem_win_prob_fti,rep_win_prob_fti
-Colorado,CO,Class 2,John Hickenlooper,D,West,-10.99,-28.0,-17.01,0.44,13.0,1.72,14.72,1.21,0.3,14.42,0.9999,9.999999999998899e-05,1.0,0.0,1.0,0.0
-Delaware,DE,Class 2,Chris Coons,D,Northeast,-14.7,-32.0,-17.3,0.53,17.0,2.05,19.05,2.81,0.7,18.35,1.0,0.0,1.0,0.0,1.0,0.0
-Georgia,GA,Class 2,Jon Ossoff,D,South,2.2,-26.0,-28.2,0.44,3.8,2.01,5.81,3.56,0.89,4.92,0.87988,0.12012,0.96114,0.038860000000000006,0.93528,0.06472
-Illinois,IL,Class 2,Dick Durbin,D,Midwest,-10.9,-30.0,-19.1,0.47,16.0,1.96,17.96,3.47,0.87,17.1,1.0,0.0,1.0,0.0,1.0,0.0
-Massachusetts,MA,Class 2,Ed Markey,D,Northeast,-25.2,-48.0,-22.8,0.38,26.0,3.55,29.55,0.71,0.18,29.37,1.0,0.0,1.0,0.0,1.0,0.0
-Michigan,MI,Class 2,Gary Peters,D,Midwest,1.42,-26.0,-27.42,0.58,4.5,1.98,6.48,5.46,1.37,5.11,0.9182,0.08179999999999998,0.9778,0.022199999999999998,0.94132,0.058679999999999954
-Minnesota,MN,Class 2,Tina Smith,D,Midwest,-4.24,-26.0,-21.76,0.54,9.0,1.75,10.75,4.14,1.04,9.72,0.99728,0.0027199999999999447,0.99952,0.00048000000000003595,0.9986,0.0013999999999999568
-New Hampshire,NH,Class 2,Jeanne Shaheen,D,Northeast,-2.78,-19.0,-16.22,0.54,9.5,0.97,10.47,4.79,1.2,9.27,0.99828,0.0017200000000000548,0.99924,0.0007599999999999829,0.99744,0.0025600000000000067
-New Jersey,NJ,Class 2,Cory Booker,D,Northeast,-5.91,-31.0,-25.09,0.42,13.5,2.28,15.78,4.31,1.08,14.71,1.0,0.0,1.0,0.0,1.0,0.0
-New Mexico,NM,Class 2,Ben Ray Luján,D,West,-6.0,-28.0,-22.0,0.35,9.5,1.92,11.42,0.88,0.22,11.2,0.99812,0.0018799999999999928,0.9996,0.00039999999999995595,0.9997,0.00029999999999996696
-Oregon,OR,Class 2,Jeff Merkley,D,West,-14.3,-37.0,-22.7,0.5,16.0,2.67,18.67,2.4,0.6,18.07,1.0,0.0,1.0,0.0,1.0,0.0
-Rhode Island,RI,Class 2,Jack Reed,D,Northeast,-13.78,-34.0,-20.22,0.48,20.5,2.33,22.83,4.7,1.17,21.65,1.0,0.0,1.0,0.0,1.0,0.0
-Virginia,VA,Class 2,Mark Warner,D,South,-5.78,-25.0,-19.22,0.45,9.5,1.57,11.07,2.21,0.55,10.52,0.99824,0.0017599999999999838,0.99966,0.00034000000000000696,0.99952,0.00048000000000003595
-Alabama,AL,Class 2,Tommy Tuberville,R,South,30.47,6.0,-24.47,0.65,-26.5,-0.7,-27.2,5.55,1.39,-28.59,0.0,1.0,0.0,1.0,0.0,1.0
-Alaska,AK,Class 2,Dan Sullivan,R,West,13.13,-12.0,-25.13,0.54,-6.0,0.77,-5.23,6.55,1.64,-6.87,0.03132,0.96868,0.05296,0.94704,0.01676,0.98324
-Arkansas,AR,Class 2,Tom Cotton,R,South,30.64,10.0,-20.64,0.68,-27.5,-1.17,-28.67,5.25,1.31,-29.99,0.0,1.0,0.0,1.0,0.0,1.0
-Idaho,ID,Class 2,Jim Risch,R,West,36.49,10.0,-26.49,0.67,-31.0,-0.94,-31.94,6.53,1.63,-33.57,0.0,1.0,0.0,1.0,0.0,1.0
-Iowa,IA,Class 2,Joni Ernst,R,Midwest,13.21,-14.0,-27.21,0.65,-3.2,1.01,-2.19,9.81,2.45,-4.64,0.16126,0.83874,0.25,0.75,0.07578,0.92422
-Kansas,KS,Class 2,Roger Marshall,R,Midwest,16.12,-1.0,-17.12,0.58,-11.5,-0.44,-11.94,5.07,1.27,-13.2,0.00024,0.99976,0.00014,0.99986,2e-05,0.99998
-Kentucky,KY,Class 2,Mitch McConnell (or Open),R,South,30.53,-4.0,-34.53,0.67,-16.5,0.5,-16.0,12.02,2.5,-18.5,0.0,1.0,0.0,1.0,0.0,1.0
-Louisiana,LA,Class 2,Bill Cassidy,R,South,22.01,-4.0,-26.01,0.52,-18.5,0.16,-18.34,3.95,0.99,-19.33,0.0,1.0,0.0,1.0,0.0,1.0
-Maine,ME,Class 2,Susan Collins,R,Northeast,-6.94,-22.0,-15.06,0.61,1.2,1.16,2.36,0.67,0.17,2.19,0.64504,0.35496000000000005,0.76402,0.23597999999999997,0.75054,0.24946000000000002
-Mississippi,MS,Class 2,Cindy Hyde-Smith,R,South,22.89,-4.0,-26.89,0.5,-17.5,0.2,-17.3,4.72,1.18,-18.48,0.0,1.0,0.0,1.0,0.0,1.0
-Montana,MT,Class 2,Steve Daines,R,West,19.93,2.0,-17.93,0.62,-12.5,-0.64,-13.14,7.06,1.77,-14.91,0.0001,0.9999,0.0,1.0,0.0,1.0
-Nebraska,NE,Class 2,Pete Ricketts,R,Midwest,20.46,-4.0,-24.46,0.59,-15.5,0.1,-15.4,5.69,1.42,-16.82,0.0,1.0,0.0,1.0,0.0,1.0
-North Carolina,NC,Class 2,Thom Tillis,R,South,3.21,-17.0,-20.21,0.53,0.6,0.97,1.57,4.7,1.17,0.39,0.57028,0.42972,0.68728,0.31272,0.54926,0.45074000000000003
-Oklahoma,OK,Class 2,Markwayne Mullin,R,South,34.26,14.0,-20.26,0.61,-28.5,-1.51,-30.01,5.53,1.38,-31.39,0.0,1.0,0.0,1.0,0.0,1.0
-South Carolina,SC,Class 2,Lindsey Graham,R,South,17.87,-3.0,-20.87,0.51,-11.0,-0.13,-11.13,5.5,1.37,-12.5,0.00034,0.99966,0.0002,0.9998,8e-05,0.99992
-South Dakota,SD,Class 2,Mike Rounds,R,Midwest,29.19,7.0,-22.19,0.64,-25.5,-0.87,-26.37,5.16,1.29,-27.66,0.0,1.0,0.0,1.0,0.0,1.0
-Tennessee,TN,Class 2,Bill Hagerty,R,South,29.72,12.0,-17.72,0.66,-24.0,-1.45,-25.45,6.24,1.56,-27.01,0.0,1.0,0.0,1.0,0.0,1.0
-Texas,TX,Class 2,John Cornyn,R,South,13.68,-22.0,-35.68,0.38,-2.2,1.99,-0.21,7.38,1.84,-2.06,0.2508,0.7492,0.47568,0.52432,0.26398,0.73602
-West Virginia,WV,Class 2,Shelley Moore Capito,R,South,41.87,17.0,-24.87,0.74,-32.5,-1.57,-34.07,9.3,2.33,-36.39,0.0,1.0,0.0,1.0,0.0,1.0
-Wyoming,WY,Class 2,Cynthia Lummis,R,West,45.76,23.0,-22.76,0.67,-39.5,-2.13,-41.63,6.3,1.58,-43.21,0.0,1.0,0.0,1.0,0.0,1.0
-Ohio (Special),OH,Special,Appointed (Vance Seat),R,Midwest,11.21,-10.0,-21.21,0.62,-3.8,0.45,-3.35,7.65,1.91,-5.26,0.122,0.878,0.1514,0.8486,0.05206,0.94794
-Florida (Special),FL,Special,Appointed (Rubio Seat),R,South,13.1,-18.0,-31.1,0.48,-4.5,1.48,-3.02,6.92,1.73,-4.75,0.08274,0.91726,0.17538,0.82462,0.07184,0.92816
+state,code,seat_type,rep_candidate,dem_candidate,matchup,incumbent,is_incumbent,current_party,region,trump_margin_2024,trump_net_approval_2026,approval_erosion_gap,ncw_pct,raw_poll_dem_margin,approval_tilt,tilted_poll_dem_margin,fti_score,fti_adjustment,fti_calibrated_dem_margin,dem_win_prob_raw,rep_win_prob_raw,dem_win_prob_tilted,rep_win_prob_tilted,dem_win_prob_fti,rep_win_prob_fti
+Colorado,CO,Class 2,Gabe Evans,John Hickenlooper,Gabe Evans (R) vs. John Hickenlooper (D),John Hickenlooper,True,D,West,-10.99,-28.0,-17.01,0.44,13.0,1.72,14.72,-0.16,-0.04,14.76,0.9999,9.999999999998899e-05,1.0,0.0,1.0,0.0
+Delaware,DE,Class 2,Lauren Witzke,Chris Coons,Lauren Witzke (R) vs. Chris Coons (D),Chris Coons,True,D,Northeast,-14.7,-32.0,-17.3,0.53,17.0,2.05,19.05,1.44,0.36,18.69,1.0,0.0,1.0,0.0,1.0,0.0
+Georgia,GA,Class 2,Mike Collins,Jon Ossoff,Mike Collins (R) vs. Jon Ossoff (D),Jon Ossoff,True,D,South,2.2,-26.0,-28.2,0.44,3.8,2.01,5.81,2.19,0.55,5.26,0.87988,0.12012,0.96114,0.038860000000000006,0.94744,0.05256000000000005
+Illinois,IL,Class 2,Erika Harold,Dick Durbin,Erika Harold (R) vs. Dick Durbin (D),Dick Durbin,True,D,Midwest,-10.9,-30.0,-19.1,0.47,16.0,1.96,17.96,2.09,0.52,17.44,1.0,0.0,1.0,0.0,1.0,0.0
+Massachusetts,MA,Class 2,John Kingston,Ed Markey,John Kingston (R) vs. Ed Markey (D),Ed Markey,True,D,Northeast,-25.2,-48.0,-22.8,0.38,26.0,3.55,29.55,-0.66,-0.17,29.72,1.0,0.0,1.0,0.0,1.0,0.0
+Michigan,MI,Class 2 (Open),Mike Rogers,Abdul El-Sayed,Mike Rogers (R) vs. Abdul El-Sayed (D),Abdul El-Sayed (Nominee),False,D,Midwest,1.42,-26.0,-27.42,0.58,3.5,1.98,5.48,4.91,1.23,4.25,0.86068,0.13932,0.95426,0.04574,0.90478,0.09521999999999997
+Minnesota,MN,Class 2 (Open),Michele Tafoya,Peggy Flanagan,Michele Tafoya (R) vs. Peggy Flanagan (D),Peggy Flanagan (Nominee),False,D,Midwest,-4.24,-26.0,-21.76,0.54,8.0,1.75,9.75,3.59,0.9,8.85,0.9931,0.006900000000000017,0.99868,0.0013199999999999878,0.99676,0.0032400000000000206
+New Hampshire,NH,Class 2 (Open),John Sununu,Chris Pappas,John Sununu (R) vs. Chris Pappas (D),Chris Pappas (Nominee),False,D,Northeast,-2.78,-19.0,-16.22,0.54,7.0,0.97,7.97,3.41,0.85,7.12,0.98428,0.015719999999999956,0.99388,0.006120000000000014,0.98588,0.014120000000000021
+New Jersey,NJ,Class 2,Curtis Bashaw,Cory Booker,Curtis Bashaw (R) vs. Cory Booker (D),Cory Booker,True,D,Northeast,-5.91,-31.0,-25.09,0.42,13.5,2.28,15.78,2.94,0.73,15.05,1.0,0.0,1.0,0.0,1.0,0.0
+New Mexico,NM,Class 2,Nella Domenici,Ben Ray Luján,Nella Domenici (R) vs. Ben Ray Luján (D),Ben Ray Luján,True,D,West,-6.0,-28.0,-22.0,0.35,9.5,1.92,11.42,-0.49,-0.12,11.54,0.99812,0.0018799999999999928,0.9996,0.00039999999999995595,0.99974,0.000260000000000038
+Oregon,OR,Class 2,Cliff Bentz,Jeff Merkley,Cliff Bentz (R) vs. Jeff Merkley (D),Jeff Merkley,True,D,West,-14.3,-37.0,-22.7,0.5,16.0,2.67,18.67,1.03,0.26,18.41,1.0,0.0,1.0,0.0,1.0,0.0
+Rhode Island,RI,Class 2,Allen Waters,Jack Reed,Allen Waters (R) vs. Jack Reed (D),Jack Reed,True,D,Northeast,-13.78,-34.0,-20.22,0.48,20.5,2.33,22.83,3.32,0.83,22.0,1.0,0.0,1.0,0.0,1.0,0.0
+Virginia,VA,Class 2,Hung Cao,Mark Warner,Hung Cao (R) vs. Mark Warner (D),Mark Warner,True,D,South,-5.78,-25.0,-19.22,0.45,9.5,1.57,11.07,0.83,0.21,10.86,0.99824,0.0017599999999999838,0.99966,0.00034000000000000696,0.99966,0.00034000000000000696
+Alabama,AL,Class 2 (Open),Steve Marshall,Will Boyd,Steve Marshall (R) vs. Will Boyd (D),Steve Marshall (Nominee),False,R,South,30.47,6.0,-24.47,0.65,-26.5,-0.7,-27.2,3.9,0.97,-28.18,0.0,1.0,0.0,1.0,0.0,1.0
+Alaska,AK,Class 2,Dan Sullivan,Mary Peltola,Dan Sullivan (R) vs. Mary Peltola (D),Dan Sullivan,True,R,West,13.13,-12.0,-25.13,0.54,-4.5,0.77,-3.73,7.1,1.78,-5.51,0.08224,0.91776,0.12364,0.87636,0.04452,0.95548
+Arkansas,AR,Class 2,Tom Cotton,Ricky Dale Harrington,Tom Cotton (R) vs. Ricky Dale Harrington (D),Tom Cotton,True,R,South,30.64,10.0,-20.64,0.68,-27.5,-1.17,-28.67,4.98,1.24,-29.92,0.0,1.0,0.0,1.0,0.0,1.0
+Idaho,ID,Class 2,Jim Risch,Paulette Jordan,Jim Risch (R) vs. Paulette Jordan (D),Jim Risch,True,R,West,36.49,10.0,-26.49,0.67,-31.0,-0.94,-31.94,6.26,1.56,-33.5,0.0,1.0,0.0,1.0,0.0,1.0
+Iowa,IA,Class 2 (Open),Ashley Hinson,Josh Turek,Ashley Hinson (R) vs. Josh Turek (D),Ashley Hinson (Nominee),False,R,Midwest,13.21,-14.0,-27.21,0.65,-4.0,1.01,-2.99,7.72,1.93,-4.92,0.10706,0.89294,0.17914,0.82086,0.0647,0.9353
+Kansas,KS,Class 2,Roger Marshall,Adam Hamilton,Roger Marshall (R) vs. Adam Hamilton (D),Roger Marshall,True,R,Midwest,16.12,-1.0,-17.12,0.58,-8.5,-0.44,-8.94,6.45,1.61,-10.55,0.0045,0.9955,0.00268,0.99732,0.00058,0.99942
+Kentucky,KY,Class 2 (Open),Daniel Cameron,Democratic Challenger,Daniel Cameron (R) vs. Democratic Challenger (D),Daniel Cameron (Nominee),False,R,South,30.53,-4.0,-34.53,0.67,-15.0,0.5,-14.5,11.2,2.5,-17.0,0.0,1.0,0.0,1.0,0.0,1.0
+Louisiana,LA,Class 2,Bill Cassidy,Adrian Perkins,Bill Cassidy (R) vs. Adrian Perkins (D),Bill Cassidy,True,R,South,22.01,-4.0,-26.01,0.52,-18.5,0.16,-18.34,3.67,0.92,-19.26,0.0,1.0,0.0,1.0,0.0,1.0
+Maine,ME,Class 2,Susan Collins,Troy Jackson,Susan Collins (R) vs. Troy Jackson (D),Susan Collins,True,R,Northeast,-6.94,-22.0,-15.06,0.61,1.8,1.16,2.96,0.73,0.18,2.78,0.71194,0.28806,0.81762,0.18238,0.80374,0.19626
+Mississippi,MS,Class 2,Cindy Hyde-Smith,Ty Pinkins,Cindy Hyde-Smith (R) vs. Ty Pinkins (D),Cindy Hyde-Smith,True,R,South,22.89,-4.0,-26.89,0.5,-17.5,0.2,-17.3,4.45,1.11,-18.42,0.0,1.0,0.0,1.0,0.0,1.0
+Montana,MT,Class 2,Steve Daines,Monica Tranel,Steve Daines (R) vs. Monica Tranel (D),Steve Daines,True,R,West,19.93,2.0,-17.93,0.62,-11.5,-0.64,-12.14,7.34,1.83,-13.98,0.00024,0.99976,8e-05,0.99992,0.0,1.0
+Nebraska,NE,Class 2,Pete Ricketts,Dan Osborn (Ind),Pete Ricketts (R) vs. Dan Osborn (Ind) (D),Pete Ricketts,True,R,Midwest,20.46,-4.0,-24.46,0.59,-6.0,0.1,-5.9,10.64,2.5,-8.4,0.03306,0.96694,0.03356,0.96644,0.00518,0.99482
+North Carolina,NC,Class 2 (Open),Michael Whatley,Roy Cooper,Michael Whatley (R) vs. Roy Cooper (D),Michael Whatley (Nominee),False,R,South,3.21,-17.0,-20.21,0.53,2.2,0.97,3.17,3.93,0.98,2.19,0.74804,0.25195999999999996,0.83618,0.16381999999999997,0.74926,0.25073999999999996
+Oklahoma,OK,Class 2,Markwayne Mullin,Madison Horn,Markwayne Mullin (R) vs. Madison Horn (D),Markwayne Mullin,True,R,South,34.26,14.0,-20.26,0.61,-28.5,-1.51,-30.01,5.25,1.31,-31.32,0.0,1.0,0.0,1.0,0.0,1.0
+South Carolina,SC,Class 2,Lindsey Graham,Christale Spain,Lindsey Graham (R) vs. Christale Spain (D),Lindsey Graham,True,R,South,17.87,-3.0,-20.87,0.51,-10.5,-0.13,-10.63,5.5,1.37,-12.0,0.00054,0.99946,0.00052,0.99948,0.00012,0.99988
+South Dakota,SD,Class 2,Mike Rounds,Dan Ahlers,Mike Rounds (R) vs. Dan Ahlers (D),Mike Rounds,True,R,Midwest,29.19,7.0,-22.19,0.64,-25.5,-0.87,-26.37,4.88,1.22,-27.59,0.0,1.0,0.0,1.0,0.0,1.0
+Tennessee,TN,Class 2,Bill Hagerty,Gloria Johnson,Bill Hagerty (R) vs. Gloria Johnson (D),Bill Hagerty,True,R,South,29.72,12.0,-17.72,0.66,-24.0,-1.45,-25.45,5.96,1.49,-26.94,0.0,1.0,0.0,1.0,0.0,1.0
+Texas,TX,Class 2 (Open/Primary Flip),Ken Paxton,James Talarico,Ken Paxton (R) vs. James Talarico (D),Ken Paxton (Nominee),False,R,South,13.68,-22.0,-35.68,0.38,-1.8,1.99,0.19,5.95,1.49,-1.3,0.29248,0.7075199999999999,0.52272,0.47728000000000004,0.34462,0.6553800000000001
+West Virginia,WV,Class 2,Shelley Moore Capito,Glenn Elliott,Shelley Moore Capito (R) vs. Glenn Elliott (D),Shelley Moore Capito,True,R,South,41.87,17.0,-24.87,0.74,-32.5,-1.57,-34.07,9.03,2.26,-36.32,0.0,1.0,0.0,1.0,0.0,1.0
+Wyoming,WY,Class 2,Cynthia Lummis,Merav Ben-David,Cynthia Lummis (R) vs. Merav Ben-David (D),Cynthia Lummis,True,R,West,45.76,23.0,-22.76,0.67,-39.5,-2.13,-41.63,6.03,1.51,-43.14,0.0,1.0,0.0,1.0,0.0,1.0
+Ohio (Special),OH,Special (Appointed),Jon Husted,Sherrod Brown,Jon Husted (R) vs. Sherrod Brown (D),Jon Husted (Nominee),False,R,Midwest,11.21,-10.0,-21.21,0.62,-2.5,0.45,-2.05,6.72,1.68,-3.73,0.22008,0.77992,0.26554,0.73446,0.12434,0.87566
+Florida (Special),FL,Special (Appointed),Ashley Moody,Angie Nixon,Ashley Moody (R) vs. Angie Nixon (D),Ashley Moody (Nominee),False,R,South,13.1,-18.0,-31.1,0.48,-5.0,1.48,-3.52,4.99,1.25,-4.76,0.06206,0.93794,0.13826,0.86174,0.07138,0.92862

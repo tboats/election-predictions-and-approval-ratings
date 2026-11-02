@@ -778,35 +778,40 @@ In the 2026 midterm elections, 35 Senate seats are contested (33 Class 2 seats +
 
 ### We evaluate THREE distinct modeling paradigms across 50,000 Monte Carlo simulations:
 1. **Model 1: Pure Polling Model** (Raw pre-election polls without structural adjustment)
-   - Expected Seats: **48.7 Dem / 51.3 GOP** (Median: 49 Dem / 51 GOP)
-   - Dem Majority: **15.4%** | GOP Control: **84.6%**
-2. **Model 2: Approval-Tilted Model** (Raw polls + +1.0 to +2.0 pt presidential approval tailwinds)
-   - Expected Seats: **49.5 Dem / 50.5 GOP** (Median: 49 Dem / 51 GOP)
-   - Dem Majority: **28.2%** | 50-50 Tie: **19.9%** | GOP Control: **71.8%**
-   - *Driver:* Texas surges to a 47.6% Dem coin flip, and North Carolina reaches 68.7% Dem win prob.
+   - Expected Seats: **49.0 Dem / 51.0 GOP** (Median: 49 Dem / 51 GOP)
+   - Dem Majority: **19.3%** | GOP Control: **80.7%**
+2. **Model 2: Approval-Tilted Model** (Raw polls + +0.5 to +2.0 pt presidential approval tailwinds)
+   - Expected Seats: **49.8 Dem / 50.2 GOP** (Median: 50 Dem / 50 GOP)
+   - Dem Majority: **32.2%** | 50-50 Tie: **23.1%** | GOP Control: **67.8%**
+   - *Driver:* Texas (Ken Paxton vs. James Talarico) surges to a 52.3% Dem coin flip, and North Carolina (Roy Cooper) reaches 83.6% Dem win prob.
 3. **Model 3: FTI-Calibrated Model (Full Model: Polls + Approval Tilt - Fundamentals Tension Adjustment)**
-   - Expected Seats: **48.7 Dem / 51.3 GOP** (Median: 49 Dem / 51 GOP)
+   - Expected Seats: **49.0 Dem / 51.0 GOP** (Median: 49 Dem / 51 GOP)
    - **80% Confidence Band:** **[47 to 51 seats]** Dem | **[49 to 53 seats]** GOP
    - **95% Confidence Band:** **[46 to 52 seats]** Dem | **[48 to 54 seats]** GOP
-   - Dem Majority: **10.5%** | 50-50 Tie: **16.0%** | GOP Outright Maj: **73.4%** | Total GOP Control: **89.5%**
-   - *Key Correction:* FTI accounts for the fact that a near-even Texas poll stretches +13.5 pts over baseline, deflating Texas back to Cornyn -2.06% (26.4% Dem win prob). Without Texas, the Democratic path to 51 seats narrows sharply.
+   - Dem Majority: **15.2%** | 50-50 Tie: **21.1%** | GOP Outright Maj: **63.7%** | Total GOP Control: **84.8%**
+   - *Key Corrections:* 
+     - **Texas (Ken Paxton vs. James Talarico):** Paxton won the GOP primary after ousting John Cornyn. While Talarico polls near even in raw/tilted surveys (+0.19%), Texas voted Trump +13.7% in 2024. FTI imposes a -1.49 pt penalty, projecting Paxton +1.30% (65.5% GOP hold prob).
+     - **North Carolina (Michael Whatley vs. Roy Cooper):** Cooper's gubernatorial popularity gives Democrats a genuine edge, but FTI narrows it to +2.19% (74.9% Dem win prob).
+     - **Maine (Susan Collins vs. Troy Jackson):** Maine's D+6.9% presidential baseline creates minimal tension (+0.73 FTI), preserving a +2.78% lead for Jackson (80.4% Dem flip prob).
+     - **Michigan (Mike Rogers vs. Abdul El-Sayed):** Open seat holds at +4.25% for El-Sayed (90.5% Dem hold).
+     - **Ohio Special (Jon Husted vs. Sherrod Brown):** Brown makes it competitive (-2.05% tilted), but Ohio's R+11.2% baseline pushes Husted to +3.73% calibrated (87.6% GOP hold).
 """))
 
 # Cell 22: Battleground 3-Model Table Code & Output
 bg_display = df_senate[df_senate['code'].isin(['ME', 'NC', 'GA', 'MI', 'TX', 'IA', 'OH', 'FL', 'AK'])].sort_values(by='fti_calibrated_dem_margin', ascending=False)
-bg_table = bg_display[['state', 'incumbent', 'current_party', 'raw_poll_dem_margin', 'approval_tilt', 'tilted_poll_dem_margin', 'fti_score', 'fti_adjustment', 'fti_calibrated_dem_margin', 'dem_win_prob_raw', 'dem_win_prob_tilted', 'dem_win_prob_fti']].copy()
+bg_table = bg_display[['state', 'matchup', 'seat_type', 'current_party', 'raw_poll_dem_margin', 'approval_tilt', 'tilted_poll_dem_margin', 'fti_score', 'fti_adjustment', 'fti_calibrated_dem_margin', 'dem_win_prob_raw', 'dem_win_prob_tilted', 'dem_win_prob_fti']].copy()
 bg_table['dem_win_prob_raw'] = (bg_table['dem_win_prob_raw'] * 100).round(1).astype(str) + '%'
 bg_table['dem_win_prob_tilted'] = (bg_table['dem_win_prob_tilted'] * 100).round(1).astype(str) + '%'
 bg_table['dem_win_prob_fti'] = (bg_table['dem_win_prob_fti'] * 100).round(1).astype(str) + '%'
-bg_table.columns = ['State', 'Incumbent', 'Party', 'Raw Poll (D-R)', 'Tilt', 'Tilted (D-R)', 'FTI Score', 'FTI Adj', 'FTI Calibrated (D-R)', 'Raw Win Prob', 'Tilted Win Prob', 'FTI Win Prob']
+bg_table.columns = ['State', 'Matchup (2026 Nominees)', 'Seat Status', 'Party', 'Raw Poll (D-R)', 'Tilt', 'Tilted (D-R)', 'FTI Score', 'FTI Adj', 'FTI Calibrated (D-R)', 'Raw Win Prob', 'Tilted Win Prob', 'FTI Win Prob']
 
 code_senate_bg = """# 2026 Competitive Battleground Senate Races: 3-Model Comparison
 bg_display = df_senate[df_senate['code'].isin(['ME', 'NC', 'GA', 'MI', 'TX', 'IA', 'OH', 'FL', 'AK'])].sort_values(by='fti_calibrated_dem_margin', ascending=False)
-bg_table = bg_display[['state', 'incumbent', 'current_party', 'raw_poll_dem_margin', 'approval_tilt', 'tilted_poll_dem_margin', 'fti_score', 'fti_adjustment', 'fti_calibrated_dem_margin', 'dem_win_prob_raw', 'dem_win_prob_tilted', 'dem_win_prob_fti']].copy()
+bg_table = bg_display[['state', 'matchup', 'seat_type', 'current_party', 'raw_poll_dem_margin', 'approval_tilt', 'tilted_poll_dem_margin', 'fti_score', 'fti_adjustment', 'fti_calibrated_dem_margin', 'dem_win_prob_raw', 'dem_win_prob_tilted', 'dem_win_prob_fti']].copy()
 bg_table['dem_win_prob_raw'] = (bg_table['dem_win_prob_raw'] * 100).round(1).astype(str) + '%'
 bg_table['dem_win_prob_tilted'] = (bg_table['dem_win_prob_tilted'] * 100).round(1).astype(str) + '%'
 bg_table['dem_win_prob_fti'] = (bg_table['dem_win_prob_fti'] * 100).round(1).astype(str) + '%'
-bg_table.columns = ['State', 'Incumbent', 'Party', 'Raw Poll (D-R)', 'Tilt', 'Tilted (D-R)', 'FTI Score', 'FTI Adj', 'FTI Calibrated (D-R)', 'Raw Win Prob', 'Tilted Win Prob', 'FTI Win Prob']
+bg_table.columns = ['State', 'Matchup (2026 Nominees)', 'Seat Status', 'Party', 'Raw Poll (D-R)', 'Tilt', 'Tilted (D-R)', 'FTI Score', 'FTI Adj', 'FTI Calibrated (D-R)', 'Raw Win Prob', 'Tilted Win Prob', 'FTI Win Prob']
 bg_table"""
 
 c21 = new_code_cell(code_senate_bg)
@@ -994,8 +999,8 @@ for _, r in df_senate_sorted.iterrows():
     senate_table_rows_html += f"""
     <tr {row_bg}>
         <td><strong>{r['state']}</strong> <span style='color:#64748b; font-size:0.85em;'>({r['code']})</span></td>
-        <td>{r['seat_type']}</td>
-        <td>{r['incumbent']}</td>
+        <td><span style='font-size:0.85em; color:#475569;'>{r['seat_type']}</span></td>
+        <td><strong>{r['rep_candidate']} (R)</strong> vs. <strong>{r['dem_candidate']} (D)</strong></td>
         <td>{party_badge}</td>
         <td style='text-align:right;'>{poll_badge}</td>
         <td style='text-align:right;'>{tilt_badge}</td>
@@ -1429,13 +1434,13 @@ html_content = f"""<!DOCTYPE html>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Highest Tension Race (2026)</div>
-                <div class="kpi-value" style="color: var(--accent-red);">Texas (+7.4 FTI)</div>
-                <div class="kpi-subtext">Cornyn poll (-0.2%) stretches +13.5 pts past 2024 baseline</div>
+                <div class="kpi-value" style="color: var(--accent-red);">Iowa (+7.7 FTI) / Texas (+6.0 FTI)</div>
+                <div class="kpi-subtext">Talarico vs. Paxton poll (+0.2%) stretches +13.9 pts past 2024 baseline</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-label">Lowest Tension Race (2026)</div>
                 <div class="kpi-value" style="color: var(--accent-blue);">Maine (+0.7 FTI)</div>
-                <div class="kpi-subtext">Collins trailing (-2.2%) aligns with D+6.9% state baseline</div>
+                <div class="kpi-subtext">Jackson vs. Collins (+2.8%) aligns with D+6.9% state baseline</div>
             </div>
         </div>
 
@@ -1523,7 +1528,7 @@ html_content = f"""<!DOCTYPE html>
         <ul>
             <li><strong>Pure Polling Model:</strong> Assumes raw polls are unbiased. Gives Republicans an 84.6% chance of control and Democrats 15.4%.</li>
             <li><strong>Approval-Tilted Model:</strong> Accounts for Trump's -26% approval deficit, boosting Democrats by +1.0 to +2.0 pts across battlegrounds. This surges Democratic majority chances to 28.2% by making Texas a 47.6% coin flip.</li>
-            <li><strong>FTI-Calibrated Model (Full Model):</strong> Corrects for the high risk of polling error in states where Democrats stretch far past baseline (Texas, Iowa, Ohio). It recognizes that Texas is an unnatural +13.5 pt stretch and deflates it back to Cornyn -2.06% (26.4% Dem win prob). As a result, Democratic majority chances drop to 10.5%, and total GOP control climbs to 89.5%.</li>
+            <li><strong>FTI-Calibrated Model (Full Model):</strong> Corrects for the high risk of polling error in states where Democrats stretch far past baseline (Texas, Iowa, Ohio). It recognizes that Texas (Ken Paxton vs. James Talarico) is an unnatural +13.9 pt stretch above baseline and deflates it back to Paxton +1.30% (65.5% GOP win prob). As a result, Democratic majority chances drop to 15.2%, and total GOP control climbs to 84.8%.</li>
         </ul>
 
         <div style="overflow-x: auto; margin-bottom: 24px;">
@@ -1591,9 +1596,9 @@ html_content = f"""<!DOCTYPE html>
                 <thead>
                     <tr>
                         <th>State</th>
-                        <th>Seat Type</th>
-                        <th>Incumbent</th>
-                        <th>Party</th>
+                        <th>Seat Status</th>
+                        <th>2026 Nominees / Matchup</th>
+                        <th>Defending Party</th>
                         <th style="text-align:right;">Raw Poll</th>
                         <th style="text-align:right;">Approval Tilt</th>
                         <th style="text-align:right;">Tilted Margin</th>

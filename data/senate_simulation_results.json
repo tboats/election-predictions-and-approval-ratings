@@ -1,8 +1,8 @@
 {
   "model_raw_polls": {
-    "mean_dem_seats": 48.65,
+    "mean_dem_seats": 48.98,
     "median_dem_seats": 49,
-    "mean_rep_seats": 51.35,
+    "mean_rep_seats": 51.02,
     "median_rep_seats": 51,
     "ci_80_dem": [
       46,
@@ -20,41 +20,41 @@
       55,
       47
     ],
-    "prob_dem_majority_51plus": 15.4,
-    "prob_tie_50_50": 14.2,
-    "prob_rep_majority_51plus": 70.4,
-    "prob_rep_control_50plus": 84.6
+    "prob_dem_majority_51plus": 19.3,
+    "prob_tie_50_50": 17.4,
+    "prob_rep_majority_51plus": 63.3,
+    "prob_rep_control_50plus": 80.7
   },
   "model_tilted": {
-    "mean_dem_seats": 49.49,
-    "median_dem_seats": 49,
-    "mean_rep_seats": 50.51,
-    "median_rep_seats": 51,
+    "mean_dem_seats": 49.83,
+    "median_dem_seats": 50,
+    "mean_rep_seats": 50.17,
+    "median_rep_seats": 50,
     "ci_80_dem": [
-      47,
+      48,
       52
     ],
     "ci_80_rep": [
-      53,
+      52,
       48
     ],
     "ci_95_dem": [
       46,
-      53
+      54
     ],
     "ci_95_rep": [
       54,
-      47
+      46
     ],
-    "prob_dem_majority_51plus": 28.2,
-    "prob_tie_50_50": 19.9,
-    "prob_rep_majority_51plus": 52.0,
-    "prob_rep_control_50plus": 71.8
+    "prob_dem_majority_51plus": 32.2,
+    "prob_tie_50_50": 23.1,
+    "prob_rep_majority_51plus": 44.7,
+    "prob_rep_control_50plus": 67.8
   },
   "model_fti_calibrated": {
-    "mean_dem_seats": 48.65,
+    "mean_dem_seats": 49.04,
     "median_dem_seats": 49,
-    "mean_rep_seats": 51.35,
+    "mean_rep_seats": 50.96,
     "median_rep_seats": 51,
     "ci_80_dem": [
       47,
@@ -72,20 +72,20 @@
       54,
       48
     ],
-    "prob_dem_majority_51plus": 10.5,
-    "prob_tie_50_50": 16.0,
-    "prob_rep_majority_51plus": 73.4,
-    "prob_rep_control_50plus": 89.5
+    "prob_dem_majority_51plus": 15.2,
+    "prob_tie_50_50": 21.1,
+    "prob_rep_majority_51plus": 63.7,
+    "prob_rep_control_50plus": 84.8
   },
   "tilt_impact": {
-    "dem_seat_delta": 0.84,
-    "dem_majority_prob_delta": 12.8,
-    "gop_control_prob_delta": -12.8
+    "dem_seat_delta": 0.85,
+    "dem_majority_prob_delta": 12.9,
+    "gop_control_prob_delta": -12.9
   },
   "fti_calibration_impact": {
-    "dem_seat_delta": -0.84,
-    "dem_majority_prob_delta": -17.7,
-    "gop_control_prob_delta": 17.7
+    "dem_seat_delta": -0.79,
+    "dem_majority_prob_delta": -17.0,
+    "gop_control_prob_delta": 17.0
   },
   "historical_fti_validation": {
     "sample_size": 31,
