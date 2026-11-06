@@ -555,18 +555,23 @@ fig_plotly_dist.add_trace(go.Bar(
 ))
 
 fig_plotly_dist.add_vline(x=50.5, line_width=2.5, line_dash='dash', line_color='#dc2626',
-                          annotation_text='<b>Dem Majority (51+ Seats)</b>', annotation_position='top right')
+                          annotation_text='<b>Dem Majority (51+ Seats)</b>', annotation_position='top right',
+                          annotation_y=0.95)
 fig_plotly_dist.add_vline(x=49.5, line_width=2, line_dash='dot', line_color='#d97706',
-                          annotation_text='<b>50-50 Split (GOP Control via VP Vance)</b>', annotation_position='top left')
+                          annotation_text='<b>50-50 Split (GOP via VP)</b>', annotation_position='top left',
+                          annotation_y=0.84)
 
 fig_plotly_dist.update_layout(
-    title=f"<b>2026 Senate Midterm Projection: Democratic Seats Distribution (50,000 Simulations)</b><br><sup>FTI Mean: {stats_fti['mean_dem_seats']} D / {stats_fti['mean_rep_seats']} R | 80% CI: {stats_fti['ci_80_dem']} D | 95% CI: {stats_fti['ci_95_dem']} D | GOP Control: {stats_fti['prob_rep_control_50plus']}%</sup>",
+    title=dict(
+        text=f"<b>2026 Senate Midterm Projection: Democratic Seats Distribution (50,000 Simulations)</b><br><sup>FTI Mean: {stats_fti['mean_dem_seats']} D / {stats_fti['mean_rep_seats']} R | 80% CI: {stats_fti['ci_80_dem']} D | 95% CI: {stats_fti['ci_95_dem']} D | GOP Control: {stats_fti['prob_rep_control_50plus']}%</sup>",
+        x=0.01, y=0.96, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
     xaxis=dict(title='Total Democratic Seats (out of 100)', tickmode='linear', tick0=42, dtick=1, range=[42.5, 56.5]),
-    yaxis=dict(title='Probability (%) across Simulations'),
+    yaxis=dict(title='Probability (%) across Simulations', range=[0, max(probs_dem_tilted) * 1.22]),
     template='plotly_white',
-    height=500,
-    legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
-    margin=dict(l=40, r=40, t=80, b=40)
+    height=540,
+    legend=dict(orientation='h', yanchor='top', y=-0.18, xanchor='center', x=0.5, bgcolor='rgba(255,255,255,0.9)', bordercolor='#e2e8f0', borderwidth=1),
+    margin=dict(l=55, r=40, t=95, b=100)
 )
 fig_senate_dist_html = fig_plotly_dist.to_html(full_html=False, include_plotlyjs=False)
 
@@ -605,12 +610,15 @@ fig_plotly_bg.add_trace(go.Bar(
 
 fig_plotly_bg.update_layout(
     barmode='group',
-    title='<b>Competitive Battleground Senate Races: Raw Polls vs. Approval Tilt vs. FTI Model</b><br><sup>FTI corrects for excessive partisan stretch and demographic non-response risk, deflating phantom leads in red/purple territory.</sup>',
-    xaxis_title='Democratic Net Margin (%) [Dem % - Rep %]',
+    title=dict(
+        text='<b>Competitive Battleground Senate Races: Raw Polls vs. Approval Tilt vs. FTI Model</b><br><sup>FTI corrects for excessive partisan stretch and demographic non-response risk, deflating phantom leads in red/purple territory.</sup>',
+        x=0.01, y=0.96, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
+    xaxis=dict(title='Democratic Net Margin (%) [Dem % - Rep %]', range=[-11.5, 16.5]),
     template='plotly_white',
-    height=550,
-    legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
-    margin=dict(l=40, r=40, t=80, b=40)
+    height=600,
+    legend=dict(orientation='h', yanchor='top', y=-0.14, xanchor='center', x=0.5, bgcolor='rgba(255,255,255,0.9)', bordercolor='#e2e8f0', borderwidth=1),
+    margin=dict(l=55, r=60, t=95, b=100)
 )
 fig_senate_bg_html = fig_plotly_bg.to_html(full_html=False, include_plotlyjs=False)
 
@@ -638,13 +646,16 @@ fig_plotly_fti.add_trace(go.Scatter(
 ))
 
 fig_plotly_fti.update_layout(
-    title=f"<b>Empirical Validation: Fundamentals Tension Index (FTI) vs. Realized Polling Anomalies</b><br><sup>Pearson r = {r_fti:.3f} | R² = {r_fti**2:.3f} | p-value = {p_fti:.2e} (31 competitive Senate races from 2014 to 2022)</sup>",
+    title=dict(
+        text=f"<b>Empirical Validation: Fundamentals Tension Index (FTI) vs. Realized Polling Anomalies</b><br><sup>Pearson r = {r_fti:.3f} | R² = {r_fti**2:.3f} | p-value = {p_fti:.2e} (31 competitive Senate races from 2014 to 2022)</sup>",
+        x=0.01, y=0.96, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
     xaxis_title='Fundamentals Tension Index (FTI)',
     yaxis_title='Signed Polling Error (%) [Poll Margin - Actual Margin (D - R)]',
     template='plotly_white',
-    height=500,
-    legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
-    margin=dict(l=40, r=40, t=80, b=40)
+    height=550,
+    legend=dict(orientation='h', yanchor='top', y=-0.18, xanchor='center', x=0.5, bgcolor='rgba(255,255,255,0.9)', bordercolor='#e2e8f0', borderwidth=1),
+    margin=dict(l=55, r=40, t=95, b=110)
 )
 fig_fti_scatter_html = fig_plotly_fti.to_html(full_html=False, include_plotlyjs=False)
 
@@ -756,7 +767,7 @@ with open('data/senate_simulation_results.json', 'w') as f:
     json.dump(sim_summary, f, indent=2)
 
 # Figure 11: Post-Election Battleground Comparison & Approval-Tilt Error Reduction (PNG)
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(17, 8.5), dpi=300, gridspec_kw={'width_ratios': [1.35, 1.0]})
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(17.5, 8.8), dpi=300, gridspec_kw={'width_ratios': [1.38, 1.0]})
 
 bg_plot_df = df_core_bg.sort_values(by='actual_dem_margin', ascending=True).reset_index(drop=True)
 y_idx = np.arange(len(bg_plot_df))
@@ -771,20 +782,28 @@ ax1.scatter(bg_plot_df['actual_dem_margin'], y_idx, color='#f59e0b', edgecolor='
 
 for i, r in bg_plot_df.iterrows():
     act_v = r['actual_dem_margin']
-    offset = 0.55 if act_v >= 0 else -0.55
-    ha = 'left' if act_v >= 0 else 'right'
     col = '#065f46' if act_v >= 0 else '#991b1b'
-    ax1.text(act_v + offset, i, f"Actual: {act_v:+.1f}%", va='center', ha=ha, fontsize=8.5, fontweight='bold', color=col)
+    if act_v >= 0:
+        x_pos = max(act_v, r['raw_poll_dem_margin'], r['tilted_poll_dem_margin'], r['fti_calibrated_dem_margin']) + 0.55
+        ha = 'left'
+    else:
+        # Place cleanly to the right of x=0 in the empty positive zone on negative rows
+        x_pos = 0.45
+        ha = 'left'
+    ax1.text(
+        x_pos, i, f"Actual: {act_v:+.1f}%", va='center', ha=ha, fontsize=8.5, fontweight='bold', color=col,
+        bbox=dict(boxstyle='round,pad=0.16', facecolor='white', alpha=0.88, edgecolor='none')
+    )
 
 ax1.set_yticks(y_idx)
 ax1.set_yticklabels([f"{r['state']} ({r['code']})\n{r['dem_candidate']} vs. {r['rep_candidate']}" for _, r in bg_plot_df.iterrows()], fontsize=9.5, fontweight='bold')
 ax1.axvline(0, color='black', linewidth=1.2)
-ax1.axvspan(-10, 0, color='#fee2e2', alpha=0.18)
-ax1.axvspan(0, 23, color='#ecfdf5', alpha=0.22)
-ax1.set_xlim(-9.5, 23.5)
+ax1.axvspan(-10.5, 0, color='#fee2e2', alpha=0.18)
+ax1.axvspan(0, 24.5, color='#ecfdf5', alpha=0.22)
+ax1.set_xlim(-9.5, 24.5)
 ax1.set_xlabel("Democratic Net Margin (%) [Dem % - Rep %]", fontsize=11, fontweight='bold')
-ax1.set_title("A. Realized 2026 Battleground Margins vs. Pre-Election Models\nApproval Tilt Moved Forecasts Toward Actual Results in 9 of 11 Races", fontsize=12, fontweight='bold', pad=12)
-ax1.legend(loc='lower right', frameon=True, fontsize=8.5)
+ax1.set_title("A. Realized 2026 Battleground Margins vs. Pre-Election Models\nApproval Tilt Moved Forecasts Toward Actual Results in 9 of 11 Races", fontsize=12, fontweight='bold', pad=14)
+ax1.legend(loc='lower right', frameon=True, facecolor='white', framealpha=0.95, fontsize=8.5)
 
 # Right Panel: Error Reduction of Approval-Tilted vs Raw Polls and vs FTI
 err_red_raw = bg_plot_df['tilt_error_reduction']
@@ -807,18 +826,18 @@ for i, r in bg_plot_df.iterrows():
 ax2.set_yticks(y_idx)
 ax2.set_yticklabels([r['code'] for _, r in bg_plot_df.iterrows()], fontsize=10, fontweight='bold')
 ax2.axvline(0, color='black', linewidth=1.2)
-ax2.set_xlim(-3.5, 3.8)
+ax2.set_xlim(-3.4, 4.4)
 ax2.set_xlabel("Forecast Error Improvement (Percentage Points, >0 = Approval-Tilted Better)", fontsize=10.5, fontweight='bold')
-ax2.set_title("B. Precision Gain of the Approval-Tilted Model by State\nPositive Values = Approval-Tilted Model Closer to Actual Result", fontsize=12, fontweight='bold', pad=12)
-ax2.legend(loc='lower left', frameon=True, fontsize=8.5)
+ax2.set_title("B. Precision Gain of the Approval-Tilted Model by State\nPositive Values = Approval-Tilted Model Closer to Actual Result", fontsize=12, fontweight='bold', pad=14)
+ax2.legend(loc='lower right', frameon=True, facecolor='white', framealpha=0.95, fontsize=8.5)
 
-plt.tight_layout()
+plt.tight_layout(pad=1.6)
 plt.savefig('figures/fig11_post_election_battleground_comparison.png')
 plt.close()
 print("Saved fig11_post_election_battleground_comparison.png")
 
 # Figure 12: 3-Panel Model Scorecard (MAE/RMSE, Brier Score/Accuracy, Seat Distribution vs Actual 54) (PNG)
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 6.2), dpi=300)
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18.5, 6.5), dpi=300)
 
 m_names = ['Model 1:\nPure Pollsmax', 'Model 2:\nApproval-Tilted\n(WINNER)', 'Model 3:\nFTI-Calibrated']
 c_raw = post_election_summary['core_11_battlegrounds']['model_raw_polls']
@@ -843,10 +862,10 @@ for bars in [b_mae, b_rmse, b_bias]:
 
 ax1.set_xticks(x_m)
 ax1.set_xticklabels(m_names, fontsize=10, fontweight='bold')
-ax1.set_ylim(0, 7.2)
+ax1.set_ylim(0, 7.6)
 ax1.set_ylabel("Error in Percentage Points (Lower is Better)", fontsize=10.5, fontweight='bold')
-ax1.set_title("A. Battleground Margin Error (11 Core Races)\nApproval-Tilted Reduces MAE by 0.88 pts vs. Raw Polls", fontsize=11.5, fontweight='bold', pad=10)
-ax1.legend(loc='upper left', frameon=True, fontsize=8.5)
+ax1.set_title("A. Battleground Margin Error (11 Core Races)\nApproval-Tilted Reduces MAE by 0.88 pts vs. Raw Polls", fontsize=11.5, fontweight='bold', pad=12)
+ax1.legend(loc='upper left', frameon=True, facecolor='white', framealpha=0.95, fontsize=8.5)
 
 # Panel 2: Brier Score & Winner Call Accuracy
 brier_vals = [c_raw['brier_score'], c_tilt['brier_score'], c_fti['brier_score']]
@@ -865,12 +884,12 @@ for bar in b_acc:
 
 ax2.set_xticks(x_m)
 ax2.set_xticklabels(m_names, fontsize=10, fontweight='bold')
-ax2.set_ylim(0, 0.18)
-ax2_twin.set_ylim(0, 118)
+ax2.set_ylim(0, 0.19)
+ax2_twin.set_ylim(0, 124)
 ax2_twin.grid(False)
 ax2.set_ylabel("Probabilistic Brier Score (Lower = Better)", fontsize=10.5, fontweight='bold')
 ax2_twin.set_ylabel("Battleground Winner Call Accuracy (%)", fontsize=10.5, fontweight='bold', color='#065f46')
-ax2.set_title("B. Probabilistic Calibration & Call Accuracy\nApproval-Tilted Achieves 0.0490 Brier & 11/11 Calls", fontsize=11.5, fontweight='bold', pad=10)
+ax2.set_title("B. Probabilistic Calibration & Call Accuracy\nApproval-Tilted Achieves 0.0490 Brier & 11/11 Calls", fontsize=11.5, fontweight='bold', pad=12)
 
 # Panel 3: Simulated Seat Distributions vs Realized 54 Seats
 counts_dem_raw, _ = np.histogram(dem_seats_raw, bins=bins)
@@ -885,13 +904,13 @@ ax3.axvspan(54, 56, color='#fca5a5', alpha=0.25, label='Uncalled Lead Range (54�
 ax3.axvspan(stats_tilted['ci_80_dem'][0], stats_tilted['ci_80_dem'][1], color='#10b981', alpha=0.10)
 
 ax3.set_xlim(45, 56.5)
-ax3.set_ylim(0, max(probs_dem_tilted)*1.22)
+ax3.set_ylim(0, max(probs_dem_tilted)*1.28)
 ax3.set_xlabel("Total Democratic Senate Seats", fontsize=10.5, fontweight='bold')
 ax3.set_ylabel("Simulation Probability (%)", fontsize=10.5, fontweight='bold')
-ax3.set_title("C. Pre-Election Seat Distributions vs. Realized 54 Seats\nActual Result Lands Inside Approval-Tilted 80% CI [50–55]", fontsize=11.5, fontweight='bold', pad=10)
-ax3.legend(loc='upper left', frameon=True, fontsize=8.0)
+ax3.set_title("C. Pre-Election Seat Distributions vs. Realized 54 Seats\nActual Result Lands Inside Approval-Tilted 80% CI [50–55]", fontsize=11.5, fontweight='bold', pad=12)
+ax3.legend(loc='upper left', frameon=True, facecolor='white', framealpha=0.95, fontsize=8.0)
 
-plt.tight_layout()
+plt.tight_layout(pad=1.6)
 plt.savefig('figures/fig12_model_scorecard_metrics.png')
 plt.close()
 print("Saved fig12_model_scorecard_metrics.png")
@@ -899,12 +918,12 @@ print("Saved fig12_model_scorecard_metrics.png")
 # Interactive Chart 4: Post-Election Battleground Comparison & Error Reduction
 fig_plotly_post_bg = make_subplots(
     rows=1, cols=2,
-    column_widths=[0.60, 0.40],
+    column_widths=[0.58, 0.42],
     subplot_titles=(
-        "<b>Realized Nov 3 Margins vs. Pre-Election Models</b>",
-        "<b>Precision Gain of Approval-Tilted Model (pts)</b>"
+        "<b>A. Realized Nov 3 Margins vs. 3 Models</b>",
+        "<b>B. Approval-Tilted Error Gain (pts)</b>"
     ),
-    horizontal_spacing=0.12
+    horizontal_spacing=0.10
 )
 
 y_labels_post = [f"{r['state']} ({r['code']}): {r['dem_candidate']} vs. {r['rep_candidate']}" for _, r in bg_plot_df.iterrows()]
@@ -942,8 +961,9 @@ fig_plotly_post_bg.add_trace(go.Scatter(
     mode='markers+text',
     name='Actual Nov 3, 2026 Result',
     marker=dict(size=13, symbol='diamond', color='#f59e0b', line=dict(color='#111827', width=1.5)),
-    text=[f"{v:+.1f}%" for v in bg_plot_df['actual_dem_margin']],
-    textposition='middle right',
+    text=[f" {v:+.1f}% " for v in bg_plot_df['actual_dem_margin']],
+    textposition=['middle right' if v >= 0 else 'middle left' for v in bg_plot_df['actual_dem_margin']],
+    textfont=dict(size=10, color='#111827'),
     hovertemplate='<b>%{y}</b><br><b>Actual Margin: %{x:+.2f}%</b><extra></extra>'
 ), row=1, col=1)
 
@@ -965,16 +985,31 @@ fig_plotly_post_bg.add_trace(go.Bar(
     hovertemplate='<b>%{y}</b><br>Error Advantage over FTI: %{x:+.2f} pts<extra></extra>'
 ), row=1, col=2)
 
+fig_plotly_post_bg.update_annotations(font_size=13, yshift=6)
+
 fig_plotly_post_bg.update_layout(
     barmode='group',
-    title='<b>Post-Election Evaluation: Realized Nov 3 Battleground Margins vs. 3 Pre-Election Models</b><br><sup>The Presidential Approval-Tilted Model reduced forecast error in 9 of 11 core battlegrounds and called 11/11 winners correctly.</sup>',
+    title=dict(
+        text='<b>Post-Election Battleground Evaluation: Realized Margins vs. Pre-Election Models</b><br><sup>The Presidential Approval-Tilted Model reduced forecast error in 9 of 11 core battlegrounds and called 11/11 winners correctly.</sup>',
+        x=0.01, y=0.97, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
     template='plotly_white',
-    height=620,
-    legend=dict(orientation='h', yanchor='bottom', y=1.05, xanchor='right', x=1),
-    margin=dict(l=40, r=40, t=100, b=40)
+    height=700,
+    legend=dict(
+        orientation='h',
+        yanchor='top',
+        y=-0.13,
+        xanchor='center',
+        x=0.5,
+        font=dict(size=11),
+        bgcolor='rgba(255,255,255,0.92)',
+        bordercolor='#e2e8f0',
+        borderwidth=1
+    ),
+    margin=dict(l=50, r=40, t=115, b=135)
 )
-fig_plotly_post_bg.update_xaxes(title_text='Democratic Net Margin (%) [Dem - Rep]', range=[-10, 24], row=1, col=1)
-fig_plotly_post_bg.update_xaxes(title_text='Error Reduction (pts, >0 = Approval-Tilted Closer)', row=1, col=2)
+fig_plotly_post_bg.update_xaxes(title_text='Democratic Net Margin (%) [Dem - Rep]', range=[-11.5, 24.5], row=1, col=1)
+fig_plotly_post_bg.update_xaxes(title_text='Error Gain (pts, >0 = Approval-Tilted Better)', range=[-3.6, 3.8], row=1, col=2)
 fig_plotly_post_bg.update_yaxes(showticklabels=False, row=1, col=2)
 
 fig_post_bg_html = fig_plotly_post_bg.to_html(full_html=False, include_plotlyjs=False)
@@ -984,8 +1019,8 @@ fig_plotly_scorecard = make_subplots(
     rows=1, cols=2,
     column_widths=[0.48, 0.52],
     subplot_titles=(
-        "<b>Battleground Error Metrics (11 Core Races)</b>",
-        "<b>Pre-Election Seat Distributions vs. Realized 54 Seats</b>"
+        "<b>A. Battleground Error Metrics (11 Core Races)</b>",
+        "<b>B. Seat Distributions vs. Realized 54 Seats</b>"
     ),
     horizontal_spacing=0.10
 )
@@ -1042,24 +1077,41 @@ fig_plotly_scorecard.add_trace(go.Scatter(
     line=dict(color='#6366f1', width=2.5, dash='dot')
 ), row=1, col=2)
 
+fig_plotly_scorecard.update_annotations(font_size=13, yshift=6)
+
 fig_plotly_scorecard.add_vline(
     x=54, line_width=3, line_color='#dc2626', line_dash='solid',
-    annotation_text='<b>Realized: 54 Dem Seats (+2 Uncalled)</b>',
+    annotation_text='<b>Realized: 54 Seats (+2 Lead)</b>',
     annotation_position='top left',
+    annotation_y=0.96,
+    annotation_font=dict(size=11, color='#b91c1c'),
     row=1, col=2
 )
 
 fig_plotly_scorecard.update_layout(
     barmode='group',
-    title='<b>Model Performance Benchmark: Approval-Tilted Model Achieves Lowest MAE (4.03 pts), Lowest Brier (0.0490), and Best Seat Calibration</b>',
+    title=dict(
+        text='<b>Model Performance Benchmark: Approval-Tilted Model Wins Across All Metrics</b><br><sup>Lowest MAE (4.03 pts), Best Brier Score (0.0490), 100% Call Accuracy (11/11), and Realized 54 Seats Inside 80% CI [50–55]</sup>',
+        x=0.01, y=0.97, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
     template='plotly_white',
-    height=500,
-    legend=dict(orientation='h', yanchor='bottom', y=1.05, xanchor='right', x=1),
-    margin=dict(l=40, r=40, t=100, b=40)
+    height=590,
+    legend=dict(
+        orientation='h',
+        yanchor='top',
+        y=-0.18,
+        xanchor='center',
+        x=0.5,
+        font=dict(size=11),
+        bgcolor='rgba(255,255,255,0.92)',
+        bordercolor='#e2e8f0',
+        borderwidth=1
+    ),
+    margin=dict(l=55, r=40, t=115, b=140)
 )
 fig_plotly_scorecard.update_yaxes(title_text='Error Magnitude (Lower = Better)', range=[0, 8.2], row=1, col=1)
 fig_plotly_scorecard.update_xaxes(title_text='Total Democratic Senate Seats', range=[45, 56.5], row=1, col=2)
-fig_plotly_scorecard.update_yaxes(title_text='Simulation Probability (%)', row=1, col=2)
+fig_plotly_scorecard.update_yaxes(title_text='Simulation Probability (%)', range=[0, 24.5], row=1, col=2)
 
 fig_post_scorecard_html = fig_plotly_scorecard.to_html(full_html=False, include_plotlyjs=False)
 

@@ -370,7 +370,7 @@ updatemenus = [
         direction='left',
         active=0, # 0 is Uniform Size
         x=0.0,
-        y=1.11,
+        y=1.07,
         xanchor='left',
         yanchor='top',
         bgcolor='#f1f5f9',
@@ -393,14 +393,17 @@ updatemenus = [
 ]
 
 fig_scatter.update_layout(
-    title='<b>Trump 2024 Win Margin vs. Net Job Approval by State (Fall 2026)</b><br><sup>Every state except DC falls in the red erosion zone below the 1:1 parity line. Toggle point size mode below.</sup>',
+    title=dict(
+        text='<b>Trump 2024 Win Margin vs. Net Job Approval by State (Fall 2026)</b><br><sup>Every state except DC falls in the red erosion zone below the 1:1 parity line. Toggle point size mode below.</sup>',
+        x=0.01, y=0.97, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
     xaxis_title='Trump 2024 Certified Win Margin (%) [Trump % - Harris %]',
     yaxis_title='Trump Fall 2026 Net Job Approval (%) [Approve % - Disapprove %]',
     template='plotly_white',
-    height=760,
+    height=780,
     updatemenus=updatemenus,
-    legend=dict(orientation='h', yanchor='bottom', y=-0.22, xanchor='center', x=0.5),
-    margin=dict(l=50, r=40, b=120, t=100)
+    legend=dict(orientation='h', yanchor='top', y=-0.13, xanchor='center', x=0.5, bgcolor='rgba(255,255,255,0.9)', bordercolor='#e2e8f0', borderwidth=1),
+    margin=dict(l=55, r=40, b=130, t=125)
 )
 fig_scatter.add_hline(y=0, line_dash='dot', line_color='#a0aec0')
 fig_scatter.add_vline(x=0, line_dash='dot', line_color='#a0aec0')
@@ -419,7 +422,7 @@ fig_segments = px.bar(
     title='<b>Average Net Approval Erosion by Economic Segment</b><br><sup>Difference between Current Net Approval and 2024 Win Margin</sup>',
     labels={'gap': 'Approval Erosion Gap (pts)', 'economic_segment': 'Economic Segment'}
 )
-fig_segments.update_layout(template='plotly_white', height=400, showlegend=False, margin=dict(l=40, r=40, t=60, b=40))
+fig_segments.update_layout(template='plotly_white', height=420, showlegend=False, margin=dict(l=40, r=40, t=75, b=45))
 fig_segments_html = fig_segments.to_html(full_html=False, include_plotlyjs=False)
 
 # Chart 3 Interactive: Swing States Comparison
@@ -445,12 +448,15 @@ fig_swing.add_trace(go.Bar(
 ))
 fig_swing.update_layout(
     barmode='group',
-    title='<b>The 7 Core 2024 Battlegrounds: From November Victory to Severe Net Deficit</b>',
-    xaxis_title='Percentage Points (%)',
+    title=dict(
+        text='<b>The 7 Core 2024 Battlegrounds: From November Victory to Severe Net Deficit</b>',
+        x=0.01, y=0.96, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
+    xaxis=dict(title='Percentage Points (%)', range=[-28, 8]),
     template='plotly_white',
-    height=480,
-    legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
-    margin=dict(l=40, r=40, t=80, b=40)
+    height=500,
+    legend=dict(orientation='h', yanchor='top', y=-0.16, xanchor='center', x=0.5, bgcolor='rgba(255,255,255,0.9)', bordercolor='#e2e8f0', borderwidth=1),
+    margin=dict(l=55, r=50, t=75, b=95)
 )
 fig_swing_html = fig_swing.to_html(full_html=False, include_plotlyjs=False)
 
@@ -525,7 +531,7 @@ hist_menus = [
         direction='left',
         active=0,
         x=0.0,
-        y=1.12,
+        y=1.08,
         xanchor='left',
         yanchor='top',
         bgcolor='#f1f5f9',
@@ -554,14 +560,17 @@ hist_menus = [
 ]
 
 fig_historical.update_layout(
-    title='<b>Presidential Job Approval Trajectory Across First 4 Years (1969–2026)</b><br><sup>Comparing Donald Trump (Term 2) at Year 1.72 against modern predecessors across their first 4-year term.</sup>',
+    title=dict(
+        text='<b>Presidential Job Approval Trajectory Across First 4 Years (1969–2026)</b><br><sup>Comparing Donald Trump (Term 2) at Year 1.78 against modern predecessors across their first 4-year term.</sup>',
+        x=0.01, y=0.97, xanchor='left', yanchor='top', font=dict(size=15)
+    ),
     xaxis_title='Years into Presidency (0 to 4 Years)',
     yaxis_title='Job Approval Rating (%)',
     template='plotly_white',
-    height=620,
+    height=650,
     updatemenus=hist_menus,
-    legend=dict(orientation='h', yanchor='bottom', y=-0.32, xanchor='center', x=0.5),
-    margin=dict(l=50, r=40, b=140, t=90)
+    legend=dict(orientation='h', yanchor='top', y=-0.15, xanchor='center', x=0.5, bgcolor='rgba(255,255,255,0.9)', bordercolor='#e2e8f0', borderwidth=1),
+    margin=dict(l=55, r=40, b=145, t=125)
 )
 fig_historical.add_hline(y=50, line_dash='dot', line_color='#94a3b8')
 
