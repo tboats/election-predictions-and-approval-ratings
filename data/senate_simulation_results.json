@@ -94,5 +94,67 @@
     "p_value": 0.00010383265782691321,
     "slope": 0.5625,
     "intercept": 2.1146
+  },
+  "post_election_evaluation": {
+    "realized_dem_seats_called": 54,
+    "realized_dem_leading_uncalled": 2,
+    "core_11_battlegrounds": {
+      "model_raw_polls": {
+        "n_races": 11,
+        "correct_calls": 11,
+        "accuracy_pct": 100.0,
+        "mae": 4.91,
+        "rmse": 5.74,
+        "mean_signed_error": 4.08,
+        "brier_score": 0.0671
+      },
+      "model_tilted": {
+        "n_races": 11,
+        "correct_calls": 11,
+        "accuracy_pct": 100.0,
+        "mae": 4.03,
+        "rmse": 4.76,
+        "mean_signed_error": 3.03,
+        "brier_score": 0.0491
+      },
+      "model_fti_calibrated": {
+        "n_races": 11,
+        "correct_calls": 8,
+        "accuracy_pct": 72.7,
+        "mae": 5.24,
+        "rmse": 6.05,
+        "mean_signed_error": 4.88,
+        "brier_score": 0.1426
+      }
+    },
+    "all_14_tracked_races": {
+      "model_raw_polls": {
+        "n_races": 14,
+        "correct_calls": 12,
+        "accuracy_pct": 85.7,
+        "mae": 5.92,
+        "rmse": 6.91,
+        "mean_signed_error": 5.27,
+        "brier_score": 0.1931
+      },
+      "model_tilted": {
+        "n_races": 14,
+        "correct_calls": 12,
+        "accuracy_pct": 85.7,
+        "mae": 5.15,
+        "rmse": 6.23,
+        "mean_signed_error": 4.37,
+        "brier_score": 0.1786
+      },
+      "model_fti_calibrated": {
+        "n_races": 14,
+        "correct_calls": 9,
+        "accuracy_pct": 64.3,
+        "mae": 6.44,
+        "rmse": 7.52,
+        "mean_signed_error": 6.16,
+        "brier_score": 0.2546
+      }
+    }
   }
 }
